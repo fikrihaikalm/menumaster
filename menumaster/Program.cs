@@ -4,6 +4,7 @@ namespace menumaster
     {
         /// <summary>
         ///  The main entry point for the application.
+        ///  testtttttt
         /// </summary>
         [STAThread]
         static void Main()
