@@ -28,6 +28,7 @@ Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanaka
 
 ## Teknologi yang Digunakan:
 
+- **IDE**: Visual Studio 2022
 - **Bahasa Pemrograman**: C#
 - **Database**: PostgreSQL
 - **Framework**: -
