@@ -1,4 +1,4 @@
-# Menu Master - Sistem Manajemen Restoran
+# Menu Master - Sistem Manajemen Restoran (IN PROGRESS)
 
 Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanakan operasional restoran. Aplikasi ini memiliki fitur lengkap untuk membantu pemilik dan staf restoran dalam mengelola proses operasional, meningkatkan visibilitas kinerja bisnis, dan meningkatkan pengalaman pelanggan.
 
