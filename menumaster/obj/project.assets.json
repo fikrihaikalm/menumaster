@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Source\\Repos\\fikrihaikalm\\menumaster\\menumaster\\menumaster.csproj",
+      "projectUniqueName": "E:\\menumaster\\menumaster\\menumaster.csproj",
       "projectName": "menumaster",
-      "projectPath": "C:\\Users\\ASUS\\Source\\Repos\\fikrihaikalm\\menumaster\\menumaster\\menumaster.csproj",
+      "projectPath": "E:\\menumaster\\menumaster\\menumaster.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Source\\Repos\\fikrihaikalm\\menumaster\\menumaster\\obj\\",
+      "outputPath": "E:\\menumaster\\menumaster\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
