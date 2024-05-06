@@ -37,6 +37,6 @@ Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanaka
 
 ## Lisensi:
 
-Menu Master dilisensikan di bawah [MIT License](LICENSE).
+Menu Master ini dilisensikan di bawah [MIT License](LICENSE).
 
 ---
