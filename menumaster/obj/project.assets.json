@@ -8,19 +8,24 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "C:\\Users\\lilya\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\menumaster\\menumaster\\menumaster.csproj",
+      "projectUniqueName": "C:\\Users\\lilya\\Source\\Repos\\fikrihaikalm\\menumaster\\menumaster\\menumaster.csproj",
       "projectName": "menumaster",
-      "projectPath": "E:\\menumaster\\menumaster\\menumaster.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "E:\\menumaster\\menumaster\\obj\\",
+      "projectPath": "C:\\Users\\lilya\\Source\\Repos\\fikrihaikalm\\menumaster\\menumaster\\menumaster.csproj",
+      "packagesPath": "C:\\Users\\lilya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lilya\\Source\\Repos\\fikrihaikalm\\menumaster\\menumaster\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lilya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
