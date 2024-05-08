@@ -9,14 +9,20 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Login_admin f2 = new Login_admin();
             f2.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Login_manajer form3 = new Login_manajer();
             form3.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace menumaster
 {
-    partial class Login_manajer
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(147, 374);
+            button1.Location = new Point(150, 375);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 13;
@@ -48,7 +48,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(44, 311);
+            textBox2.Location = new Point(47, 312);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(197, 27);
             textBox2.TabIndex = 12;
@@ -56,7 +56,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(44, 279);
+            label4.Location = new Point(47, 280);
             label4.Name = "label4";
             label4.Size = new Size(70, 20);
             label4.TabIndex = 11;
@@ -64,7 +64,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(44, 219);
+            textBox1.Location = new Point(47, 220);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(197, 27);
             textBox1.TabIndex = 10;
@@ -72,7 +72,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(44, 187);
+            label3.Location = new Point(47, 188);
             label3.Name = "label3";
             label3.Size = new Size(24, 20);
             label3.TabIndex = 9;
@@ -81,7 +81,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(44, 114);
+            label2.Location = new Point(47, 115);
             label2.Name = "label2";
             label2.Size = new Size(197, 20);
             label2.TabIndex = 8;
@@ -91,13 +91,13 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(31, 54);
+            label1.Location = new Point(34, 55);
             label1.Name = "label1";
             label1.Size = new Size(355, 60);
             label1.TabIndex = 7;
             label1.Text = "Selamat Datang";
             // 
-            // Login_manajer
+            // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -109,8 +109,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Login_manajer";
-            Text = "Login manajer";
+            Name = "Form4";
+            Text = "Form4";
             ResumeLayout(false);
             PerformLayout();
         }

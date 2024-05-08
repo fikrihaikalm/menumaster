@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace menumaster
 {
-    public partial class Form2 : Form
+    public partial class Login_admin : Form
     {
-        public Form2()
+        public Login_admin()
         {
             InitializeComponent();
         }
