@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace menumaster
 {
-    public partial class Form4 : Form
+    public partial class Login_kasir : Form
     {
-        public Form4()
+        public Login_kasir()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
