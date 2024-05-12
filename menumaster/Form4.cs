@@ -19,7 +19,7 @@ namespace menumaster
 
         private void button2_Click(object sender, EventArgs e)
         {
-            welcome_page f1 = new welcome_page();
+            Form1 f1 = new Form1();
             f1.Show();
         }
 
