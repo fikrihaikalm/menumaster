@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace menumaster
 {
-    public partial class Login_manajer : Form
+    public partial class manajer_page : Form
     {
-        public Login_manajer()
+        public manajer_page()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            welcome_page f1 = new welcome_page();
-            f1.Show();
         }
     }
 }

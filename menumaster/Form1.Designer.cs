@@ -148,7 +148,7 @@
             Margin = new Padding(2);
             MinimumSize = new Size(800, 600);
             Name = "Form1";
-            Text = "Form1";
+            Text = "welcome page";
             WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();

@@ -134,7 +134,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "admin_page";
-            Text = "admin_page";
+            Text = "admin page";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

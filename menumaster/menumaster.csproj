@@ -25,6 +25,8 @@
 
   <ItemGroup>
     <Folder Include="admin\" />
+    <Folder Include="manajer\" />
+    <Folder Include="kasir\" />
   </ItemGroup>
 
 </Project>
