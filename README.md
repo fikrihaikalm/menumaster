@@ -20,7 +20,7 @@ Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanaka
    - Menghasilkan laporan penjualan, keuangan, dan inventaris secara berkala.
    - Mengelola informasi karyawan seperti jadwal kerja, evaluasi kinerja, dan pelatihan.
 
-5. **Waiters/Kasir**:
+5. **Kasir**:
    - Mengelola pesanan, menu, meja, dan proses pembayaran.
    - Menerima pesanan dari pelanggan, mengakses menu, dan mengelola transaksi pembayaran.
 
