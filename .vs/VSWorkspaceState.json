@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\menumaster"
   ],
-  "SelectedNode": "\\menumaster.sln",
+  "SelectedNode": "\\menumaster\\Form2.cs",
   "PreviewInSolutionExplorer": false
 }
