@@ -21,7 +21,7 @@ namespace menumaster
         {
             page_admin pa = new page_admin();   
             pa.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

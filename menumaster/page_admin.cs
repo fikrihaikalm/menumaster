@@ -21,7 +21,7 @@ namespace menumaster
         {
             pengeluaran p1 = new pengeluaran();
             p1.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
