@@ -19,9 +19,9 @@ namespace menumaster
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Hide();
             Form1 f1 = new Form1();
             f1.Show();
+            this.Close();
         }
     }
 }
