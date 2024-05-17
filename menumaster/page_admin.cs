@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace menumaster
 {
-    public partial class kelola_menu : Form
+    public partial class page_admin : Form
     {
-        public kelola_menu()
+        public page_admin()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            page_admin pa = new page_admin();
-            pa.Show();
+            pengeluaran p1 = new pengeluaran();
+            p1.Show();
             this.Close();
         }
     }

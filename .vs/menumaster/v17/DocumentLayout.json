@@ -1,18 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\menumaster\\",
+  "WorkspaceRootPath": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|e:\\menumaster\\menumaster\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\page_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\page_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|E:\\menumaster\\menumaster\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\page_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\page_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\kelola_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\kelola_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\kelola_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\kelola_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pendapatan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\pendapatan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pendapatan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\pendapatan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pengeluaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\pengeluaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pengeluaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\pengeluaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|E:\\menumaster\\menumaster\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|c:\\users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E47DA970-D486-47DD-BD41-C4DA2FD671A0}|menumaster\\menumaster.csproj|solutionrelative:menumaster\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,35 +59,127 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\menumaster\\menumaster\\Form1.cs",
-              "RelativeDocumentMoniker": "menumaster\\Form1.cs",
-              "ToolTip": "E:\\menumaster\\menumaster\\Form1.cs",
-              "RelativeToolTip": "menumaster\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Title": "page_admin.cs",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\page_admin.cs",
+              "RelativeDocumentMoniker": "menumaster\\page_admin.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\page_admin.cs",
+              "RelativeToolTip": "menumaster\\page_admin.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAIAwwBcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T16:00:21.541Z",
+              "WhenOpened": "2024-05-17T13:45:22.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "E:\\menumaster\\menumaster\\Form2.cs",
-              "RelativeDocumentMoniker": "menumaster\\Form2.cs",
-              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\Form2.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "kelola_menu.cs",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\kelola_menu.cs",
+              "RelativeDocumentMoniker": "menumaster\\kelola_menu.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\kelola_menu.cs",
+              "RelativeToolTip": "menumaster\\kelola_menu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T16:00:09.459Z"
+              "WhenOpened": "2024-05-17T13:45:04.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "E:\\menumaster\\menumaster\\Form1.cs",
-              "RelativeDocumentMoniker": "menumaster\\Form1.cs",
-              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\Form1.cs [Design]",
+              "Title": "kelola_menu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\kelola_menu.cs",
+              "RelativeDocumentMoniker": "menumaster\\kelola_menu.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\kelola_menu.cs [Design]",
+              "RelativeToolTip": "menumaster\\kelola_menu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T15:59:28.736Z"
+              "WhenOpened": "2024-05-17T13:45:01.898Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "page_admin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\page_admin.cs",
+              "RelativeDocumentMoniker": "menumaster\\page_admin.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\page_admin.cs [Design]",
+              "RelativeToolTip": "menumaster\\page_admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:40:41.43Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pendapatan.cs",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pendapatan.cs",
+              "RelativeDocumentMoniker": "menumaster\\pendapatan.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pendapatan.cs",
+              "RelativeToolTip": "menumaster\\pendapatan.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAIAwwBcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:44:54.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pendapatan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pendapatan.cs",
+              "RelativeDocumentMoniker": "menumaster\\pendapatan.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pendapatan.cs [Design]",
+              "RelativeToolTip": "menumaster\\pendapatan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:44:52.052Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "pengeluaran.cs",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pengeluaran.cs",
+              "RelativeDocumentMoniker": "menumaster\\pengeluaran.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pengeluaran.cs",
+              "RelativeToolTip": "menumaster\\pengeluaran.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAIAwwBUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:44:19.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "pengeluaran.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pengeluaran.cs",
+              "RelativeDocumentMoniker": "menumaster\\pengeluaran.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\pengeluaran.cs [Design]",
+              "RelativeToolTip": "menumaster\\pengeluaran.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:44:15.243Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\Form2.cs",
+              "RelativeDocumentMoniker": "menumaster\\Form2.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\Form2.cs",
+              "RelativeToolTip": "menumaster\\Form2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:42:59.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\Form2.cs",
+              "RelativeDocumentMoniker": "menumaster\\Form2.cs",
+              "ToolTip": "C:\\Users\\lilya\\source\\repos\\fikrihaikalm\\menumaster\\menumaster\\Form2.cs [Design]",
+              "RelativeToolTip": "menumaster\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T13:42:57.722Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

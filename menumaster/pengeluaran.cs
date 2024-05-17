@@ -19,8 +19,8 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            admin_page ap = new admin_page();
-            ap.Show();
+            page_admin pa = new page_admin();   
+            pa.Show();
             this.Close();
         }
     }
