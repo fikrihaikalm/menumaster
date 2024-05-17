@@ -27,6 +27,7 @@ namespace menumaster
         {
             admin_page ap = new admin_page();
             ap.Show();
+            this.Close();
 
 
         }
