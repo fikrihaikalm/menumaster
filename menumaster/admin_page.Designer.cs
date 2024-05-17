@@ -28,102 +28,136 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_page));
             panel1 = new Panel();
-            panel4 = new Panel();
-            label4 = new Label();
-            panel3 = new Panel();
-            label3 = new Label();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             panel2 = new Panel();
+            pictureBox2 = new PictureBox();
             label2 = new Label();
+            panel3 = new Panel();
+            pictureBox3 = new PictureBox();
+            label3 = new Label();
+            label4 = new Label();
             panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = SystemColors.GradientInactiveCaption;
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(23, 23);
+            panel1.Location = new Point(378, 172);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 599);
+            panel1.Size = new Size(330, 81);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint_1;
             // 
-            // panel4
+            // pictureBox1
             // 
-            panel4.BackColor = SystemColors.GradientActiveCaption;
-            panel4.Controls.Add(label4);
-            panel4.Location = new Point(0, 259);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 50);
-            panel4.TabIndex = 3;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.DarkBlue;
-            label4.Location = new Point(53, 15);
-            label4.Name = "label4";
-            label4.Size = new Size(94, 20);
-            label4.TabIndex = 2;
-            label4.Text = "Kelola menu";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.GradientActiveCaption;
-            panel3.Controls.Add(label3);
-            panel3.Location = new Point(0, 179);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(200, 50);
-            panel3.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.DarkBlue;
-            label3.Location = new Point(53, 15);
-            label3.Name = "label3";
-            label3.Size = new Size(90, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Pendapatan";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(28, 30);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(34, 34);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.DarkBlue;
-            label1.Location = new Point(12, 14);
+            label1.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.MidnightBlue;
+            label1.Location = new Point(78, 14);
             label1.Name = "label1";
-            label1.Size = new Size(115, 23);
+            label1.Size = new Size(233, 50);
             label1.TabIndex = 0;
-            label1.Text = "Menu Master";
+            label1.Text = "Pengeluaran";
+            label1.Click += label1_Click;
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.GradientActiveCaption;
+            panel2.Anchor = AnchorStyles.None;
+            panel2.BackColor = SystemColors.GradientInactiveCaption;
+            panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(23, 127);
+            panel2.Location = new Point(378, 274);
             panel2.Name = "panel2";
-            panel2.Size = new Size(200, 50);
+            panel2.Size = new Size(330, 81);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
+            panel2.Paint += panel2_Paint_1;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(28, 30);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 34);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.DarkBlue;
-            label2.Location = new Point(51, 15);
+            label2.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.MidnightBlue;
+            label2.Location = new Point(78, 14);
             label2.Name = "label2";
-            label2.Size = new Size(95, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Pengeluaran";
+            label2.Size = new Size(221, 50);
+            label2.TabIndex = 0;
+            label2.Text = "Pendapatan";
+            // 
+            // panel3
+            // 
+            panel3.Anchor = AnchorStyles.None;
+            panel3.BackColor = SystemColors.GradientInactiveCaption;
+            panel3.Controls.Add(pictureBox3);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(378, 378);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(330, 81);
+            panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(28, 30);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(34, 34);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.MidnightBlue;
+            label3.Location = new Point(78, 14);
+            label3.Name = "label3";
+            label3.Size = new Size(233, 50);
+            label3.TabIndex = 0;
+            label3.Text = "Kelola menu";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.GradientActiveCaption;
+            label4.Location = new Point(29, 27);
+            label4.Name = "label4";
+            label4.Size = new Size(101, 38);
+            label4.TabIndex = 3;
+            label4.Text = "Admin";
             // 
             // admin_page
             // 
@@ -131,6 +165,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1113, 646);
+            Controls.Add(label4);
+            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "admin_page";
@@ -138,13 +174,15 @@
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -152,10 +190,12 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
-        private Panel panel4;
-        private Label label4;
+        private Label label2;
         private Panel panel3;
         private Label label3;
-        private Label label2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label label4;
     }
 }
