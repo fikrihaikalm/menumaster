@@ -52,19 +52,17 @@
             panel3.BackColor = SystemColors.GradientInactiveCaption;
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(323, 424);
-            panel3.Margin = new Padding(4);
+            panel3.Location = new Point(398, 393);
             panel3.Name = "panel3";
-            panel3.Size = new Size(412, 101);
+            panel3.Size = new Size(330, 81);
             panel3.TabIndex = 5;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(35, 38);
-            pictureBox3.Margin = new Padding(4);
+            pictureBox3.Location = new Point(28, 30);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(42, 42);
+            pictureBox3.Size = new Size(34, 34);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
@@ -74,10 +72,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.MidnightBlue;
-            label3.Location = new Point(98, 18);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(78, 14);
             label3.Name = "label3";
-            label3.Size = new Size(279, 61);
+            label3.Size = new Size(233, 50);
             label3.TabIndex = 0;
             label3.Text = "Kelola menu";
             // 
@@ -87,19 +84,17 @@
             panel2.BackColor = SystemColors.GradientInactiveCaption;
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(323, 294);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(398, 289);
             panel2.Name = "panel2";
-            panel2.Size = new Size(412, 101);
+            panel2.Size = new Size(330, 81);
             panel2.TabIndex = 4;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(35, 38);
-            pictureBox2.Margin = new Padding(4);
+            pictureBox2.Location = new Point(28, 30);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 42);
+            pictureBox2.Size = new Size(34, 34);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -109,10 +104,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.MidnightBlue;
-            label2.Location = new Point(98, 18);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(78, 14);
             label2.Name = "label2";
-            label2.Size = new Size(265, 61);
+            label2.Size = new Size(221, 50);
             label2.TabIndex = 0;
             label2.Text = "Pendapatan";
             // 
@@ -122,20 +116,18 @@
             panel1.BackColor = SystemColors.GradientInactiveCaption;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(323, 167);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(398, 188);
             panel1.Name = "panel1";
-            panel1.Size = new Size(412, 101);
+            panel1.Size = new Size(330, 81);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(35, 38);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(28, 30);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 42);
+            pictureBox1.Size = new Size(34, 34);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -145,21 +137,21 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.MidnightBlue;
-            label1.Location = new Point(98, 18);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(78, 14);
             label1.Name = "label1";
-            label1.Size = new Size(279, 61);
+            label1.Size = new Size(233, 50);
             label1.TabIndex = 0;
             label1.Text = "Pengeluaran";
             // 
             // page_admin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1019, 656);
+            ClientSize = new Size(1094, 632);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(2, 2, 2, 2);
             MinimumSize = new Size(800, 600);
             Name = "page_admin";
             Text = "page_admin";
