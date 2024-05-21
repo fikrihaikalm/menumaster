@@ -19,14 +19,12 @@ namespace menumaster
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            WelcomePageForm f1 = new WelcomePageForm();
             f1.Show();
             this.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            page_admin pa = new page_admin();
-            pa.Show();
             this.Close();
 
 
