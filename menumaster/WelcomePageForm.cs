@@ -7,25 +7,27 @@ namespace menumaster
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void adminButton_Click(object sender, EventArgs e)
         {
             Login_admin f2 = new Login_admin();
             f2.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void managerButton_Click(object sender, EventArgs e)
         {
             Login_manajer form3 = new Login_manajer();
             form3.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void kasirButton_Click(object sender, EventArgs e)
         {
             Login_kasir f4 = new Login_kasir();
             f4.Show();
             this.Hide();
         }
+
+
     }
 }

@@ -22,18 +22,24 @@ namespace menumaster.Components
             InitializeComponent();
         }
 
+        [Category("Custom Properties")]
+        [Description("Text on the label")]
         public string CardName
         {
             get { return labelCardName.Text; }
             set { labelCardName.Text = value; }
         }
 
+        [Category("Custom Properties")]
+        [Description("Text on the button")]
         public string ButtonText
         {
             get { return buttonCardButton.Text; }
             set { buttonCardButton.Text = value; }
         }
 
+        [Category("Custom Properties")]
+        [Description("On click")]
         public event EventHandler ButtonClick
         {
             add { buttonCardButton.Click += value; }

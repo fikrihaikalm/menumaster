@@ -28,155 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            welcomePageCardAdmin = new Components.WelcomePageCardButton();
+            welcomePageCardManager = new Components.WelcomePageCardButton();
+            welcomePageCardKasir = new Components.WelcomePageCardButton();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
             label1 = new Label();
-            button2 = new Button();
-            button3 = new Button();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            welcomePageCardButton1 = new Components.WelcomePageCardButton();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // welcomePageCardAdmin
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Font = new Font("Segoe UI", 10.8F);
-            button1.Location = new Point(85, 348);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(225, 43);
-            button1.TabIndex = 0;
-            button1.Text = "Login sebagai admin";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            welcomePageCardAdmin.Anchor = AnchorStyles.None;
+            welcomePageCardAdmin.BorderRadius = 20;
+            welcomePageCardAdmin.BorderStyle = BorderStyle.FixedSingle;
+            welcomePageCardAdmin.ButtonText = "Lanjutkan Sebagai Admin";
+            welcomePageCardAdmin.CardName = "Admin";
+            welcomePageCardAdmin.Location = new Point(25, 245);
+            welcomePageCardAdmin.Margin = new Padding(10);
+            welcomePageCardAdmin.Name = "welcomePageCardAdmin";
+            welcomePageCardAdmin.Padding = new Padding(10);
+            welcomePageCardAdmin.Size = new Size(325, 135);
+            welcomePageCardAdmin.TabIndex = 8;
+            welcomePageCardAdmin.ButtonClick += new System.EventHandler(adminButton_Click);
+            // 
+            // welcomePageCardManager
+            // 
+            welcomePageCardManager.Anchor = AnchorStyles.None;
+            welcomePageCardManager.BorderRadius = 20;
+            welcomePageCardManager.BorderStyle = BorderStyle.FixedSingle;
+            welcomePageCardManager.ButtonText = "Lanjutkan Sebagai Manager";
+            welcomePageCardManager.CardName = "Manager";
+            welcomePageCardManager.Location = new Point(382, 245);
+            welcomePageCardManager.Margin = new Padding(10);
+            welcomePageCardManager.Name = "welcomePageCardManager";
+            welcomePageCardManager.Padding = new Padding(10);
+            welcomePageCardManager.Size = new Size(325, 135);
+            welcomePageCardManager.TabIndex = 10;
+            welcomePageCardManager.ButtonClick += new System.EventHandler(managerButton_Click);
+            // 
+            // welcomePageCardKasir
+            // 
+            welcomePageCardKasir.Anchor = AnchorStyles.None;
+            welcomePageCardKasir.BorderRadius = 20;
+            welcomePageCardKasir.BorderStyle = BorderStyle.FixedSingle;
+            welcomePageCardKasir.ButtonText = "Lanjutkan Sebagai Kasir";
+            welcomePageCardKasir.CardName = "Kasir";
+            welcomePageCardKasir.Location = new Point(739, 245);
+            welcomePageCardKasir.Margin = new Padding(10);
+            welcomePageCardKasir.Name = "welcomePageCardKasir";
+            welcomePageCardKasir.Padding = new Padding(10);
+            welcomePageCardKasir.Size = new Size(325, 135);
+            welcomePageCardKasir.TabIndex = 11;
+            welcomePageCardKasir.ButtonClick += new System.EventHandler(kasirButton_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel1.Controls.Add(welcomePageCardKasir, 2, 1);
+            tableLayoutPanel1.Controls.Add(welcomePageCardManager, 1, 1);
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(welcomePageCardAdmin, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.Padding = new Padding(10);
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.Size = new Size(1091, 628);
+            tableLayoutPanel1.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top;
+            tableLayoutPanel1.SetColumnSpan(panel1, 3);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(195, 13);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(700, 125);
+            panel1.TabIndex = 12;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
+            label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(228, 21);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(642, 106);
-            label1.TabIndex = 2;
+            label1.Size = new Size(700, 100);
+            label1.TabIndex = 3;
             label1.Text = "Selamat Datang";
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.Font = new Font("Segoe UI", 10.8F);
-            button2.Location = new Point(378, 348);
-            button2.Name = "button2";
-            button2.Size = new Size(225, 43);
-            button2.TabIndex = 1;
-            button2.Text = "Login sebagai manajer";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.Anchor = AnchorStyles.None;
-            button3.Font = new Font("Segoe UI", 10.8F);
-            button3.Location = new Point(664, 348);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(225, 43);
-            button3.TabIndex = 3;
-            button3.Text = "Login sebagai kasir";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.None;
+            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(483, 127);
+            label2.Location = new Point(298, 100);
             label2.Name = "label2";
             label2.Size = new Size(120, 25);
             label2.TabIndex = 4;
             label2.Text = "silahkan login";
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
-            label3.Location = new Point(228, 303);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 31);
-            label3.TabIndex = 5;
-            label3.Text = "Admin";
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
-            label4.Location = new Point(504, 303);
-            label4.Name = "label4";
-            label4.Size = new Size(99, 31);
-            label4.TabIndex = 6;
-            label4.Text = "Manajer";
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold);
-            label5.Location = new Point(824, 303);
-            label5.Name = "label5";
-            label5.Size = new Size(65, 31);
-            label5.TabIndex = 7;
-            label5.Text = "Kasir";
-            // 
-            // welcomePageCardButton1
-            // 
-            welcomePageCardButton1.BorderRadius = 20;
-            welcomePageCardButton1.ButtonText = "Lanjutkan Sebagai Admin";
-            welcomePageCardButton1.CardName = "Admin";
-            welcomePageCardButton1.Location = new Point(60, 127);
-            welcomePageCardButton1.Name = "welcomePageCardButton1";
-            welcomePageCardButton1.Padding = new Padding(10);
-            welcomePageCardButton1.Size = new Size(438, 188);
-            welcomePageCardButton1.TabIndex = 8;
             // 
             // WelcomePageForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1094, 628);
-            Controls.Add(welcomePageCardButton1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(button3);
-            Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(1091, 628);
+            Controls.Add(tableLayoutPanel1);
             Margin = new Padding(2);
             MinimumSize = new Size(800, 600);
             Name = "WelcomePageForm";
             Text = "welcome page";
             WindowState = FormWindowState.Maximized;
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Label label1;
-        private Button button2;
-        private Button button3;
+        private Components.WelcomePageCardButton welcomePageCardAdmin;
+        private Components.WelcomePageCardButton welcomePageCardButton2;
+        private Components.WelcomePageCardButton welcomePageCardManager;
+        private Components.WelcomePageCardButton welcomePageCardKasir;
+        private TableLayoutPanel tableLayoutPanel1;
         private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Components.WelcomePageCardButton welcomePageCardButton1;
+        private Panel panel1;
+        private Label label1;
     }
 }

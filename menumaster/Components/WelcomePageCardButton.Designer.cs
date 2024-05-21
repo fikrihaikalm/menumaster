@@ -36,17 +36,17 @@
             // 
             labelCardName.AutoSize = true;
             labelCardName.Dock = DockStyle.Top;
-            labelCardName.Font = new Font("Arial", 20F);
+            labelCardName.Font = new Font("Arial", 16F);
             labelCardName.Location = new Point(10, 10);
             labelCardName.Name = "labelCardName";
-            labelCardName.Size = new Size(104, 39);
+            labelCardName.Size = new Size(86, 32);
             labelCardName.TabIndex = 0;
             labelCardName.Text = "label1";
             // 
             // buttonCardButton
             // 
             buttonCardButton.Dock = DockStyle.Bottom;
-            buttonCardButton.Font = new Font("Arial", 16F);
+            buttonCardButton.Font = new Font("Arial", 12F);
             buttonCardButton.Location = new Point(10, 88);
             buttonCardButton.MinimumSize = new Size(0, 50);
             buttonCardButton.Name = "buttonCardButton";
