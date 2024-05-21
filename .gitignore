@@ -396,3 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+menumaster/obj/
+menumaster/obj/Debug/net8.0-windows/menumaster.AssemblyInfo.cs
+menumaster/obj/Debug/net8.0-windows/menumaster.AssemblyInfoInputs.cache
+menumaster/obj/Debug/net8.0-windows/menumaster.assets.cache
+menumaster/obj/Debug/net8.0-windows/menumaster.GeneratedMSBuildEditorConfig.editorconfig
