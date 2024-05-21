@@ -45,19 +45,22 @@
             // 
             button1.Anchor = AnchorStyles.None;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(195, 419);
+            button1.Location = new Point(171, 314);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(100, 44);
+            button1.Size = new Size(88, 33);
             button1.TabIndex = 13;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(58, 359);
+            textBox2.Location = new Point(51, 269);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(237, 27);
+            textBox2.Size = new Size(208, 23);
             textBox2.TabIndex = 12;
             // 
             // label4
@@ -65,18 +68,19 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(58, 315);
+            label4.Location = new Point(51, 236);
             label4.Name = "label4";
-            label4.Size = new Size(97, 28);
+            label4.Size = new Size(79, 21);
             label4.TabIndex = 11;
             label4.Text = "Password";
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(58, 250);
+            textBox1.Location = new Point(51, 188);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(237, 27);
+            textBox1.Size = new Size(208, 23);
             textBox1.TabIndex = 10;
             // 
             // label3
@@ -84,9 +88,9 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(58, 205);
+            label3.Location = new Point(51, 154);
             label3.Name = "label3";
-            label3.Size = new Size(32, 28);
+            label3.Size = new Size(26, 21);
             label3.TabIndex = 9;
             label3.Text = "ID";
             // 
@@ -95,9 +99,9 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(58, 135);
+            label2.Location = new Point(51, 101);
             label2.Name = "label2";
-            label2.Size = new Size(237, 25);
+            label2.Size = new Size(197, 20);
             label2.TabIndex = 8;
             label2.Text = "please login to your account";
             // 
@@ -106,9 +110,9 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 37.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(45, 41);
+            label1.Location = new Point(39, 31);
             label1.Name = "label1";
-            label1.Size = new Size(508, 85);
+            label1.Size = new Size(410, 68);
             label1.TabIndex = 7;
             label1.Text = "Selamat Datang";
             // 
@@ -116,9 +120,10 @@
             // 
             button2.Anchor = AnchorStyles.None;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(58, 419);
+            button2.Location = new Point(51, 314);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(100, 44);
+            button2.Size = new Size(88, 33);
             button2.TabIndex = 14;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = true;
@@ -128,19 +133,20 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(559, 115);
+            pictureBox1.Location = new Point(489, 86);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(448, 348);
+            pictureBox1.Size = new Size(392, 261);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
             // Login_manajer
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1100, 642);
+            ClientSize = new Size(962, 482);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -150,10 +156,12 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            MinimumSize = new Size(800, 600);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(702, 460);
             Name = "Login_manajer";
             Text = "Login manajer";
             WindowState = FormWindowState.Maximized;
+            Load += Login_manajer_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
