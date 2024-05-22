@@ -6,18 +6,20 @@ Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanaka
 
 ## Anggota Tim
 
-| Nama                      | NIM          | Tugas                |
-|---------------------------|--------------|----------------------|
-| Riki Ega Pramana          | 202410103023 | Fitur Manager        |
-| Abraham Arghya Silaen     | 202410103031 | Fitur Manager        |
-| Shinta Nuria Agustin      | 212410103016 | Fitur Waiters        |
-| Chika Azalia Maghfira     | 232410103017 | Fitur Admin          |
-| Devitri Buaton            | 232410103026 | Fitur Admin          |
-| Aisyah Turohma            | 232410103028 | Fitur Admin          |
-| Laely Dwi Harianti        | 232410103062 | Fitur Admin          |
-| Muhammad Fikri Haikal     | 232410103050 | Fitur Waiters        |
-| Maulana Syahbana          | 232410103076 | Fitur Waiters        |
-| Ahmad Danar Purwonugroho  | 232410103096 | Fitur Waiters        |
+## Struktur Tim
+
+| Nama                      | NIM          | Tugas          | Role           |
+|---------------------------|--------------|----------------|----------------|
+| Riki Ega Pramana          | 202410103023 | Fitur Manager  | Front End      |
+| Abraham Arghya Silaen     | 202410103031 | Fitur Manager  | Back End       |
+| Shinta Nuria Agustin      | 212410103016 | Fitur Waiters  | Front End      |
+| Chika Azalia Maghfira     | 232410103017 | Fitur Admin    | Front End      |
+| Devitri Buaton            | 232410103026 | Fitur Admin    | Front End      |
+| Aisyah Turohma            | 232410103028 | Fitur Admin    | Back End       |
+| Muhammad Fikri Haikal     | 232410103050 | Fitur Waiters  | Back End & PM  |
+| Laely Dwi Harianti        | 232410103062 | Fitur Admin    | Front End      |
+| Maulana Syahbana          | 232410103076 | Fitur Waiters  | Front End      |
+| Ahmad Danar Purwonugroho  | 232410103096 | Fitur Waiters  | Back End       |
 
 ---
 
