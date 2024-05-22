@@ -28,6 +28,9 @@ namespace menumaster
             this.Hide();
         }
 
+        private void welcomePageCardManager_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

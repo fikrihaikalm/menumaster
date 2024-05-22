@@ -19,9 +19,7 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Manager_Home f2 = new Manager_Home();
-            f2.Show();
-            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
