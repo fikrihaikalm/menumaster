@@ -4,8 +4,6 @@ Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanaka
 
 ---
 
-## Anggota Tim
-
 ## Struktur Tim
 
 | Nama                      | NIM          | Tugas          | Role           |
