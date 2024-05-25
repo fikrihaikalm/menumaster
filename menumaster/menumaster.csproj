@@ -35,4 +35,14 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="forms\admin\" />
+    <Folder Include="forms\manager\" />
+    <Folder Include="forms\waiters\" />
+    <Folder Include="models\" />
+    <Folder Include="controllers\" />
+    <Folder Include="helpers\" />
+    <Folder Include="resources\" />
+  </ItemGroup>
+
 </Project>
