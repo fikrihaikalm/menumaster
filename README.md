@@ -24,7 +24,7 @@ Menu Master adalah sistem manajemen restoran yang dirancang untuk menyederhanaka
 ## Fitur Utama:
 
 1. **Sign Up**:
-   - Fitur ini digunakan oleh manajer untuk membuat akun.
+   - Fitur ini digunakan oleh manajer untuk membuat akun karyawan lain.
 
 2. **Sign In**:
    - Memungkinkan karyawan untuk mengakses platform dengan keamanan yang ditingkatkan, menggunakan kredensial yang unik.
