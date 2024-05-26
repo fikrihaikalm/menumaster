@@ -10,12 +10,15 @@
 
   <ItemGroup>
     <Compile Remove="admin\**" />
+    <Compile Remove="helpers\**" />
     <Compile Remove="kasir\**" />
     <Compile Remove="manajer\**" />
     <EmbeddedResource Remove="admin\**" />
+    <EmbeddedResource Remove="helpers\**" />
     <EmbeddedResource Remove="kasir\**" />
     <EmbeddedResource Remove="manajer\**" />
     <None Remove="admin\**" />
+    <None Remove="helpers\**" />
     <None Remove="kasir\**" />
     <None Remove="manajer\**" />
   </ItemGroup>
@@ -36,13 +39,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="forms\admin\" />
-    <Folder Include="forms\manager\" />
-    <Folder Include="forms\waiters\" />
-    <Folder Include="models\" />
-    <Folder Include="controllers\" />
-    <Folder Include="helpers\" />
-    <Folder Include="resources\" />
+    <Folder Include="Forms\admin\" />
+    <Folder Include="Forms\manager\" />
+    <Folder Include="Forms\waiters\" />
+    <Folder Include="Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.3" />
   </ItemGroup>
 
 </Project>
