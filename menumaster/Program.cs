@@ -1,4 +1,4 @@
-namespace menumaster.forms
+namespace menumaster
 {
     internal static class Program
     {
