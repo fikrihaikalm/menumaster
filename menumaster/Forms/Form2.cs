@@ -17,12 +17,12 @@ namespace menumaster
             InitializeComponent();
         }
 
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
-            admin_page admin_page = new admin_page();
+/*            admin_page admin_page = new admin_page();
             admin_page.Show();
-            this.Hide();
+            this.Hide();*/
 
             //string adminID = textBox1.Text;
             //string adminPassword = textBox2.Text;
@@ -47,6 +47,11 @@ namespace menumaster
             WelcomePageForm f1 = new WelcomePageForm();
             f1.Show();
             this.Close();
+        }
+
+        private void Login_admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
