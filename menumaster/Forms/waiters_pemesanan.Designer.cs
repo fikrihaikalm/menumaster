@@ -1,4 +1,5 @@
-﻿namespace menumaster.Forms.Waiters
+﻿
+namespace menumaster.Forms.Waiters
 {
     partial class waiters_pemesanan
     {
@@ -66,7 +67,6 @@
             LabelName.Size = new Size(56, 23);
             LabelName.TabIndex = 1;
             LabelName.Text = "Name";
-            LabelName.Click += label1_Click;
             // 
             // LableNoTelepone
             // 
@@ -107,7 +107,6 @@
             LabelTanggal.Size = new Size(69, 23);
             LabelTanggal.TabIndex = 5;
             LabelTanggal.Text = "Tanggal";
-            LabelTanggal.Click += label1_Click_1;
             // 
             // LabelUangMuka
             // 
@@ -118,7 +117,6 @@
             LabelUangMuka.Size = new Size(98, 23);
             LabelUangMuka.TabIndex = 7;
             LabelUangMuka.Text = "Uang Muka";
-            LabelUangMuka.Click += this.label1_Click_2;
             // 
             // UangMuka
             // 
@@ -131,7 +129,6 @@
             UangMuka.Size = new Size(570, 40);
             UangMuka.TabIndex = 4;
             UangMuka.Text = "";
-            UangMuka.TextChanged += richTextBox1_TextChanged;
             // 
             // LabelMeja
             // 
@@ -142,7 +139,6 @@
             LabelMeja.Size = new Size(47, 23);
             LabelMeja.TabIndex = 9;
             LabelMeja.Text = "Meja";
-            LabelMeja.Click += label1_Click_3;
             // 
             // label2
             // 
@@ -153,7 +149,6 @@
             label2.Size = new Size(168, 23);
             label2.TabIndex = 11;
             label2.Text = "Metode Pembayaran";
-            label2.Click += label2_Click;
             // 
             // Meja
             // 
