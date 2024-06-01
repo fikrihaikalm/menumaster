@@ -34,11 +34,12 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Cooper Black", 15F);
-            label1.Location = new Point(57, 24);
+            label1.Location = new Point(20, 32);
             label1.Name = "label1";
-            label1.Size = new Size(197, 35);
+            label1.Size = new Size(164, 29);
             label1.TabIndex = 0;
             label1.Text = "Pendapatan";
             label1.Click += label1_Click;
@@ -49,7 +50,7 @@
             button1.BackColor = Color.DarkSlateBlue;
             button1.Font = new Font("Franklin Gothic Medium Cond", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.HighlightText;
-            button1.Location = new Point(44, 722);
+            button1.Location = new Point(20, 557);
             button1.Name = "button1";
             button1.Size = new Size(135, 54);
             button1.TabIndex = 1;
@@ -59,14 +60,14 @@
             // 
             // Pendapatan
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1392, 812);
+            ClientSize = new Size(1111, 647);
             Controls.Add(button1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            MinimumSize = new Size(994, 736);
+            MinimumSize = new Size(800, 600);
             Name = "Pendapatan";
             Text = "Pendapatan";
             WindowState = FormWindowState.Maximized;

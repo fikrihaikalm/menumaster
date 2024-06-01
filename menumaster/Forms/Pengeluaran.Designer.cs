@@ -37,20 +37,23 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Cooper Black", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(80, 39);
+            label1.Location = new Point(11, 9);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(206, 35);
+            label1.Size = new Size(171, 29);
             label1.TabIndex = 0;
             label1.Text = "Pengeluaran";
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.DarkSlateBlue;
             button1.Font = new Font("Franklin Gothic Medium Cond", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.HighlightText;
-            button1.Location = new Point(49, 730);
+            button1.Location = new Point(11, 596);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(135, 54);
+            button1.Size = new Size(108, 43);
             button1.TabIndex = 2;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
@@ -58,13 +61,12 @@
             // 
             // Pengeluaran
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1391, 812);
+            ClientSize = new Size(1113, 650);
             Controls.Add(button1);
             Controls.Add(label1);
-            Margin = new Padding(4);
-            MinimumSize = new Size(994, 736);
+            MinimumSize = new Size(799, 598);
             Name = "Pengeluaran";
             Text = "Pengeluaran";
             WindowState = FormWindowState.Maximized;
