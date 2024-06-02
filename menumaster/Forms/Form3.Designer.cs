@@ -45,7 +45,7 @@
             // 
             button1.Anchor = AnchorStyles.None;
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(171, 314);
+            button1.Location = new Point(167, 308);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(88, 33);
@@ -57,7 +57,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(51, 269);
+            textBox2.Location = new Point(47, 263);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(208, 23);
@@ -68,7 +68,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(51, 236);
+            label4.Location = new Point(47, 230);
             label4.Name = "label4";
             label4.Size = new Size(79, 21);
             label4.TabIndex = 11;
@@ -77,7 +77,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(51, 188);
+            textBox1.Location = new Point(47, 182);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(208, 23);
@@ -88,7 +88,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(51, 154);
+            label3.Location = new Point(47, 148);
             label3.Name = "label3";
             label3.Size = new Size(26, 21);
             label3.TabIndex = 9;
@@ -99,7 +99,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(51, 101);
+            label2.Location = new Point(47, 95);
             label2.Name = "label2";
             label2.Size = new Size(197, 20);
             label2.TabIndex = 8;
@@ -110,7 +110,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 37.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 31);
+            label1.Location = new Point(35, 25);
             label1.Name = "label1";
             label1.Size = new Size(410, 68);
             label1.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             button2.Anchor = AnchorStyles.None;
             button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(51, 314);
+            button2.Location = new Point(47, 308);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(88, 33);
@@ -133,20 +133,21 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(489, 86);
+            pictureBox1.Location = new Point(485, 80);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(392, 261);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Login_manajer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(962, 482);
+            ClientSize = new Size(955, 471);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button1);

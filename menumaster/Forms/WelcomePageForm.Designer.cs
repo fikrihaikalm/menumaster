@@ -46,11 +46,11 @@
             welcomePageCardAdmin.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardAdmin.ButtonText = "Lanjutkan Sebagai Admin";
             welcomePageCardAdmin.CardName = "Admin";
-            welcomePageCardAdmin.Location = new Point(25, 246);
-            welcomePageCardAdmin.Margin = new Padding(10, 11, 10, 11);
+            welcomePageCardAdmin.Location = new Point(22, 183);
+            welcomePageCardAdmin.Margin = new Padding(9, 8, 9, 8);
             welcomePageCardAdmin.Name = "welcomePageCardAdmin";
-            welcomePageCardAdmin.Padding = new Padding(10, 11, 10, 11);
-            welcomePageCardAdmin.Size = new Size(325, 135);
+            welcomePageCardAdmin.Padding = new Padding(9, 8, 9, 8);
+            welcomePageCardAdmin.Size = new Size(285, 102);
             welcomePageCardAdmin.TabIndex = 8;
             welcomePageCardAdmin.ButtonClick += adminButton_Click;
             // 
@@ -61,11 +61,11 @@
             welcomePageCardManager.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardManager.ButtonText = "Lanjutkan Sebagai Manager";
             welcomePageCardManager.CardName = "Manager";
-            welcomePageCardManager.Location = new Point(382, 246);
-            welcomePageCardManager.Margin = new Padding(10, 11, 10, 11);
+            welcomePageCardManager.Location = new Point(334, 183);
+            welcomePageCardManager.Margin = new Padding(9, 8, 9, 8);
             welcomePageCardManager.Name = "welcomePageCardManager";
-            welcomePageCardManager.Padding = new Padding(10, 11, 10, 11);
-            welcomePageCardManager.Size = new Size(325, 135);
+            welcomePageCardManager.Padding = new Padding(9, 8, 9, 8);
+            welcomePageCardManager.Size = new Size(285, 102);
             welcomePageCardManager.TabIndex = 10;
             welcomePageCardManager.ButtonClick += managerButton_Click;
             welcomePageCardManager.Load += welcomePageCardManager_Load;
@@ -77,11 +77,11 @@
             welcomePageCardKasir.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardKasir.ButtonText = "Lanjutkan Sebagai Kasir";
             welcomePageCardKasir.CardName = "Kasir";
-            welcomePageCardKasir.Location = new Point(739, 246);
-            welcomePageCardKasir.Margin = new Padding(10, 11, 10, 11);
+            welcomePageCardKasir.Location = new Point(647, 183);
+            welcomePageCardKasir.Margin = new Padding(9, 8, 9, 8);
             welcomePageCardKasir.Name = "welcomePageCardKasir";
-            welcomePageCardKasir.Padding = new Padding(10, 11, 10, 11);
-            welcomePageCardKasir.Size = new Size(325, 135);
+            welcomePageCardKasir.Padding = new Padding(9, 8, 9, 8);
+            welcomePageCardKasir.Size = new Size(285, 102);
             welcomePageCardKasir.TabIndex = 11;
             welcomePageCardKasir.ButtonClick += kasirButton_Click;
             // 
@@ -97,13 +97,14 @@
             tableLayoutPanel1.Controls.Add(welcomePageCardAdmin, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(10, 11, 10, 11);
+            tableLayoutPanel1.Padding = new Padding(9, 8, 9, 8);
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(1091, 628);
+            tableLayoutPanel1.Size = new Size(955, 471);
             tableLayoutPanel1.TabIndex = 13;
             // 
             // panel1
@@ -112,9 +113,10 @@
             tableLayoutPanel1.SetColumnSpan(panel1, 3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(196, 14);
+            panel1.Location = new Point(171, 10);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(699, 125);
+            panel1.Size = new Size(612, 94);
             panel1.TabIndex = 12;
             // 
             // label1
@@ -123,7 +125,7 @@
             label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(699, 100);
+            label1.Size = new Size(612, 75);
             label1.TabIndex = 3;
             label1.Text = "Selamat Datang";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -133,21 +135,21 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(298, 100);
+            label2.Location = new Point(261, 75);
             label2.Name = "label2";
-            label2.Size = new Size(120, 25);
+            label2.Size = new Size(100, 20);
             label2.TabIndex = 4;
             label2.Text = "silahkan login";
             // 
             // WelcomePageForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1091, 628);
+            ClientSize = new Size(955, 471);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(2, 3, 2, 3);
-            MinimumSize = new Size(800, 598);
+            Margin = new Padding(2, 2, 2, 2);
+            MinimumSize = new Size(702, 460);
             Name = "WelcomePageForm";
             Text = "welcome page";
             WindowState = FormWindowState.Maximized;

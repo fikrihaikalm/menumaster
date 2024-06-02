@@ -1,4 +1,5 @@
-﻿using System;
+﻿using menumaster.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,10 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Manager_Homepage f1 = new Manager_Homepage();
+            f1.Show();
+            this.Hide();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             WelcomePageForm f1 = new WelcomePageForm();
@@ -30,6 +32,11 @@ namespace menumaster
         }
 
         private void Login_manajer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
