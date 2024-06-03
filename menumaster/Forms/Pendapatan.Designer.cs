@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pendapatan));
             label1 = new Label();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -39,7 +42,7 @@
             label1.Font = new Font("Cooper Black", 15F);
             label1.Location = new Point(20, 32);
             label1.Name = "label1";
-            label1.Size = new Size(164, 29);
+            label1.Size = new Size(197, 35);
             label1.TabIndex = 0;
             label1.Text = "Pendapatan";
             label1.Click += label1_Click;
@@ -58,11 +61,24 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BackgroundImage = Properties.Resources.ep_back;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(34, 572);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(26, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
             // Pendapatan
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 647);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -71,6 +87,7 @@
             Name = "Pendapatan";
             Text = "Pendapatan";
             WindowState = FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -79,5 +96,6 @@
 
         private Label label1;
         private Button button1;
+        private PictureBox pictureBox1;
     }
 }

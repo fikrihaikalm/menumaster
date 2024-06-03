@@ -63,9 +63,29 @@ namespace menumaster.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ep_back {
+            get {
+                object obj = ResourceManager.GetObject("ep_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Manage {
             get {
                 object obj = ResourceManager.GetObject("Manage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Manage1 {
+            get {
+                object obj = ResourceManager.GetObject("Manage1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,16 @@ namespace menumaster.Properties {
         internal static System.Drawing.Bitmap Screenshot_2024_06_03_194026 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-06-03 194026", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vector_88 {
+            get {
+                object obj = ResourceManager.GetObject("Vector 88", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
