@@ -96,6 +96,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.Location = new Point(578, 164);
             pictureBox1.Name = "pictureBox1";
@@ -106,6 +107,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.BackgroundImage = Properties.Resources.Payment;
             pictureBox2.Location = new Point(583, 325);
             pictureBox2.Name = "pictureBox2";
@@ -115,6 +117,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Anchor = AnchorStyles.None;
             pictureBox3.BackgroundImage = Properties.Resources.Manage;
             pictureBox3.Location = new Point(579, 477);
             pictureBox3.Name = "pictureBox3";
