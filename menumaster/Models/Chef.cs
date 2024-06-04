@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace menumaster.Models
 {
-    public class Person
+    public class Chef : Karyawan
     {
-        public string Nama { get; set; }
-        public string Telp { get; set; }
+        public bool MenerimaPesanan() { /* implementation */ return true; }
     }
 }

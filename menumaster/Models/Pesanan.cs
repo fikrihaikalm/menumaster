@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace menumaster.Models
 {
-    public class Person
+    public class Pesanan
     {
-        public string Nama { get; set; }
-        public string Telp { get; set; }
+        public int IdOrder { get; set; }
+        public string StatusPesanan { get; set; }
     }
 }

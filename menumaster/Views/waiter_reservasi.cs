@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace menumaster.Forms.Waiters
 {
-    public partial class waiters_pemesanan : Form
+    public partial class waiter_reservasi : Form
     {
-        public waiters_pemesanan()
+        public waiter_reservasi()
         {
             InitializeComponent();
             this.Tanggal.CalendarForeColor = Color.Aqua;

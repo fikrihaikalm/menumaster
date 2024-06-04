@@ -1,7 +1,7 @@
 ﻿
 namespace menumaster.Forms.Waiters
 {
-    partial class waiters_pemesanan
+    partial class waiter_reservasi
     {
         /// <summary>
         /// Required designer variable.
