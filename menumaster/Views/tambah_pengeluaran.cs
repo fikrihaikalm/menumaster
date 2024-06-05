@@ -16,5 +16,12 @@ namespace menumaster
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            admin_page admin_page = new admin_page();
+            admin_page.Show();
+            this.Hide();
+        }
     }
 }

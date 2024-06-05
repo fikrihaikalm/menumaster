@@ -27,7 +27,7 @@ namespace menumaster
         }
         private void LoadData()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {

@@ -32,7 +32,9 @@
             label1 = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -75,11 +77,22 @@
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(149, 136);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(864, 529);
+            dataGridView1.TabIndex = 4;
+            // 
             // admin_pengeluaran
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1391, 812);
+            Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -89,6 +102,7 @@
             Text = "Pengeluaran";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -98,5 +112,6 @@
         private Label label1;
         private Button button1;
         private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
     }
 }

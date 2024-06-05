@@ -32,7 +32,9 @@
             label1 = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -73,21 +75,32 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // Pendapatan
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(180, 132);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(765, 362);
+            dataGridView1.TabIndex = 5;
+            // 
+            // admin_pendapatan
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 647);
+            Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             MinimumSize = new Size(800, 600);
-            Name = "Pendapatan";
+            Name = "admin_pendapatan";
             Text = "Pendapatan";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +110,6 @@
         private Label label1;
         private Button button1;
         private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
     }
 }
