@@ -37,9 +37,10 @@
             labelCardName.AutoSize = true;
             labelCardName.Dock = DockStyle.Top;
             labelCardName.Font = new Font("Arial", 16F);
-            labelCardName.Location = new Point(10, 10);
+            labelCardName.Location = new Point(12, 12);
+            labelCardName.Margin = new Padding(4, 0, 4, 0);
             labelCardName.Name = "labelCardName";
-            labelCardName.Size = new Size(86, 32);
+            labelCardName.Size = new Size(98, 36);
             labelCardName.TabIndex = 0;
             labelCardName.Text = "label1";
             // 
@@ -47,24 +48,26 @@
             // 
             buttonCardButton.Dock = DockStyle.Bottom;
             buttonCardButton.Font = new Font("Arial", 12F);
-            buttonCardButton.Location = new Point(10, 88);
-            buttonCardButton.MinimumSize = new Size(0, 50);
+            buttonCardButton.Location = new Point(12, 111);
+            buttonCardButton.Margin = new Padding(4);
+            buttonCardButton.MinimumSize = new Size(0, 62);
             buttonCardButton.Name = "buttonCardButton";
-            buttonCardButton.Size = new Size(328, 50);
+            buttonCardButton.Size = new Size(411, 62);
             buttonCardButton.TabIndex = 1;
             buttonCardButton.Text = "button1";
             buttonCardButton.UseVisualStyleBackColor = true;
             // 
             // WelcomePageCardButton
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(buttonCardButton);
             Controls.Add(labelCardName);
+            Margin = new Padding(4);
             Name = "WelcomePageCardButton";
-            Padding = new Padding(10);
-            Size = new Size(348, 148);
+            Padding = new Padding(12);
+            Size = new Size(435, 185);
             ResumeLayout(false);
             PerformLayout();
         }

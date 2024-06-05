@@ -32,5 +32,10 @@ namespace menumaster
         {
 
         }
+
+        private void WelcomePageForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
