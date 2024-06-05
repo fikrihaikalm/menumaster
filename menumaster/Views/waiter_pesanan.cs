@@ -16,5 +16,16 @@ namespace menumaster.Views
         {
             InitializeComponent();
         }
+
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Pesanan sudah dibuat", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                this.Hide(); // Menyembunyikan form saat ini
+                waiter_homepage homePage = new waiter_homepage();
+                homePage.Show(); // Menampilkan form HomePage
+            }
+        }
     }
 }

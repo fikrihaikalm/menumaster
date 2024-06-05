@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "waiter_pesanan";
+            btnSimpan = new Button();
+            SuspendLayout();
+            // 
+            // btnSimpan
+            // 
+            btnSimpan.BackColor = SystemColors.ActiveCaption;
+            btnSimpan.Font = new Font("Sylfaen", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSimpan.Location = new Point(598, 382);
+            btnSimpan.Name = "btnSimpan";
+            btnSimpan.Size = new Size(174, 46);
+            btnSimpan.TabIndex = 0;
+            btnSimpan.Text = "SIMPAN";
+            btnSimpan.UseVisualStyleBackColor = false;
+            btnSimpan.Click += btnSimpan_Click;
+            // 
+            // waiter_pesanan
+            // 
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnSimpan);
+            Name = "waiter_pesanan";
+            Text = "waiter_pesanan";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnSimpan;
     }
 }

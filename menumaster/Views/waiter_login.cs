@@ -1,4 +1,5 @@
-﻿using System;
+﻿using menumaster.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,11 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            {
+                waiter_homepage homepage = new waiter_homepage();
+                homepage.Show();
+                this.Close();
+            }
         }
     }
 }

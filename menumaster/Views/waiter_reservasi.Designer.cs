@@ -43,7 +43,7 @@ namespace menumaster.Forms.Waiters
             comboBox1 = new ComboBox();
             BtnSimpan = new Button();
             BtnHapus = new Button();
-            button1 = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // name
@@ -51,10 +51,11 @@ namespace menumaster.Forms.Waiters
             name.BackColor = Color.FromArgb(231, 231, 241);
             name.BorderStyle = BorderStyle.None;
             name.DetectUrls = false;
-            name.Location = new Point(257, 48);
+            name.Location = new Point(418, 77);
+            name.Margin = new Padding(5);
             name.Multiline = false;
             name.Name = "name";
-            name.Size = new Size(570, 40);
+            name.Size = new Size(926, 64);
             name.TabIndex = 0;
             name.Text = "";
             // 
@@ -62,9 +63,10 @@ namespace menumaster.Forms.Waiters
             // 
             LabelName.AutoSize = true;
             LabelName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelName.Location = new Point(257, 13);
+            LabelName.Location = new Point(418, 21);
+            LabelName.Margin = new Padding(5, 0, 5, 0);
             LabelName.Name = "LabelName";
-            LabelName.Size = new Size(56, 23);
+            LabelName.Size = new Size(91, 38);
             LabelName.TabIndex = 1;
             LabelName.Text = "Name";
             // 
@@ -72,9 +74,10 @@ namespace menumaster.Forms.Waiters
             // 
             LableNoTelepone.AutoSize = true;
             LableNoTelepone.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LableNoTelepone.Location = new Point(257, 103);
+            LableNoTelepone.Location = new Point(418, 165);
+            LableNoTelepone.Margin = new Padding(5, 0, 5, 0);
             LableNoTelepone.Name = "LableNoTelepone";
-            LableNoTelepone.Size = new Size(110, 23);
+            LableNoTelepone.Size = new Size(180, 38);
             LableNoTelepone.TabIndex = 3;
             LableNoTelepone.Text = "No. Telepone";
             // 
@@ -83,28 +86,31 @@ namespace menumaster.Forms.Waiters
             NoTelepone.BackColor = Color.FromArgb(231, 231, 241);
             NoTelepone.BorderStyle = BorderStyle.None;
             NoTelepone.DetectUrls = false;
-            NoTelepone.Location = new Point(257, 138);
+            NoTelepone.Location = new Point(418, 221);
+            NoTelepone.Margin = new Padding(5);
             NoTelepone.Multiline = false;
             NoTelepone.Name = "NoTelepone";
-            NoTelepone.Size = new Size(570, 40);
+            NoTelepone.Size = new Size(926, 64);
             NoTelepone.TabIndex = 1;
             NoTelepone.Text = "";
             // 
             // Tanggal
             // 
             Tanggal.CalendarMonthBackground = SystemColors.ButtonHighlight;
-            Tanggal.Location = new Point(257, 235);
+            Tanggal.Location = new Point(418, 376);
+            Tanggal.Margin = new Padding(5);
             Tanggal.Name = "Tanggal";
-            Tanggal.Size = new Size(570, 27);
+            Tanggal.Size = new Size(924, 39);
             Tanggal.TabIndex = 3;
             // 
             // LabelTanggal
             // 
             LabelTanggal.AutoSize = true;
             LabelTanggal.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelTanggal.Location = new Point(257, 197);
+            LabelTanggal.Location = new Point(418, 315);
+            LabelTanggal.Margin = new Padding(5, 0, 5, 0);
             LabelTanggal.Name = "LabelTanggal";
-            LabelTanggal.Size = new Size(69, 23);
+            LabelTanggal.Size = new Size(112, 38);
             LabelTanggal.TabIndex = 5;
             LabelTanggal.Text = "Tanggal";
             // 
@@ -112,9 +118,10 @@ namespace menumaster.Forms.Waiters
             // 
             LabelUangMuka.AutoSize = true;
             LabelUangMuka.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelUangMuka.Location = new Point(257, 282);
+            LabelUangMuka.Location = new Point(418, 451);
+            LabelUangMuka.Margin = new Padding(5, 0, 5, 0);
             LabelUangMuka.Name = "LabelUangMuka";
-            LabelUangMuka.Size = new Size(98, 23);
+            LabelUangMuka.Size = new Size(159, 38);
             LabelUangMuka.TabIndex = 7;
             LabelUangMuka.Text = "Uang Muka";
             // 
@@ -123,10 +130,11 @@ namespace menumaster.Forms.Waiters
             UangMuka.BackColor = Color.FromArgb(231, 231, 241);
             UangMuka.BorderStyle = BorderStyle.None;
             UangMuka.DetectUrls = false;
-            UangMuka.Location = new Point(257, 317);
+            UangMuka.Location = new Point(418, 507);
+            UangMuka.Margin = new Padding(5);
             UangMuka.Multiline = false;
             UangMuka.Name = "UangMuka";
-            UangMuka.Size = new Size(570, 40);
+            UangMuka.Size = new Size(926, 64);
             UangMuka.TabIndex = 4;
             UangMuka.Text = "";
             // 
@@ -134,9 +142,10 @@ namespace menumaster.Forms.Waiters
             // 
             LabelMeja.AutoSize = true;
             LabelMeja.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelMeja.Location = new Point(257, 372);
+            LabelMeja.Location = new Point(418, 595);
+            LabelMeja.Margin = new Padding(5, 0, 5, 0);
             LabelMeja.Name = "LabelMeja";
-            LabelMeja.Size = new Size(47, 23);
+            LabelMeja.Size = new Size(78, 38);
             LabelMeja.TabIndex = 9;
             LabelMeja.Text = "Meja";
             // 
@@ -144,9 +153,10 @@ namespace menumaster.Forms.Waiters
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(257, 468);
+            label2.Location = new Point(418, 749);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(168, 23);
+            label2.Size = new Size(273, 38);
             label2.TabIndex = 11;
             label2.Text = "Metode Pembayaran";
             // 
@@ -155,11 +165,12 @@ namespace menumaster.Forms.Waiters
             Meja.BackColor = Color.FromArgb(231, 231, 241);
             Meja.FormattingEnabled = true;
             Meja.Items.AddRange(new object[] { "No. 1", "No. 2", "No. 3", "No. 4", "No. 5", "No. 6", "No. 7", "No. 8", "No. 9", "No. 10" });
-            Meja.Location = new Point(257, 407);
+            Meja.Location = new Point(418, 651);
+            Meja.Margin = new Padding(5);
             Meja.MaxDropDownItems = 10;
             Meja.Name = "Meja";
             Meja.RightToLeft = RightToLeft.No;
-            Meja.Size = new Size(570, 28);
+            Meja.Size = new Size(924, 40);
             Meja.TabIndex = 5;
             // 
             // comboBox1
@@ -167,52 +178,58 @@ namespace menumaster.Forms.Waiters
             comboBox1.BackColor = Color.FromArgb(231, 231, 241);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Cash", "Transfer" });
-            comboBox1.Location = new Point(257, 503);
+            comboBox1.Location = new Point(418, 805);
+            comboBox1.Margin = new Padding(5);
             comboBox1.MaxDropDownItems = 10;
             comboBox1.Name = "comboBox1";
             comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(570, 28);
+            comboBox1.Size = new Size(924, 40);
             comboBox1.TabIndex = 12;
             // 
             // BtnSimpan
             // 
             BtnSimpan.BackColor = Color.FromArgb(90, 103, 186);
             BtnSimpan.ForeColor = Color.White;
-            BtnSimpan.Location = new Point(954, 547);
+            BtnSimpan.Location = new Point(1550, 875);
+            BtnSimpan.Margin = new Padding(5);
             BtnSimpan.Name = "BtnSimpan";
-            BtnSimpan.Size = new Size(119, 48);
+            BtnSimpan.Size = new Size(193, 77);
             BtnSimpan.TabIndex = 13;
             BtnSimpan.Text = "Simpan";
             BtnSimpan.UseVisualStyleBackColor = false;
+            BtnSimpan.Click += BtnSimpan_Click;
             // 
             // BtnHapus
             // 
             BtnHapus.BackColor = Color.FromArgb(90, 103, 186);
             BtnHapus.ForeColor = Color.White;
-            BtnHapus.Location = new Point(829, 547);
+            BtnHapus.Location = new Point(1347, 875);
+            BtnHapus.Margin = new Padding(5);
             BtnHapus.Name = "BtnHapus";
-            BtnHapus.Size = new Size(119, 48);
+            BtnHapus.Size = new Size(193, 77);
             BtnHapus.TabIndex = 14;
             BtnHapus.Text = "Hapus";
             BtnHapus.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnBack
             // 
-            button1.BackColor = Color.FromArgb(90, 103, 186);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(12, 547);
-            button1.Name = "button1";
-            button1.Size = new Size(119, 48);
-            button1.TabIndex = 15;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = false;
+            btnBack.BackColor = Color.FromArgb(90, 103, 186);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(20, 875);
+            btnBack.Margin = new Padding(5);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(193, 77);
+            btnBack.TabIndex = 15;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
-            // waiters_pemesanan
+            // waiter_reservasi
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1085, 625);
-            Controls.Add(button1);
+            ClientSize = new Size(1763, 1000);
+            Controls.Add(btnBack);
             Controls.Add(BtnHapus);
             Controls.Add(BtnSimpan);
             Controls.Add(comboBox1);
@@ -227,7 +244,8 @@ namespace menumaster.Forms.Waiters
             Controls.Add(NoTelepone);
             Controls.Add(LabelName);
             Controls.Add(name);
-            Name = "waiters_pemesanan";
+            Margin = new Padding(5);
+            Name = "waiter_reservasi";
             Text = "Waiters Pemesanan";
             WindowState = FormWindowState.Maximized;
             Load += waiters_pemesanan_Load;
@@ -251,6 +269,6 @@ namespace menumaster.Forms.Waiters
         private ComboBox comboBox1;
         private Button BtnSimpan;
         private Button BtnHapus;
-        private Button button1;
+        private Button btnBack;
     }
 }
