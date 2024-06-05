@@ -140,7 +140,7 @@
             button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(467, 104);
-            button4.TabIndex = 7;
+            button4.TabIndex = 0;
             button4.Text = "Pengeluaran Operasional";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;

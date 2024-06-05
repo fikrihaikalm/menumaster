@@ -55,6 +55,7 @@
             button4.TabIndex = 24;
             button4.Text = "Tambah Jenis Pengeluaran";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -68,6 +69,7 @@
             button3.TabIndex = 23;
             button3.Text = "Hapus";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -81,6 +83,7 @@
             button2.TabIndex = 22;
             button2.Text = "Simpan";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // comboBox1
             // 
@@ -93,6 +96,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(523, 46);
             comboBox1.TabIndex = 21;
+            comboBox1.Text = "Pilih jenis";
             // 
             // textBox2
             // 
@@ -209,6 +213,7 @@
             Name = "tambah_pengeluaran";
             Text = "tambah_pengeluaran";
             WindowState = FormWindowState.Maximized;
+            Load += tambah_pengeluaran_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
