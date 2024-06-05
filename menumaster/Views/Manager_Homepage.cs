@@ -18,9 +18,7 @@ namespace menumaster.Forms
         }
         private void button2_Click (object sender, EventArgs e)
         {
-            Manager_KelolaKaryawan f1 = new Manager_KelolaKaryawan();
-            f1.Show();
-            this.Hide();
+            
         }
         private void Manager_Homepage_Load(object sender, EventArgs e)
         {
