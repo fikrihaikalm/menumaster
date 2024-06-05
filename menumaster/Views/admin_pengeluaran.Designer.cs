@@ -40,12 +40,13 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Cooper Black", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(14, 11);
+            label1.Location = new Point(29, 32);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(206, 35);
             label1.TabIndex = 0;
             label1.Text = "Pengeluaran";
+            label1.Click += label1_Click;
             // 
             // button1
             // 
@@ -74,7 +75,7 @@
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
-            // Pengeluaran
+            // admin_pengeluaran
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -82,9 +83,9 @@
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MinimumSize = new Size(993, 734);
-            Name = "Pengeluaran";
+            Name = "admin_pengeluaran";
             Text = "Pengeluaran";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
