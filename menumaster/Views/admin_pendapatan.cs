@@ -14,8 +14,12 @@ namespace menumaster
 {
     public partial class admin_pendapatan : Form
     {
-        private string tanggal1;
-        private string tanggal2;
+        private DateTime tanggal1;
+        private DateTime tanggal2;
+
+        private DateOnly tanggalawal;
+        private DateOnly tanggalakhir;
+
 
         public admin_pendapatan()
         {
@@ -50,9 +54,10 @@ namespace menumaster
         }
         private void LoadData()
         {
-            tanggal1 = dateTimePicker1.Value.ToString();
-
-            tanggal2 = dateTimePicker2.Value.ToString();
+            tanggal1 = dateTimePicker1.Value;
+            tanggalawal = DateOnly.FromDateTime(tanggal1);
+            tanggal2 = dateTimePicker2.Value;
+            tanggalakhir = DateOnly.FromDateTime(tanggal2);
 
             string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
@@ -64,9 +69,9 @@ namespace menumaster
                 NpgsqlCommand command = new NpgsqlCommand(sql, conn);
 
 
-                command.Parameters.AddWithValue("tanggalawal", tanggal1);
+                command.Parameters.AddWithValue("tanggalawal", tanggalawal);
 
-                command.Parameters.AddWithValue("tanggalakhir", tanggal2);
+                command.Parameters.AddWithValue("tanggalakhir", tanggalakhir);
 
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(command);
                 DataTable dt = new DataTable();
