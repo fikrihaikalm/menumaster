@@ -48,11 +48,6 @@ namespace menumaster
 
         private void button2_Click(object sender, EventArgs e)
         {
-            tanggal1 = dateTimePicker1.Value;
-            tanggalawal = tanggal1.ToString();
-
-            tanggal2 = dateTimePicker2.Value;
-            tanggalakhir = tanggal2.ToString();
 
             if (tanggal1 != DateTime.MinValue)
             {
@@ -63,18 +58,21 @@ namespace menumaster
                 MessageBox.Show("silahkan pilih tanggal!");
             }
 
-
-
         }
         private void LoadData()
         {
+            tanggal1 = dateTimePicker1.Value;
+            tanggalawal = tanggal1.ToString();
+
+            tanggal2 = dateTimePicker2.Value;
+            tanggalakhir = tanggal2.ToString();
+
             string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {
                 conn.Open();
-                string sql = "select total_harga as pendapatan, tanggal_pemesanan as tanggal from pesanan" +
-                    "where tanggal_pemesanan >= @tanggalawal and tanggal_pemesanan <= tanggalakhir";
+                string sql = "select total_harga as pendapatan, tanggal_pemesanan as tanggal from pesanan where tanggal_pemesanan >= @tanggalawal and tanggal_pemesanan <= @tanggalakhir";
 
                 NpgsqlCommand command = new NpgsqlCommand(sql, conn);
 
@@ -83,7 +81,7 @@ namespace menumaster
 
                 command.Parameters.AddWithValue("@tanggalakhir", tanggalakhir);
 
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(command);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
