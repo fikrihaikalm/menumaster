@@ -80,5 +80,12 @@ namespace menumaster
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tambah_pengeluaran Pengeluaran = new tambah_pengeluaran();
+            Pengeluaran.Show();
+            this.Hide();
+        }
     }
 }

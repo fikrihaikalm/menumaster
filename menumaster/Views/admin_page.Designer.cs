@@ -52,7 +52,7 @@
             button3.Anchor = AnchorStyles.None;
             button3.BackColor = SystemColors.GradientInactiveCaption;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(346, 580);
+            button3.Location = new Point(460, 546);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(467, 104);
@@ -66,7 +66,7 @@
             button1.Anchor = AnchorStyles.None;
             button1.BackColor = SystemColors.GradientInactiveCaption;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(346, 316);
+            button1.Location = new Point(460, 282);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(467, 107);
@@ -80,7 +80,7 @@
             button2.Anchor = AnchorStyles.None;
             button2.BackColor = SystemColors.GradientInactiveCaption;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(346, 187);
+            button2.Location = new Point(460, 153);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(467, 104);
@@ -104,7 +104,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(384, 222);
+            pictureBox1.Location = new Point(498, 188);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(36, 40);
             pictureBox1.TabIndex = 4;
@@ -115,7 +115,7 @@
             // 
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.BackgroundImage = Properties.Resources.Payment;
-            pictureBox2.Location = new Point(389, 356);
+            pictureBox2.Location = new Point(503, 322);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(31, 32);
             pictureBox2.TabIndex = 5;
@@ -125,7 +125,7 @@
             // 
             pictureBox3.Anchor = AnchorStyles.None;
             pictureBox3.BackgroundImage = Properties.Resources.Manage;
-            pictureBox3.Location = new Point(385, 615);
+            pictureBox3.Location = new Point(499, 581);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(35, 37);
             pictureBox3.TabIndex = 6;
@@ -136,19 +136,20 @@
             button4.Anchor = AnchorStyles.None;
             button4.BackColor = SystemColors.GradientInactiveCaption;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(346, 450);
+            button4.Location = new Point(460, 416);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
             button4.Size = new Size(467, 104);
             button4.TabIndex = 7;
             button4.Text = "Pengeluaran Operasional";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // pictureBox4
             // 
             pictureBox4.Anchor = AnchorStyles.None;
             pictureBox4.BackgroundImage = Properties.Resources.Payment;
-            pictureBox4.Location = new Point(389, 486);
+            pictureBox4.Location = new Point(503, 452);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(31, 32);
             pictureBox4.TabIndex = 8;

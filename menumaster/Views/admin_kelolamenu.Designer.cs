@@ -43,10 +43,10 @@
             button1.BackColor = Color.DarkSlateBlue;
             button1.Font = new Font("Franklin Gothic Medium Cond", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.HighlightText;
-            button1.Location = new Point(11, 598);
+            button1.Location = new Point(14, 748);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(108, 43);
+            button1.Size = new Size(135, 54);
             button1.TabIndex = 2;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
@@ -56,10 +56,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Cooper Black", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 9);
+            label1.Location = new Point(28, 11);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(169, 29);
+            label1.Size = new Size(204, 35);
             label1.TabIndex = 3;
             label1.Text = "Kelola Menu";
             // 
@@ -67,35 +67,38 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 58);
+            dataGridView1.Location = new Point(28, 72);
+            dataGridView1.Margin = new Padding(4, 4, 4, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1062, 509);
+            dataGridView1.Size = new Size(1328, 636);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = Properties.Resources.ep_back;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(22, 611);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Location = new Point(28, 764);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(21, 19);
+            pictureBox1.Size = new Size(26, 24);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // admin_kelolamenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1114, 652);
+            ClientSize = new Size(1392, 815);
             Controls.Add(pictureBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Controls.Add(button1);
-            MinimumSize = new Size(799, 598);
+            Margin = new Padding(4, 4, 4, 4);
+            MinimumSize = new Size(993, 734);
             Name = "admin_kelolamenu";
             Text = "kelolamenu";
             WindowState = FormWindowState.Maximized;
