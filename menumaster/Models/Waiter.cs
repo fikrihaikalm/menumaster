@@ -8,7 +8,7 @@ namespace menumaster.Models
 {
     public class Waiter : Karyawan
     {
-        public bool MembuatPesanan() { /* implementation */ return true; }
+        public bool MembuatPesanan() { /* implementatioon */ return true; }
         public bool HapusPesanan() { /* implementation */ return true; }
         public bool UbahPesanan() { /* implementation */ return true; }
         public bool MembuatReservasi() { /* implementation */ return true; }
