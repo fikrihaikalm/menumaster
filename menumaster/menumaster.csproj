@@ -48,7 +48,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 
   <ItemGroup>
