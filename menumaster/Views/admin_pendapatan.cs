@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace menumaster
 {
-    public partial class Pengeluaran : Form
+    public partial class admin_pendapatan : Form
     {
-        public Pengeluaran()
+        public admin_pendapatan()
         {
             InitializeComponent();
         }
@@ -22,6 +22,11 @@ namespace menumaster
             admin_page admin_page = new admin_page();
             admin_page.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

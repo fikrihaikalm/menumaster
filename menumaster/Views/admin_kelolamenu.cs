@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace menumaster
 {
-    public partial class kelolamenu : Form
+    public partial class admin_kelolamenu : Form
     {
-        public kelolamenu()
+        public admin_kelolamenu()
         {
             InitializeComponent();
         }

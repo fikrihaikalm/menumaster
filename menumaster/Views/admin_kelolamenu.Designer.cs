@@ -1,6 +1,6 @@
 ﻿namespace menumaster
 {
-    partial class kelolamenu
+    partial class admin_kelolamenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kelolamenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_kelolamenu));
             button1 = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
