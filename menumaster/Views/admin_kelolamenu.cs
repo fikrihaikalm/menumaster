@@ -16,6 +16,7 @@ namespace menumaster
         public admin_kelolamenu()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace menumaster
         }
         private void LoadData()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {
