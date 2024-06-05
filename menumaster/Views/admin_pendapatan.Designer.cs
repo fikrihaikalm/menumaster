@@ -47,7 +47,7 @@
             label1.Font = new Font("Cooper Black", 15F);
             label1.Location = new Point(20, 32);
             label1.Name = "label1";
-            label1.Size = new Size(197, 35);
+            label1.Size = new Size(164, 29);
             label1.TabIndex = 0;
             label1.Text = "Pendapatan";
             label1.Click += label1_Click;
@@ -91,15 +91,17 @@
             // 
             dateTimePicker1.Location = new Point(209, 113);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
+            dateTimePicker1.Size = new Size(300, 27);
             dateTimePicker1.TabIndex = 6;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Location = new Point(546, 113);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(300, 31);
+            dateTimePicker2.Size = new Size(300, 27);
             dateTimePicker2.TabIndex = 7;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // button2
             // 
@@ -110,10 +112,11 @@
             button2.TabIndex = 8;
             button2.Text = "Tampilkan";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // admin_pendapatan
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 647);
             Controls.Add(button2);
