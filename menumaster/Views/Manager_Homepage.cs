@@ -30,7 +30,16 @@ namespace menumaster.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
+            WelcomePageForm f1 = new WelcomePageForm();
+            f1.Show();
+            this.Close();
+        }
 
+        private void btnlaporankeuangan_Click(object sender, EventArgs e)
+        {
+            LaporanKeuanganForm LK = new LaporanKeuanganForm();
+            LK.Show();
+            this.Close();
         }
     }
 }
