@@ -88,5 +88,12 @@ namespace menumaster
             Pengeluaran.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Login_admin la = new Login_admin();
+            la.Show();
+            this.Hide();
+        }
     }
 }

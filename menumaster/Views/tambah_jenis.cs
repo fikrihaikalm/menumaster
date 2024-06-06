@@ -23,7 +23,7 @@ namespace menumaster.Views
         {
             string jenis_pengeluaran = textBox1.Text;
 
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 // Correct the SQL statement to match the table schema

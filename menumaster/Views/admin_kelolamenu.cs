@@ -22,7 +22,7 @@ namespace menumaster.Views
 
         private DataTable kelolamenu()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
 
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
@@ -61,7 +61,7 @@ namespace menumaster.Views
 
         private void LoadData()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {
@@ -94,7 +94,7 @@ namespace menumaster.Views
             string deskripsiMenu = textBox3.Text;
             int jenisKategori = (int)comboBox1.SelectedValue;
 
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 string masuk = "INSERT INTO menu (nama, harga, deskripsi, id_kategori) VALUES (@nama, @harga, @deskripsi, @id_kategori)";

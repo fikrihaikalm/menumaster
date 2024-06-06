@@ -49,11 +49,11 @@
             // 
             button3.Anchor = AnchorStyles.None;
             button3.BackColor = SystemColors.GradientInactiveCaption;
-            button3.Font = new Font("Segoe UI", 10.8F);
-            button3.Location = new Point(500, 519);
+            button3.Font = new Font("Segoe UI", 13.8F);
+            button3.Location = new Point(473, 513);
             button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(374, 83);
+            button3.Size = new Size(465, 83);
             button3.TabIndex = 2;
             button3.Text = "Kelola Menu";
             button3.UseVisualStyleBackColor = false;
@@ -63,11 +63,11 @@
             // 
             button1.Anchor = AnchorStyles.None;
             button1.BackColor = SystemColors.GradientInactiveCaption;
-            button1.Font = new Font("Segoe UI", 10.8F);
-            button1.Location = new Point(500, 308);
+            button1.Font = new Font("Segoe UI", 13.8F);
+            button1.Location = new Point(473, 302);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(374, 86);
+            button1.Size = new Size(465, 86);
             button1.TabIndex = 0;
             button1.Text = "Pengeluaran";
             button1.UseVisualStyleBackColor = false;
@@ -77,11 +77,11 @@
             // 
             button2.Anchor = AnchorStyles.None;
             button2.BackColor = SystemColors.GradientInactiveCaption;
-            button2.Font = new Font("Segoe UI", 10.8F);
-            button2.Location = new Point(500, 204);
+            button2.Font = new Font("Segoe UI", 13.8F);
+            button2.Location = new Point(473, 198);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(374, 83);
+            button2.Size = new Size(465, 83);
             button2.TabIndex = 1;
             button2.Text = "Pendapatan";
             button2.UseVisualStyleBackColor = false;
@@ -103,8 +103,8 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(530, 232);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Location = new Point(503, 226);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(29, 32);
             pictureBox1.TabIndex = 4;
@@ -115,8 +115,8 @@
             // 
             pictureBox2.Anchor = AnchorStyles.None;
             pictureBox2.BackgroundImage = Properties.Resources.Payment;
-            pictureBox2.Location = new Point(534, 340);
-            pictureBox2.Margin = new Padding(2, 2, 2, 2);
+            pictureBox2.Location = new Point(507, 334);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(25, 26);
             pictureBox2.TabIndex = 5;
@@ -126,8 +126,8 @@
             // 
             pictureBox3.Anchor = AnchorStyles.None;
             pictureBox3.BackgroundImage = Properties.Resources.Manage;
-            pictureBox3.Location = new Point(531, 547);
-            pictureBox3.Margin = new Padding(2, 2, 2, 2);
+            pictureBox3.Location = new Point(504, 541);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(28, 30);
             pictureBox3.TabIndex = 6;
@@ -137,11 +137,11 @@
             // 
             button4.Anchor = AnchorStyles.None;
             button4.BackColor = SystemColors.GradientInactiveCaption;
-            button4.Font = new Font("Segoe UI", 10.8F);
-            button4.Location = new Point(500, 415);
+            button4.Font = new Font("Segoe UI", 13.8F);
+            button4.Location = new Point(473, 409);
             button4.Margin = new Padding(2);
             button4.Name = "button4";
-            button4.Size = new Size(374, 83);
+            button4.Size = new Size(465, 83);
             button4.TabIndex = 0;
             button4.Text = "Pengeluaran Operasional";
             button4.UseVisualStyleBackColor = false;
@@ -151,8 +151,8 @@
             // 
             pictureBox4.Anchor = AnchorStyles.None;
             pictureBox4.BackgroundImage = Properties.Resources.Payment;
-            pictureBox4.Location = new Point(534, 444);
-            pictureBox4.Margin = new Padding(2, 2, 2, 2);
+            pictureBox4.Location = new Point(507, 438);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(25, 26);
             pictureBox4.TabIndex = 8;
@@ -165,12 +165,13 @@
             button5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = SystemColors.HighlightText;
             button5.Location = new Point(20, 719);
-            button5.Margin = new Padding(2, 2, 2, 2);
+            button5.Margin = new Padding(2);
             button5.Name = "button5";
             button5.Size = new Size(135, 54);
             button5.TabIndex = 9;
             button5.Text = "Logout";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // admin_page
             // 

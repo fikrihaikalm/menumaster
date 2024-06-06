@@ -59,7 +59,7 @@ namespace menumaster
             tanggal2 = dateTimePicker2.Value;
             tanggalakhir = DateOnly.FromDateTime(tanggal2);
 
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {
