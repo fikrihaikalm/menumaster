@@ -1,6 +1,6 @@
 ﻿namespace menumaster
 {
-    partial class Pendapatan
+    partial class admin_pendapatan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pendapatan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_pendapatan));
             label1 = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -40,7 +45,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Cooper Black", 15F);
-            label1.Location = new Point(20, 32);
+            label1.Location = new Point(90, 38);
             label1.Name = "label1";
             label1.Size = new Size(197, 35);
             label1.TabIndex = 0;
@@ -73,21 +78,63 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // Pendapatan
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(209, 164);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(781, 374);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(209, 113);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(300, 31);
+            dateTimePicker1.TabIndex = 6;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(546, 113);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(300, 31);
+            dateTimePicker2.TabIndex = 7;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.GradientInactiveCaption;
+            button2.Location = new Point(878, 110);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 34);
+            button2.TabIndex = 8;
+            button2.Text = "Tampilkan";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // admin_pendapatan
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 647);
+            Controls.Add(button2);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             MinimumSize = new Size(800, 600);
-            Name = "Pendapatan";
+            Name = "admin_pendapatan";
             Text = "Pendapatan";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +144,9 @@
         private Label label1;
         private Button button1;
         private PictureBox pictureBox1;
+        private DataGridView dataGridView1;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
+        private Button button2;
     }
 }

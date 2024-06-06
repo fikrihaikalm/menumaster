@@ -19,7 +19,7 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pengeluaran pengeluaran = new Pengeluaran();
+            admin_pengeluaran pengeluaran = new admin_pengeluaran();
             pengeluaran.Show();
             this.Hide();
         }
@@ -27,7 +27,7 @@ namespace menumaster
         private void button2_Click(object sender, EventArgs e)
         {
             // Buka form Pendapatan
-            Pendapatan pendapatan = new Pendapatan();
+            admin_pendapatan pendapatan = new admin_pendapatan();
             pendapatan.Show();
             this.Hide();
         }
@@ -35,14 +35,14 @@ namespace menumaster
         private void button3_Click(object sender, EventArgs e)
         {
             // Buka form Kelola Menu
-            kelolamenu kelolamenu = new kelolamenu();
+            admin_kelolamenu kelolamenu = new admin_kelolamenu();
             kelolamenu.Show();
             this.Hide();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Pendapatan pendapatan = new Pendapatan();
+            admin_pendapatan pendapatan = new admin_pendapatan();
             pendapatan.Show();
             this.Hide();
 
@@ -50,7 +50,7 @@ namespace menumaster
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            kelolamenu kelolamenu = new kelolamenu();
+            admin_kelolamenu kelolamenu = new admin_kelolamenu();
             kelolamenu.Show();
             this.Hide();
 
@@ -79,6 +79,13 @@ namespace menumaster
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tambah_pengeluaran Pengeluaran = new tambah_pengeluaran();
+            Pengeluaran.Show();
+            this.Hide();
         }
     }
 }

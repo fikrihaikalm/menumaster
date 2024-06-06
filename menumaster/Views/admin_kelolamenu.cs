@@ -11,11 +11,18 @@ using Npgsql;
 
 namespace menumaster
 {
+<<<<<<< HEAD:menumaster/Forms/kelolamenu.cs
     public partial class KelolaMenu : Form
     {
         public KelolaMenu()
+=======
+    public partial class admin_kelolamenu : Form
+    {
+        public admin_kelolamenu()
+>>>>>>> dbeeba6735644caf6eb1d3cd33bfb5814de6869c:menumaster/Views/admin_kelolamenu.cs
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +33,7 @@ namespace menumaster
         }
         private void LoadData()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster";
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {
