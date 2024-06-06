@@ -34,15 +34,15 @@
             button2 = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            Nama = new DataGridViewTextBoxColumn();
-            Telp = new DataGridViewTextBoxColumn();
-            Alamat = new DataGridViewTextBoxColumn();
-            Foto = new DataGridViewTextBoxColumn();
-            Aktif = new DataGridViewTextBoxColumn();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            id_karyawan = new DataGridViewTextBoxColumn();
+            nama = new DataGridViewTextBoxColumn();
+            telp = new DataGridViewTextBoxColumn();
+            alamat = new DataGridViewTextBoxColumn();
+            foto = new DataGridViewTextBoxColumn();
+            aktif = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -103,42 +103,12 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Nama, Telp, Alamat, Foto, Aktif });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { id_karyawan, nama, telp, alamat, foto, aktif });
             dataGridView1.Location = new Point(151, 64);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(644, 344);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ID
-            // 
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            // 
-            // Nama
-            // 
-            Nama.HeaderText = "Nama";
-            Nama.Name = "Nama";
-            // 
-            // Telp
-            // 
-            Telp.HeaderText = "Telp";
-            Telp.Name = "Telp";
-            // 
-            // Alamat
-            // 
-            Alamat.HeaderText = "Alamat";
-            Alamat.Name = "Alamat";
-            // 
-            // Foto
-            // 
-            Foto.HeaderText = "Foto";
-            Foto.Name = "Foto";
-            // 
-            // Aktif
-            // 
-            Aktif.HeaderText = "Aktif";
-            Aktif.Name = "Aktif";
             // 
             // button3
             // 
@@ -186,6 +156,42 @@
             button5.Text = "Delete";
             button5.UseVisualStyleBackColor = false;
             // 
+            // id_karyawan
+            // 
+            id_karyawan.DataPropertyName = "id_karyawan";
+            id_karyawan.HeaderText = "ID";
+            id_karyawan.Name = "id_karyawan";
+            // 
+            // nama
+            // 
+            nama.DataPropertyName = "nama";
+            nama.HeaderText = "Nama";
+            nama.Name = "nama";
+            // 
+            // telp
+            // 
+            telp.DataPropertyName = "telp";
+            telp.HeaderText = "Telp";
+            telp.Name = "telp";
+            // 
+            // alamat
+            // 
+            alamat.DataPropertyName = "alamat";
+            alamat.HeaderText = "Alamat";
+            alamat.Name = "alamat";
+            // 
+            // foto
+            // 
+            foto.DataPropertyName = "foto";
+            foto.HeaderText = "Foto";
+            foto.Name = "foto";
+            // 
+            // aktif
+            // 
+            aktif.DataPropertyName = "aktif";
+            aktif.HeaderText = "Aktif";
+            aktif.Name = "aktif";
+            // 
             // Manager_KelolaKaryawan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -216,14 +222,14 @@
         private Button button2;
         private Label label1;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Nama;
-        private DataGridViewTextBoxColumn Telp;
-        private DataGridViewTextBoxColumn Alamat;
-        private DataGridViewTextBoxColumn Foto;
-        private DataGridViewTextBoxColumn Aktif;
         private Button button3;
         private Button button4;
         private Button button5;
+        private DataGridViewTextBoxColumn id_karyawan;
+        private DataGridViewTextBoxColumn nama;
+        private DataGridViewTextBoxColumn telp;
+        private DataGridViewTextBoxColumn alamat;
+        private DataGridViewTextBoxColumn foto;
+        private DataGridViewTextBoxColumn aktif;
     }
 }

@@ -20,34 +20,6 @@ namespace menumaster.Views
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            LoadEmployeeData();
-        }
-
-        private void LoadEmployeeData()
-        {
-            using (NpgsqlConnection con = new NpgsqlConnection(connectionString))
-            {
-                try
-                {
-                    con.Open();
-                    string query = "SELECT ID_karyawan AS ID, nama, telp, alamat, foto, aktif FROM karyawan";
-                    using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, con))
-                    {
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-        }
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             Manager_Homepage f2 = new Manager_Homepage();
@@ -64,7 +36,7 @@ namespace menumaster.Views
 
         private void Manager_KelolaKaryawan_Load(object sender, EventArgs e)
         {
-
+            LoadKaryawanData();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,6 +44,25 @@ namespace menumaster.Views
 
         }
 
-    
+        private void LoadKaryawanData()
+        {
+            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM karyawan";
+                    NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
 }
