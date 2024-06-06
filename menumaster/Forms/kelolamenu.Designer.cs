@@ -1,6 +1,6 @@
 ﻿namespace menumaster
 {
-    partial class kelolamenu
+    partial class KelolaMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kelolamenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelolaMenu));
             button1 = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
             pictureBox1 = new PictureBox();
+            ID = new DataGridViewTextBoxColumn();
+            Foto = new DataGridViewImageColumn();
+            Nama = new DataGridViewTextBoxColumn();
+            Harga = new DataGridViewTextBoxColumn();
+            Deskripsi = new DataGridViewTextBoxColumn();
+            UbahHapus = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -66,12 +72,14 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Foto, Nama, Harga, Deskripsi, UbahHapus });
             dataGridView1.Location = new Point(106, 128);
-            dataGridView1.Margin = new Padding(4, 4, 4, 4);
+            dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(375, 235);
+            dataGridView1.Size = new Size(946, 160);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // pictureBox1
             // 
@@ -85,7 +93,49 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // kelolamenu
+            // ID
+            // 
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 8;
+            ID.Name = "ID";
+            ID.Width = 150;
+            // 
+            // Foto
+            // 
+            Foto.HeaderText = "Foto";
+            Foto.MinimumWidth = 8;
+            Foto.Name = "Foto";
+            Foto.Width = 150;
+            // 
+            // Nama
+            // 
+            Nama.HeaderText = "Nama";
+            Nama.MinimumWidth = 8;
+            Nama.Name = "Nama";
+            Nama.Width = 150;
+            // 
+            // Harga
+            // 
+            Harga.HeaderText = "Harga";
+            Harga.MinimumWidth = 8;
+            Harga.Name = "Harga";
+            Harga.Width = 150;
+            // 
+            // Deskripsi
+            // 
+            Deskripsi.HeaderText = "Deskripsi";
+            Deskripsi.MinimumWidth = 8;
+            Deskripsi.Name = "Deskripsi";
+            Deskripsi.Width = 150;
+            // 
+            // UbahHapus
+            // 
+            UbahHapus.HeaderText = "Ubah atau Hapus";
+            UbahHapus.MinimumWidth = 8;
+            UbahHapus.Name = "UbahHapus";
+            UbahHapus.Width = 150;
+            // 
+            // KelolaMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -94,9 +144,9 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Controls.Add(button1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MinimumSize = new Size(994, 736);
-            Name = "kelolamenu";
+            Name = "KelolaMenu";
             Text = "kelolamenu";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -111,5 +161,11 @@
         private Label label1;
         private DataGridView dataGridView1;
         private PictureBox pictureBox1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewImageColumn Foto;
+        private DataGridViewTextBoxColumn Nama;
+        private DataGridViewTextBoxColumn Harga;
+        private DataGridViewTextBoxColumn Deskripsi;
+        private DataGridViewButtonColumn UbahHapus;
     }
 }

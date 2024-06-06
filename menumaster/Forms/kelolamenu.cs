@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace menumaster
 {
-    public partial class kelolamenu : Form
+    public partial class KelolaMenu : Form
     {
-        public kelolamenu()
+        public KelolaMenu()
         {
             InitializeComponent();
         }
@@ -45,6 +45,11 @@ namespace menumaster
             {
                 conn.Close();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
