@@ -41,7 +41,7 @@
             btnPesan.Name = "btnPesan";
             btnPesan.Size = new Size(348, 73);
             btnPesan.TabIndex = 0;
-            btnPesan.Text = "PESAN";
+            btnPesan.Text = "BUAT PESANAN";
             btnPesan.UseVisualStyleBackColor = false;
             btnPesan.Click += btnPesan_Click;
             // 

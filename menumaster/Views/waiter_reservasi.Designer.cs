@@ -29,35 +29,44 @@ namespace menumaster.Forms.Waiters
         /// </summary>
         private void InitializeComponent()
         {
-            name = new RichTextBox();
+            textBoxNama = new RichTextBox();
             LabelName = new Label();
             LableNoTelepone = new Label();
-            NoTelepone = new RichTextBox();
-            Tanggal = new DateTimePicker();
+            textBoxTelp = new RichTextBox();
+            dateTimePickerTanggal = new DateTimePicker();
             LabelTanggal = new Label();
-            LabelUangMuka = new Label();
-            UangMuka = new RichTextBox();
             LabelMeja = new Label();
             label2 = new Label();
-            Meja = new ComboBox();
-            comboBox1 = new ComboBox();
+            comboBoxMeja = new ComboBox();
+            comboBoxMetodePembayaran = new ComboBox();
             BtnSimpan = new Button();
-            BtnHapus = new Button();
             btnBack = new Button();
+            numericUpDownDurasi = new NumericUpDown();
+            label1 = new Label();
+            label3 = new Label();
+            numericUpDownWaktu = new NumericUpDown();
+            numericUpDownJumlahOrang = new NumericUpDown();
+            label4 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label5 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownDurasi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownWaktu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownJumlahOrang).BeginInit();
             SuspendLayout();
             // 
-            // name
+            // textBoxNama
             // 
-            name.BackColor = Color.FromArgb(231, 231, 241);
-            name.BorderStyle = BorderStyle.None;
-            name.DetectUrls = false;
-            name.Location = new Point(418, 77);
-            name.Margin = new Padding(5);
-            name.Multiline = false;
-            name.Name = "name";
-            name.Size = new Size(926, 64);
-            name.TabIndex = 0;
-            name.Text = "";
+            textBoxNama.BackColor = Color.FromArgb(231, 231, 241);
+            textBoxNama.BorderStyle = BorderStyle.None;
+            textBoxNama.DetectUrls = false;
+            textBoxNama.Location = new Point(418, 77);
+            textBoxNama.Margin = new Padding(5);
+            textBoxNama.Multiline = false;
+            textBoxNama.Name = "textBoxNama";
+            textBoxNama.Size = new Size(926, 64);
+            textBoxNama.TabIndex = 0;
+            textBoxNama.Text = "";
             // 
             // LabelName
             // 
@@ -81,27 +90,27 @@ namespace menumaster.Forms.Waiters
             LableNoTelepone.TabIndex = 3;
             LableNoTelepone.Text = "No. Telepone";
             // 
-            // NoTelepone
+            // textBoxTelp
             // 
-            NoTelepone.BackColor = Color.FromArgb(231, 231, 241);
-            NoTelepone.BorderStyle = BorderStyle.None;
-            NoTelepone.DetectUrls = false;
-            NoTelepone.Location = new Point(418, 221);
-            NoTelepone.Margin = new Padding(5);
-            NoTelepone.Multiline = false;
-            NoTelepone.Name = "NoTelepone";
-            NoTelepone.Size = new Size(926, 64);
-            NoTelepone.TabIndex = 1;
-            NoTelepone.Text = "";
+            textBoxTelp.BackColor = Color.FromArgb(231, 231, 241);
+            textBoxTelp.BorderStyle = BorderStyle.None;
+            textBoxTelp.DetectUrls = false;
+            textBoxTelp.Location = new Point(418, 221);
+            textBoxTelp.Margin = new Padding(5);
+            textBoxTelp.Multiline = false;
+            textBoxTelp.Name = "textBoxTelp";
+            textBoxTelp.Size = new Size(926, 64);
+            textBoxTelp.TabIndex = 1;
+            textBoxTelp.Text = "";
             // 
-            // Tanggal
+            // dateTimePickerTanggal
             // 
-            Tanggal.CalendarMonthBackground = SystemColors.ButtonHighlight;
-            Tanggal.Location = new Point(418, 376);
-            Tanggal.Margin = new Padding(5);
-            Tanggal.Name = "Tanggal";
-            Tanggal.Size = new Size(924, 39);
-            Tanggal.TabIndex = 3;
+            dateTimePickerTanggal.CalendarMonthBackground = SystemColors.ButtonHighlight;
+            dateTimePickerTanggal.Location = new Point(418, 376);
+            dateTimePickerTanggal.Margin = new Padding(5);
+            dateTimePickerTanggal.Name = "dateTimePickerTanggal";
+            dateTimePickerTanggal.Size = new Size(438, 39);
+            dateTimePickerTanggal.TabIndex = 3;
             // 
             // LabelTanggal
             // 
@@ -114,35 +123,11 @@ namespace menumaster.Forms.Waiters
             LabelTanggal.TabIndex = 5;
             LabelTanggal.Text = "Tanggal";
             // 
-            // LabelUangMuka
-            // 
-            LabelUangMuka.AutoSize = true;
-            LabelUangMuka.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelUangMuka.Location = new Point(418, 451);
-            LabelUangMuka.Margin = new Padding(5, 0, 5, 0);
-            LabelUangMuka.Name = "LabelUangMuka";
-            LabelUangMuka.Size = new Size(159, 38);
-            LabelUangMuka.TabIndex = 7;
-            LabelUangMuka.Text = "Uang Muka";
-            // 
-            // UangMuka
-            // 
-            UangMuka.BackColor = Color.FromArgb(231, 231, 241);
-            UangMuka.BorderStyle = BorderStyle.None;
-            UangMuka.DetectUrls = false;
-            UangMuka.Location = new Point(418, 507);
-            UangMuka.Margin = new Padding(5);
-            UangMuka.Multiline = false;
-            UangMuka.Name = "UangMuka";
-            UangMuka.Size = new Size(926, 64);
-            UangMuka.TabIndex = 4;
-            UangMuka.Text = "";
-            // 
             // LabelMeja
             // 
             LabelMeja.AutoSize = true;
             LabelMeja.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelMeja.Location = new Point(418, 595);
+            LabelMeja.Location = new Point(431, 614);
             LabelMeja.Margin = new Padding(5, 0, 5, 0);
             LabelMeja.Name = "LabelMeja";
             LabelMeja.Size = new Size(78, 38);
@@ -160,37 +145,35 @@ namespace menumaster.Forms.Waiters
             label2.TabIndex = 11;
             label2.Text = "Metode Pembayaran";
             // 
-            // Meja
+            // comboBoxMeja
             // 
-            Meja.BackColor = Color.FromArgb(231, 231, 241);
-            Meja.FormattingEnabled = true;
-            Meja.Items.AddRange(new object[] { "No. 1", "No. 2", "No. 3", "No. 4", "No. 5", "No. 6", "No. 7", "No. 8", "No. 9", "No. 10" });
-            Meja.Location = new Point(418, 651);
-            Meja.Margin = new Padding(5);
-            Meja.MaxDropDownItems = 10;
-            Meja.Name = "Meja";
-            Meja.RightToLeft = RightToLeft.No;
-            Meja.Size = new Size(924, 40);
-            Meja.TabIndex = 5;
+            comboBoxMeja.BackColor = Color.FromArgb(231, 231, 241);
+            comboBoxMeja.FormattingEnabled = true;
+            comboBoxMeja.Location = new Point(418, 678);
+            comboBoxMeja.Margin = new Padding(5);
+            comboBoxMeja.MaxDropDownItems = 10;
+            comboBoxMeja.Name = "comboBoxMeja";
+            comboBoxMeja.RightToLeft = RightToLeft.No;
+            comboBoxMeja.Size = new Size(924, 40);
+            comboBoxMeja.TabIndex = 5;
             // 
-            // comboBox1
+            // comboBoxMetodePembayaran
             // 
-            comboBox1.BackColor = Color.FromArgb(231, 231, 241);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Cash", "Transfer" });
-            comboBox1.Location = new Point(418, 805);
-            comboBox1.Margin = new Padding(5);
-            comboBox1.MaxDropDownItems = 10;
-            comboBox1.Name = "comboBox1";
-            comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(924, 40);
-            comboBox1.TabIndex = 12;
+            comboBoxMetodePembayaran.BackColor = Color.FromArgb(231, 231, 241);
+            comboBoxMetodePembayaran.FormattingEnabled = true;
+            comboBoxMetodePembayaran.Location = new Point(418, 805);
+            comboBoxMetodePembayaran.Margin = new Padding(5);
+            comboBoxMetodePembayaran.MaxDropDownItems = 10;
+            comboBoxMetodePembayaran.Name = "comboBoxMetodePembayaran";
+            comboBoxMetodePembayaran.RightToLeft = RightToLeft.No;
+            comboBoxMetodePembayaran.Size = new Size(924, 40);
+            comboBoxMetodePembayaran.TabIndex = 12;
             // 
             // BtnSimpan
             // 
             BtnSimpan.BackColor = Color.FromArgb(90, 103, 186);
             BtnSimpan.ForeColor = Color.White;
-            BtnSimpan.Location = new Point(1550, 875);
+            BtnSimpan.Location = new Point(1535, 875);
             BtnSimpan.Margin = new Padding(5);
             BtnSimpan.Name = "BtnSimpan";
             BtnSimpan.Size = new Size(193, 77);
@@ -198,18 +181,6 @@ namespace menumaster.Forms.Waiters
             BtnSimpan.Text = "Simpan";
             BtnSimpan.UseVisualStyleBackColor = false;
             BtnSimpan.Click += BtnSimpan_Click;
-            // 
-            // BtnHapus
-            // 
-            BtnHapus.BackColor = Color.FromArgb(90, 103, 186);
-            BtnHapus.ForeColor = Color.White;
-            BtnHapus.Location = new Point(1347, 875);
-            BtnHapus.Margin = new Padding(5);
-            BtnHapus.Name = "BtnHapus";
-            BtnHapus.Size = new Size(193, 77);
-            BtnHapus.TabIndex = 14;
-            BtnHapus.Text = "Hapus";
-            BtnHapus.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
@@ -224,51 +195,150 @@ namespace menumaster.Forms.Waiters
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
+            // numericUpDownDurasi
+            // 
+            numericUpDownDurasi.Location = new Point(1207, 376);
+            numericUpDownDurasi.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
+            numericUpDownDurasi.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDownDurasi.Name = "numericUpDownDurasi";
+            numericUpDownDurasi.Size = new Size(82, 39);
+            numericUpDownDurasi.TabIndex = 17;
+            numericUpDownDurasi.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(883, 321);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 32);
+            label1.TabIndex = 18;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(1207, 321);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 32);
+            label3.TabIndex = 19;
+            // 
+            // numericUpDownWaktu
+            // 
+            numericUpDownWaktu.Location = new Point(883, 376);
+            numericUpDownWaktu.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
+            numericUpDownWaktu.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDownWaktu.Name = "numericUpDownWaktu";
+            numericUpDownWaktu.Size = new Size(240, 39);
+            numericUpDownWaktu.TabIndex = 20;
+            numericUpDownWaktu.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // numericUpDownJumlahOrang
+            // 
+            numericUpDownJumlahOrang.Location = new Point(418, 528);
+            numericUpDownJumlahOrang.Name = "numericUpDownJumlahOrang";
+            numericUpDownJumlahOrang.Size = new Size(240, 39);
+            numericUpDownJumlahOrang.TabIndex = 21;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(418, 471);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 32);
+            label4.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(883, 315);
+            label6.Margin = new Padding(5, 0, 5, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(95, 38);
+            label6.TabIndex = 24;
+            label6.Text = "Waktu";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(418, 456);
+            label7.Margin = new Padding(5, 0, 5, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(189, 38);
+            label7.TabIndex = 25;
+            label7.Text = "Jumlah Orang";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1207, 315);
+            label5.Margin = new Padding(5, 0, 5, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(96, 38);
+            label5.TabIndex = 26;
+            label5.Text = "Durasi";
+            // 
             // waiter_reservasi
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1763, 1000);
+            Controls.Add(label5);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label4);
+            Controls.Add(numericUpDownJumlahOrang);
+            Controls.Add(numericUpDownWaktu);
+            Controls.Add(label3);
+            Controls.Add(label1);
+            Controls.Add(numericUpDownDurasi);
             Controls.Add(btnBack);
-            Controls.Add(BtnHapus);
             Controls.Add(BtnSimpan);
-            Controls.Add(comboBox1);
-            Controls.Add(Meja);
+            Controls.Add(comboBoxMetodePembayaran);
+            Controls.Add(comboBoxMeja);
             Controls.Add(label2);
             Controls.Add(LabelMeja);
-            Controls.Add(LabelUangMuka);
-            Controls.Add(UangMuka);
             Controls.Add(LabelTanggal);
-            Controls.Add(Tanggal);
+            Controls.Add(dateTimePickerTanggal);
             Controls.Add(LableNoTelepone);
-            Controls.Add(NoTelepone);
+            Controls.Add(textBoxTelp);
             Controls.Add(LabelName);
-            Controls.Add(name);
+            Controls.Add(textBoxNama);
             Margin = new Padding(5);
             Name = "waiter_reservasi";
-            Text = "Waiters Pemesanan";
+            Text = "Waiters Reservasi";
             WindowState = FormWindowState.Maximized;
             Load += waiters_pemesanan_Load;
+            ((System.ComponentModel.ISupportInitialize)numericUpDownDurasi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownWaktu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownJumlahOrang).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private RichTextBox name;
+        private RichTextBox textBoxNama;
         private Label LabelName;
         private Label LableNoTelepone;
-        private RichTextBox NoTelepone;
-        private DateTimePicker Tanggal;
+        private RichTextBox textBoxTelp;
+        private DateTimePicker dateTimePickerTanggal;
         private Label LabelTanggal;
-        private Label LabelUangMuka;
-        private RichTextBox UangMuka;
         private Label LabelMeja;
         private Label label2;
-        private ComboBox Meja;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxMeja;
+        private ComboBox comboBoxMetodePembayaran;
         private Button BtnSimpan;
-        private Button BtnHapus;
         private Button btnBack;
+        private NumericUpDown numericUpDownDurasi;
+        private Label label1;
+        private Label label3;
+        private NumericUpDown numericUpDownWaktu;
+        private NumericUpDown numericUpDownJumlahOrang;
+        private Label label4;
+        private Label label6;
+        private Label label7;
+        private Label label5;
     }
 }

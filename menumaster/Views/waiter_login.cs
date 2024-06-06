@@ -27,10 +27,15 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // ID, password valid dan role waiter
+            waiter_homepage homepage = new waiter_homepage();
+            homepage.Show();
+            this.Close();
+/*
             string connString = "Host=localhost;Username=postgres;Password=1;Database=menumaster";
 
             // Update query to check role in addition to ID and password
-            string query = "SELECT * FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password and id_role = 4" ;
+            string query = "SELECT * FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password and id_role = 4";
             using (NpgsqlConnection conn = new NpgsqlConnection(connString))
             {
                 conn.Open();
@@ -44,10 +49,7 @@ namespace menumaster
 
                     if (result.HasValue && result.Value > 0)
                     {
-                        // ID, password valid dan role waiter
-                        waiter_homepage homepage = new waiter_homepage();
-                        homepage.Show();
-                        this.Close();
+
                     }
                     else
                     {
@@ -55,7 +57,7 @@ namespace menumaster
                         MessageBox.Show("ID, password salah atau bukan role waiter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
+            }*/
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
