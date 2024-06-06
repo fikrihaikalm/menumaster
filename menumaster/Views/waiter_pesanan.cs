@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq; // Add this using statement for the Count() method
 using System.Windows.Forms;
 using Npgsql;
 
@@ -11,6 +12,7 @@ namespace menumaster.Views
     {
         private List<string> pesananList = new List<string>();
         private List<int> menuIDs = new List<int>();
+        private Dictionary<int, decimal> itemPrices = new Dictionary<int, decimal>(); // Dictionary to store item prices
         private string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menumaster";
 
         public waiter_pesanan()
@@ -112,6 +114,14 @@ namespace menumaster.Views
 
             pesananList.Add(itemName);
             menuIDs.Add(itemID);
+            if (itemPrices.ContainsKey(itemID))
+            {
+                itemPrices[itemID] += itemPrice;
+            }
+            else
+            {
+                itemPrices[itemID] = itemPrice;
+            }
             totalHarga += itemPrice;
             UpdatePesananPanel();
             lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
@@ -130,6 +140,10 @@ namespace menumaster.Views
                 // Hapus item dari pesanan
                 pesananList.Remove(itemName);
                 menuIDs.Remove(itemID);
+                if (itemPrices.ContainsKey(itemID))
+                {
+                    itemPrices[itemID] -= itemPrice;
+                }
                 totalHarga -= itemPrice;
 
                 UpdatePesananPanel();
@@ -165,7 +179,6 @@ namespace menumaster.Views
             delItemButton.Size = new Size(40, 40);
             delItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
             delItemButton.Click += new EventHandler(DelItemButton_Click);
-
 
             itemPanel.Controls.Add(itemNameLabel);
             itemPanel.Controls.Add(itemPriceLabel);
@@ -227,26 +240,30 @@ namespace menumaster.Views
                             int pesananID = (int)cmd.ExecuteScalar();
 
                             // Insert into detail_pesanan table
-                            string insertDetailPesananQuery = "INSERT INTO detail_pesanan (ID_pesanan, ID_menu, jumlah, diskon, sub_total) VALUES (@ID_pesanan, @ID_menu, @jumlah, @diskon, @sub_total)";
-                            foreach (int menuID in menuIDs)
+                            string insertDetailPesananQuery = "INSERT INTO detail_pesanan (ID_pesanan, ID_menu, jumlah) VALUES (@ID_pesanan, @ID_menu, @jumlah)";
+                            foreach (var entry in itemPrices)
                             {
+                                int menuID = entry.Key;
+                                decimal itemPrice = entry.Value;
+                                int jumlahItem = menuIDs.Count(id => id == menuID); // Count the number of times the item was ordered
+
                                 using (NpgsqlCommand detailCmd = new NpgsqlCommand(insertDetailPesananQuery, conn))
                                 {
                                     detailCmd.Parameters.AddWithValue("ID_pesanan", pesananID);
                                     detailCmd.Parameters.AddWithValue("ID_menu", menuID);
-                                    detailCmd.Parameters.AddWithValue("jumlah", 1); // Assume quantity is 1 for simplicity
-                                    detailCmd.Parameters.AddWithValue("diskon", 0.00);
-                                    detailCmd.Parameters.AddWithValue("sub_total", 10000); // Calculate this based on order details
+                                    detailCmd.Parameters.AddWithValue("jumlah", jumlahItem);
 
                                     detailCmd.ExecuteNonQuery();
                                 }
+
                             }
                         }
 
                         trans.Commit();
-                        MessageBox.Show("Pesanan berhasil disimpan!");
+                        MessageBox.Show("Pesanan berhasil ditambahkan");
                         pesananList.Clear();
                         menuIDs.Clear();
+                        itemPrices.Clear();
                         totalHarga = 0;
                         lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
                         UpdatePesananPanel();
@@ -260,7 +277,6 @@ namespace menumaster.Views
                 }
             }
         }
-
 
         private void ButtonMakanan_Click(object sender, EventArgs e)
         {
