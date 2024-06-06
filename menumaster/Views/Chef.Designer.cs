@@ -43,10 +43,10 @@
             btnLihatPesanan.ForeColor = Color.SlateBlue;
             btnLihatPesanan.Image = (Image)resources.GetObject("btnLihatPesanan.Image");
             btnLihatPesanan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLihatPesanan.Location = new Point(467, 240);
+            btnLihatPesanan.Location = new Point(471, 319);
             btnLihatPesanan.Margin = new Padding(6, 8, 6, 8);
             btnLihatPesanan.Name = "btnLihatPesanan";
-            btnLihatPesanan.Size = new Size(272, 52);
+            btnLihatPesanan.Size = new Size(355, 84);
             btnLihatPesanan.TabIndex = 0;
             btnLihatPesanan.Text = "Lihat Pesanan";
             btnLihatPesanan.UseVisualStyleBackColor = false;
@@ -60,7 +60,7 @@
             btnBack.ForeColor = Color.White;
             btnBack.Image = (Image)resources.GetObject("btnBack.Image");
             btnBack.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBack.Location = new Point(114, 556);
+            btnBack.Location = new Point(47, 702);
             btnBack.Margin = new Padding(6, 8, 6, 8);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(160, 52);
