@@ -92,5 +92,10 @@ namespace menumaster
         {
 
         }
+
+        private void admin_pendapatan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -47,7 +47,7 @@
             label1.Font = new Font("Cooper Black", 15F);
             label1.Location = new Point(90, 38);
             label1.Name = "label1";
-            label1.Size = new Size(164, 29);
+            label1.Size = new Size(197, 35);
             label1.TabIndex = 0;
             label1.Text = "Pendapatan";
             label1.Click += label1_Click;
@@ -94,7 +94,7 @@
             dateTimePicker1.Anchor = AnchorStyles.None;
             dateTimePicker1.Location = new Point(209, 113);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 27);
+            dateTimePicker1.Size = new Size(300, 31);
             dateTimePicker1.TabIndex = 6;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
@@ -103,7 +103,7 @@
             dateTimePicker2.Anchor = AnchorStyles.None;
             dateTimePicker2.Location = new Point(546, 113);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(300, 27);
+            dateTimePicker2.Size = new Size(300, 31);
             dateTimePicker2.TabIndex = 7;
             dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
@@ -121,7 +121,7 @@
             // 
             // admin_pendapatan
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 647);
             Controls.Add(button2);
@@ -137,6 +137,7 @@
             Name = "admin_pendapatan";
             Text = "Pendapatan";
             WindowState = FormWindowState.Maximized;
+            Load += admin_pendapatan_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
