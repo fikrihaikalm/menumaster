@@ -1,4 +1,5 @@
-﻿using System;
+﻿using menumaster.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,18 @@ namespace menumaster.Forms
         {
             InitializeComponent();
         }
-        private void button2_Click (object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            
+            Manager_KelolaKaryawan f2 = new Manager_KelolaKaryawan();
+            f2.Show();
+            this.Hide();
         }
         private void Manager_Homepage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

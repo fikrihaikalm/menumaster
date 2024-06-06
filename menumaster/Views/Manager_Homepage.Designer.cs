@@ -33,6 +33,7 @@
             button2 = new Button();
             label1 = new Label();
             panel1 = new Panel();
+            button3 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,11 +98,31 @@
             panel1.Size = new Size(421, 255);
             panel1.TabIndex = 3;
             // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.None;
+            button3.BackColor = Color.RoyalBlue;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = SystemColors.Control;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(42, 416);
+            button3.Name = "button3";
+            button3.Size = new Size(95, 31);
+            button3.TabIndex = 4;
+            button3.Text = "Logout";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // Manager_Homepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(955, 471);
+            Controls.Add(button3);
             Controls.Add(panel1);
             Controls.Add(label1);
             MinimumSize = new Size(702, 460);
@@ -120,5 +141,6 @@
         private Button button2;
         private Label label1;
         private Panel panel1;
+        private Button button3;
     }
 }
