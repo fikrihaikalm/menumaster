@@ -35,6 +35,7 @@
             // 
             // btnPesan
             // 
+            btnPesan.Anchor = AnchorStyles.None;
             btnPesan.BackColor = SystemColors.MenuHighlight;
             btnPesan.Font = new Font("Sylfaen", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPesan.Location = new Point(741, 177);
@@ -47,6 +48,7 @@
             // 
             // btnReservasi
             // 
+            btnReservasi.Anchor = AnchorStyles.None;
             btnReservasi.BackColor = SystemColors.MenuHighlight;
             btnReservasi.Font = new Font("Sylfaen", 13.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReservasi.Location = new Point(741, 365);
@@ -59,6 +61,7 @@
             // 
             // btnLogout
             // 
+            btnLogout.Anchor = AnchorStyles.None;
             btnLogout.Location = new Point(76, 693);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(180, 60);

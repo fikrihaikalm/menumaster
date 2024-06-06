@@ -135,8 +135,8 @@ namespace menumaster.Views
                 UpdatePesananPanel();
                 lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
             }
-            else 
-            { 
+            else
+            {
                 return;
             }
         }
@@ -148,17 +148,21 @@ namespace menumaster.Views
 
             Label itemNameLabel = new Label();
             itemNameLabel.Text = itemName;
+            itemNameLabel.Size = new Size(140, 80);
 
             Label itemPriceLabel = new Label();
             itemPriceLabel.Text = $"Rp {itemPrice:N2}";
+            itemPriceLabel.Size = new Size(200, 60);
 
             Button addItemButton = new Button();
             addItemButton.Text = "+";
+            addItemButton.Size = new Size(40, 40);
             addItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
             addItemButton.Click += new EventHandler(AddItemButton_Click);
 
             Button delItemButton = new Button();
             delItemButton.Text = "-";
+            delItemButton.Size = new Size(40, 40);
             delItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
             delItemButton.Click += new EventHandler(DelItemButton_Click);
 
@@ -177,6 +181,7 @@ namespace menumaster.Views
             {
                 Label itemLabel = new Label();
                 itemLabel.Text = item;
+                itemLabel.Size = new Size(140, 80);
                 panelPesanan.Controls.Add(itemLabel);
             }
         }
@@ -213,8 +218,8 @@ namespace menumaster.Views
                         using (NpgsqlCommand cmd = new NpgsqlCommand(insertPesananQuery, conn))
                         {
                             cmd.Parameters.AddWithValue("tanggal_pemesanan", DateTime.Now);
-                            cmd.Parameters.AddWithValue("total_harga", 100000); // Calculate this based on order details
-                            cmd.Parameters.AddWithValue("total_tax", 10000);   // Calculate this based on order details
+                            cmd.Parameters.AddWithValue("total_harga", totalHarga);
+                            cmd.Parameters.AddWithValue("total_tax", totalHarga * 0.1m);
                             cmd.Parameters.AddWithValue("ID_pelanggan", pelangganID);
                             cmd.Parameters.AddWithValue("ID_metode_pembayaran", metodePembayaranID);
                             cmd.Parameters.AddWithValue("ID_karyawan", karyawanID);
@@ -242,6 +247,8 @@ namespace menumaster.Views
                         MessageBox.Show("Pesanan berhasil disimpan!");
                         pesananList.Clear();
                         menuIDs.Clear();
+                        totalHarga = 0;
+                        lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
                         UpdatePesananPanel();
                     }
                     catch (Exception ex)
@@ -249,9 +256,11 @@ namespace menumaster.Views
                         trans.Rollback();
                         MessageBox.Show("Terjadi kesalahan: " + ex.Message);
                     }
+
                 }
             }
         }
+
 
         private void ButtonMakanan_Click(object sender, EventArgs e)
         {
@@ -266,6 +275,13 @@ namespace menumaster.Views
         private void ButtonSnack_Click(object sender, EventArgs e)
         {
             LoadSnack();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            waiter_homepage homePage = new waiter_homepage();
+            homePage.Show();
+            this.Close();
         }
     }
 }
