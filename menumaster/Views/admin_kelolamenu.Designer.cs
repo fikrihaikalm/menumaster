@@ -44,6 +44,7 @@
             pictureBox1 = new PictureBox();
             button2 = new Button();
             button3 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -51,13 +52,14 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.None;
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button1.BackColor = Color.DarkSlateBlue;
-            button1.Font = new Font("Franklin Gothic Medium Cond", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.HighlightText;
-            button1.Location = new Point(20, 623);
+            button1.Location = new Point(30, 738);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(135, 54);
+            button1.Size = new Size(121, 46);
             button1.TabIndex = 28;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
@@ -65,71 +67,89 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Font = new Font("Cooper Black", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 9);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(30, 33);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(204, 35);
+            label1.Size = new Size(194, 41);
             label1.TabIndex = 30;
             label1.Text = "Kelola Menu";
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.Anchor = AnchorStyles.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(479, 162);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            dataGridView1.BackgroundColor = SystemColors.ControlLight;
+            dataGridView1.ColumnHeadersHeight = 29;
+            dataGridView1.Location = new Point(579, 114);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(487, 412);
+            dataGridView1.Size = new Size(730, 535);
             dataGridView1.TabIndex = 31;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(160, 56);
+            textBox1.Location = new Point(30, 54);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 31);
+            textBox1.Size = new Size(320, 27);
             textBox1.TabIndex = 32;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(160, 128);
+            textBox2.Location = new Point(30, 147);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(182, 31);
+            textBox2.Size = new Size(320, 27);
             textBox2.TabIndex = 33;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Location = new Point(25, 62);
+            label2.Font = new Font("Segoe UI", 10.8F);
+            label2.Location = new Point(25, 21);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(113, 25);
+            label2.Size = new Size(109, 25);
             label2.TabIndex = 35;
-            label2.Text = "Nama          :";
+            label2.Text = "Nama          ";
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(25, 131);
+            label3.Font = new Font("Segoe UI", 10.8F);
+            label3.Location = new Point(24, 111);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(114, 25);
+            label3.Size = new Size(110, 25);
             label3.TabIndex = 36;
-            label3.Text = "Harga          :";
+            label3.Text = "Harga          ";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.Location = new Point(24, 219);
+            label4.Font = new Font("Segoe UI", 10.8F);
+            label4.Location = new Point(24, 192);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(113, 25);
+            label4.Size = new Size(104, 25);
             label4.TabIndex = 37;
-            label4.Text = "Deskripsi     :";
+            label4.Text = "Deskripsi    ";
             // 
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.None;
-            groupBox1.BackColor = SystemColors.GradientInactiveCaption;
+            groupBox1.BackColor = SystemColors.ControlLight;
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(textBox3);
@@ -138,48 +158,55 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
-            groupBox1.Location = new Point(33, 162);
+            groupBox1.Location = new Point(93, 114);
+            groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(396, 366);
+            groupBox1.Padding = new Padding(2);
+            groupBox1.Size = new Size(392, 451);
             groupBox1.TabIndex = 38;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Tambah Menu";
             groupBox1.Enter += groupBox1_Enter;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Makanan", "Minuman", "Snack" });
-            comboBox1.Location = new Point(160, 296);
+            comboBox1.Location = new Point(31, 389);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
+            comboBox1.Size = new Size(319, 28);
             comboBox1.TabIndex = 39;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Location = new Point(25, 299);
+            label5.Font = new Font("Segoe UI", 10.8F);
+            label5.Location = new Point(26, 357);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(112, 25);
+            label5.Size = new Size(108, 25);
             label5.TabIndex = 38;
-            label5.Text = "Kategori      :";
+            label5.Text = "Kategori      ";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(160, 184);
+            textBox3.Location = new Point(30, 218);
+            textBox3.Margin = new Padding(2);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(182, 91);
+            textBox3.Size = new Size(320, 115);
             textBox3.TabIndex = 34;
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox1.BackgroundImage = Properties.Resources.ep_back;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(33, 639);
+            pictureBox1.Location = new Point(40, 751);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(26, 24);
+            pictureBox1.Size = new Size(27, 22);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 40;
             pictureBox1.TabStop = false;
@@ -188,9 +215,11 @@
             // 
             button2.Anchor = AnchorStyles.None;
             button2.BackColor = Color.MistyRose;
-            button2.Location = new Point(104, 540);
+            button2.Font = new Font("Segoe UI", 10.8F);
+            button2.Location = new Point(224, 594);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(112, 40);
+            button2.Size = new Size(118, 55);
             button2.TabIndex = 41;
             button2.Text = "Hapus";
             button2.UseVisualStyleBackColor = false;
@@ -200,19 +229,35 @@
             // 
             button3.Anchor = AnchorStyles.None;
             button3.BackColor = SystemColors.GradientActiveCaption;
-            button3.Location = new Point(263, 540);
+            button3.Font = new Font("Segoe UI", 10.8F);
+            button3.Location = new Point(367, 594);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(112, 40);
+            button3.Size = new Size(118, 55);
             button3.TabIndex = 42;
             button3.Text = "Simpan";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // button5
+            // 
+            button5.Anchor = AnchorStyles.None;
+            button5.BackColor = Color.DarkSeaGreen;
+            button5.Font = new Font("Segoe UI", 10.8F);
+            button5.Location = new Point(1191, 670);
+            button5.Margin = new Padding(2);
+            button5.Name = "button5";
+            button5.Size = new Size(118, 55);
+            button5.TabIndex = 44;
+            button5.Text = "Update";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // admin_kelolamenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(978, 744);
+            ClientSize = new Size(1368, 809);
+            Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
@@ -220,6 +265,8 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Controls.Add(button1);
+            Margin = new Padding(2);
+            MinimumSize = new Size(1386, 856);
             Name = "admin_kelolamenu";
             Text = "admin_kelolamenu";
             WindowState = FormWindowState.Maximized;
@@ -248,5 +295,6 @@
         private PictureBox pictureBox1;
         private Button button2;
         private Button button3;
+        private Button button5;
     }
 }
