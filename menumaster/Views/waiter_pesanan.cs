@@ -100,29 +100,7 @@ namespace menumaster.Views
             buttonMinuman.BackColor = default(Color);
         }
 
-        private FlowLayoutPanel CreateItemPanel(string itemName, int itemID, string imagePath, decimal price)
-        {
-            FlowLayoutPanel itemPanel = new FlowLayoutPanel();
-            itemPanel.Size = new Size(150, 150);
-
-            PictureBox itemPictureBox = new PictureBox();
-            itemPictureBox.Size = new Size(100, 100);
-            itemPictureBox.ImageLocation = imagePath;
-
-            Label itemNameLabel = new Label();
-            itemNameLabel.Text = $"{itemName} - {price:C}";
-
-            Button addItemButton = new Button();
-            addItemButton.Text = "Add";
-            addItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, price);
-            addItemButton.Click += new EventHandler(AddItemButton_Click);
-
-            itemPanel.Controls.Add(itemPictureBox);
-            itemPanel.Controls.Add(itemNameLabel);
-            itemPanel.Controls.Add(addItemButton);
-
-            return itemPanel;
-        }
+        private decimal totalHarga = 0;
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
@@ -130,11 +108,66 @@ namespace menumaster.Views
             var itemInfo = (Tuple<string, int, decimal>)button.Tag;
             string itemName = itemInfo.Item1;
             int itemID = itemInfo.Item2;
-            decimal price = itemInfo.Item3;
+            decimal itemPrice = itemInfo.Item3;
 
-            pesananList.Add($"{itemName} - {price:C}");
+            pesananList.Add(itemName);
             menuIDs.Add(itemID);
+            totalHarga += itemPrice;
             UpdatePesananPanel();
+            lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
+        }
+
+        private void DelItemButton_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            var itemInfo = (Tuple<string, int, decimal>)button.Tag;
+            string itemName = itemInfo.Item1;
+            int itemID = itemInfo.Item2;
+            decimal itemPrice = itemInfo.Item3;
+
+            if (totalHarga >= 0)
+            {
+                // Hapus item dari pesanan
+                pesananList.Remove(itemName);
+                menuIDs.Remove(itemID);
+                totalHarga -= itemPrice;
+
+                UpdatePesananPanel();
+                lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
+            }
+            else 
+            { 
+                return;
+            }
+        }
+
+        private FlowLayoutPanel CreateItemPanel(string itemName, int itemID, string imagePath, decimal itemPrice)
+        {
+            FlowLayoutPanel itemPanel = new FlowLayoutPanel();
+            itemPanel.Size = new Size(150, 180);
+
+            Label itemNameLabel = new Label();
+            itemNameLabel.Text = itemName;
+
+            Label itemPriceLabel = new Label();
+            itemPriceLabel.Text = $"Rp {itemPrice:N2}";
+
+            Button addItemButton = new Button();
+            addItemButton.Text = "+";
+            addItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
+            addItemButton.Click += new EventHandler(AddItemButton_Click);
+
+            Button delItemButton = new Button();
+            delItemButton.Text = "-";
+            delItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
+            delItemButton.Click += new EventHandler(DelItemButton_Click);
+
+
+            itemPanel.Controls.Add(itemNameLabel);
+            itemPanel.Controls.Add(itemPriceLabel);
+            itemPanel.Controls.Add(addItemButton);
+            itemPanel.Controls.Add(delItemButton);
+            return itemPanel;
         }
 
         private void UpdatePesananPanel()

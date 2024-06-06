@@ -28,11 +28,13 @@
             lblMetodePembayaranID = new Label();
             lblKaryawanID = new Label();
             label1 = new Label();
+            lblTotalHarga = new Label();
             SuspendLayout();
             // 
             // buttonMakanan
             // 
-            buttonMakanan.Location = new Point(12, 12);
+            buttonMakanan.Anchor = AnchorStyles.None;
+            buttonMakanan.Location = new Point(108, 12);
             buttonMakanan.Name = "buttonMakanan";
             buttonMakanan.Size = new Size(133, 46);
             buttonMakanan.TabIndex = 0;
@@ -42,7 +44,8 @@
             // 
             // buttonMinuman
             // 
-            buttonMinuman.Location = new Point(184, 12);
+            buttonMinuman.Anchor = AnchorStyles.None;
+            buttonMinuman.Location = new Point(281, 12);
             buttonMinuman.Name = "buttonMinuman";
             buttonMinuman.Size = new Size(146, 46);
             buttonMinuman.TabIndex = 1;
@@ -52,7 +55,8 @@
             // 
             // buttonSnack
             // 
-            buttonSnack.Location = new Point(385, 12);
+            buttonSnack.Anchor = AnchorStyles.None;
+            buttonSnack.Location = new Point(472, 12);
             buttonSnack.Name = "buttonSnack";
             buttonSnack.Size = new Size(117, 46);
             buttonSnack.TabIndex = 2;
@@ -62,21 +66,24 @@
             // 
             // panelItems
             // 
-            panelItems.Location = new Point(13, 84);
+            panelItems.Anchor = AnchorStyles.None;
+            panelItems.Location = new Point(15, 84);
             panelItems.Name = "panelItems";
             panelItems.Size = new Size(862, 500);
             panelItems.TabIndex = 3;
             // 
             // panelPesanan
             // 
-            panelPesanan.Location = new Point(918, 69);
+            panelPesanan.Anchor = AnchorStyles.None;
+            panelPesanan.Location = new Point(920, 69);
             panelPesanan.Name = "panelPesanan";
             panelPesanan.Size = new Size(401, 612);
             panelPesanan.TabIndex = 4;
             // 
             // submitButton
             // 
-            submitButton.Location = new Point(1109, 687);
+            submitButton.Anchor = AnchorStyles.None;
+            submitButton.Location = new Point(1111, 687);
             submitButton.Name = "submitButton";
             submitButton.Size = new Size(210, 61);
             submitButton.TabIndex = 5;
@@ -86,29 +93,33 @@
             // 
             // txtPelangganID
             // 
-            txtPelangganID.Location = new Point(304, 595);
+            txtPelangganID.Anchor = AnchorStyles.None;
+            txtPelangganID.Location = new Point(306, 595);
             txtPelangganID.Name = "txtPelangganID";
             txtPelangganID.Size = new Size(100, 39);
             txtPelangganID.TabIndex = 6;
             // 
             // txtMetodePembayaranID
             // 
-            txtMetodePembayaranID.Location = new Point(304, 646);
+            txtMetodePembayaranID.Anchor = AnchorStyles.None;
+            txtMetodePembayaranID.Location = new Point(306, 646);
             txtMetodePembayaranID.Name = "txtMetodePembayaranID";
             txtMetodePembayaranID.Size = new Size(100, 39);
             txtMetodePembayaranID.TabIndex = 7;
             // 
             // txtKaryawanID
             // 
-            txtKaryawanID.Location = new Point(304, 698);
+            txtKaryawanID.Anchor = AnchorStyles.None;
+            txtKaryawanID.Location = new Point(306, 698);
             txtKaryawanID.Name = "txtKaryawanID";
             txtKaryawanID.Size = new Size(100, 39);
             txtKaryawanID.TabIndex = 8;
             // 
             // lblPelangganID
             // 
+            lblPelangganID.Anchor = AnchorStyles.None;
             lblPelangganID.AutoSize = true;
-            lblPelangganID.Location = new Point(13, 598);
+            lblPelangganID.Location = new Point(15, 598);
             lblPelangganID.Name = "lblPelangganID";
             lblPelangganID.Size = new Size(155, 32);
             lblPelangganID.TabIndex = 9;
@@ -116,8 +127,9 @@
             // 
             // lblMetodePembayaranID
             // 
+            lblMetodePembayaranID.Anchor = AnchorStyles.None;
             lblMetodePembayaranID.AutoSize = true;
-            lblMetodePembayaranID.Location = new Point(12, 649);
+            lblMetodePembayaranID.Location = new Point(14, 649);
             lblMetodePembayaranID.Name = "lblMetodePembayaranID";
             lblMetodePembayaranID.Size = new Size(265, 32);
             lblMetodePembayaranID.TabIndex = 10;
@@ -125,25 +137,36 @@
             // 
             // lblKaryawanID
             // 
-/*            lblKaryawanID.AutoSize = true;
-            lblKaryawanID.Location = new Point(13, 587);
+            lblKaryawanID.Anchor = AnchorStyles.None;
+            lblKaryawanID.Location = new Point(2, 0);
             lblKaryawanID.Name = "lblKaryawanID";
-            lblKaryawanID.Size = new Size(0, 32);
-            lblKaryawanID.TabIndex = 11;
-            lblKaryawanID.Click += lblKaryawanID_Click;*/
+            lblKaryawanID.Size = new Size(100, 23);
+            lblKaryawanID.TabIndex = 13;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(13, 701);
+            label1.Location = new Point(15, 701);
             label1.Name = "label1";
             label1.Size = new Size(145, 32);
             label1.TabIndex = 12;
             label1.Text = "Karyawan ID";
             // 
+            // lblTotalHarga
+            // 
+            lblTotalHarga.Anchor = AnchorStyles.None;
+            lblTotalHarga.AutoSize = true;
+            lblTotalHarga.Location = new Point(920, 698);
+            lblTotalHarga.Name = "lblTotalHarga";
+            lblTotalHarga.Size = new Size(164, 32);
+            lblTotalHarga.TabIndex = 14;
+            lblTotalHarga.Text = "TOTAL HARGA";
+            // 
             // waiter_pesanan
             // 
             ClientSize = new Size(1360, 785);
+            Controls.Add(lblTotalHarga);
             Controls.Add(label1);
             Controls.Add(lblKaryawanID);
             Controls.Add(lblMetodePembayaranID);
@@ -157,10 +180,10 @@
             Controls.Add(buttonSnack);
             Controls.Add(buttonMinuman);
             Controls.Add(buttonMakanan);
-            MaximumSize = new Size(1386, 856);
             MinimumSize = new Size(994, 736);
             Name = "waiter_pesanan";
             Text = "Waiter Pesanan";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -178,5 +201,6 @@
         private System.Windows.Forms.Label lblMetodePembayaranID;
         private System.Windows.Forms.Label lblKaryawanID;
         private Label label1;
+        private Label lblTotalHarga;
     }
 }
