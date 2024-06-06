@@ -38,5 +38,31 @@ namespace menumaster.Views
             welcome.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            waiter_reservasi wr = new waiter_reservasi();
+            wr.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            waiter_pesanan wp = new waiter_pesanan();
+            wp.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            WelcomePageForm welcome = new WelcomePageForm();
+            welcome.Show();
+            this.Close();
+        }
+
+        private void waiter_homepage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
