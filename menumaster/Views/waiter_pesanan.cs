@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
-using System.Linq; // Add this using statement for the Count() method
+using System.Linq;
 using System.Windows.Forms;
-using Npgsql;
+using menumaster.Controllers;
+using menumaster.Models;
 
 namespace menumaster.Views
 {
     public partial class waiter_pesanan : Form
     {
-        private List<string> pesananList = new List<string>();
-        private List<int> menuIDs = new List<int>();
-        private Dictionary<int, decimal> itemPrices = new Dictionary<int, decimal>(); // Dictionary to store item prices
-        private string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menumaster";
+        private List<MenuItem> pesananList = new List<MenuItem>();
+        private WaiterPesananController controller = new WaiterPesananController();
+        private decimal totalHarga = 0;
 
         public waiter_pesanan()
         {
@@ -23,26 +22,7 @@ namespace menumaster.Views
 
         private void LoadMakanan()
         {
-            panelItems.Controls.Clear();
-            string query = "SELECT id_menu, nama, harga FROM menu WHERE id_kategori = '1'";
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
-            {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                {
-                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int idMenu = reader.GetInt32(0);
-                            string namaMenu = reader.GetString(1);
-                            decimal harga = reader.GetDecimal(2);
-                            panelItems.Controls.Add(CreateItemPanel(namaMenu, idMenu, "path_to_image.jpg", harga));
-                        }
-                    }
-                }
-            }
-
+            LoadItems(1);
             buttonMakanan.BackColor = Color.Blue;
             buttonMinuman.BackColor = default(Color);
             buttonSnack.BackColor = default(Color);
@@ -50,26 +30,7 @@ namespace menumaster.Views
 
         private void LoadMinuman()
         {
-            panelItems.Controls.Clear();
-            string query = "SELECT id_menu, nama, harga FROM menu WHERE id_kategori = '2'";
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
-            {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                {
-                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int idMenu = reader.GetInt32(0);
-                            string namaMenu = reader.GetString(1);
-                            decimal harga = reader.GetDecimal(2);
-                            panelItems.Controls.Add(CreateItemPanel(namaMenu, idMenu, "path_to_image.jpg", harga));
-                        }
-                    }
-                }
-            }
-
+            LoadItems(2);
             buttonMinuman.BackColor = Color.Blue;
             buttonMakanan.BackColor = default(Color);
             buttonSnack.BackColor = default(Color);
@@ -77,108 +38,46 @@ namespace menumaster.Views
 
         private void LoadSnack()
         {
-            panelItems.Controls.Clear();
-            string query = "SELECT id_menu, nama, harga FROM menu WHERE id_kategori = '3'";
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
-            {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                {
-                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int idMenu = reader.GetInt32(0);
-                            string namaMenu = reader.GetString(1);
-                            decimal harga = reader.GetDecimal(2);
-                            panelItems.Controls.Add(CreateItemPanel(namaMenu, idMenu, "path_to_image.jpg", harga));
-                        }
-                    }
-                }
-            }
-
+            LoadItems(3);
             buttonSnack.BackColor = Color.Blue;
             buttonMakanan.BackColor = default(Color);
             buttonMinuman.BackColor = default(Color);
         }
 
-        private decimal totalHarga = 0;
-
-        private void AddItemButton_Click(object sender, EventArgs e)
+        private void LoadItems(int kategoriID)
         {
-            Button button = sender as Button;
-            var itemInfo = (Tuple<string, int, decimal>)button.Tag;
-            string itemName = itemInfo.Item1;
-            int itemID = itemInfo.Item2;
-            decimal itemPrice = itemInfo.Item3;
-
-            pesananList.Add(itemName);
-            menuIDs.Add(itemID);
-            if (itemPrices.ContainsKey(itemID))
+            panelItems.Controls.Clear();
+            var items = controller.GetMenuItems(kategoriID);
+            foreach (var item in items)
             {
-                itemPrices[itemID] += itemPrice;
-            }
-            else
-            {
-                itemPrices[itemID] = itemPrice;
-            }
-            totalHarga += itemPrice;
-            UpdatePesananPanel();
-            lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
-        }
-
-        private void DelItemButton_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            var itemInfo = (Tuple<string, int, decimal>)button.Tag;
-            string itemName = itemInfo.Item1;
-            int itemID = itemInfo.Item2;
-            decimal itemPrice = itemInfo.Item3;
-
-            if (totalHarga >= 0)
-            {
-                // Hapus item dari pesanan
-                pesananList.Remove(itemName);
-                menuIDs.Remove(itemID);
-                if (itemPrices.ContainsKey(itemID))
-                {
-                    itemPrices[itemID] -= itemPrice;
-                }
-                totalHarga -= itemPrice;
-
-                UpdatePesananPanel();
-                lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
-            }
-            else
-            {
-                return;
+                panelItems.Controls.Add(CreateItemPanel(item));
             }
         }
 
-        private FlowLayoutPanel CreateItemPanel(string itemName, int itemID, string imagePath, decimal itemPrice)
+        private FlowLayoutPanel CreateItemPanel(MenuItem item)
         {
             FlowLayoutPanel itemPanel = new FlowLayoutPanel();
             itemPanel.Size = new Size(150, 180);
 
             Label itemNameLabel = new Label();
-            itemNameLabel.Text = itemName;
+            itemNameLabel.Text = item.Nama;
             itemNameLabel.Size = new Size(140, 80);
 
             Label itemPriceLabel = new Label();
-            itemPriceLabel.Text = $"Rp {itemPrice:N2}";
+            itemPriceLabel.Text = $"Rp {item.Harga:N2}";
             itemPriceLabel.Size = new Size(200, 60);
 
             Button addItemButton = new Button();
             addItemButton.Text = "+";
             addItemButton.Size = new Size(40, 40);
-            addItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
-            addItemButton.Click += new EventHandler(AddItemButton_Click);
+            addItemButton.Tag = item;
+            addItemButton.Click += AddItemButton_Click;
 
             Button delItemButton = new Button();
             delItemButton.Text = "-";
             delItemButton.Size = new Size(40, 40);
-            delItemButton.Tag = new Tuple<string, int, decimal>(itemName, itemID, itemPrice);
-            delItemButton.Click += new EventHandler(DelItemButton_Click);
+            delItemButton.Tag = item;
+            delItemButton.Click += DelItemButton_Click;
 
             itemPanel.Controls.Add(itemNameLabel);
             itemPanel.Controls.Add(itemPriceLabel);
@@ -187,13 +86,57 @@ namespace menumaster.Views
             return itemPanel;
         }
 
+        private void AddItemButton_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            var item = (MenuItem)button.Tag;
+
+            var existingItem = pesananList.FirstOrDefault(i => i.ID == item.ID);
+            if (existingItem != null)
+            {
+                existingItem.Jumlah++;
+            }
+            else
+            {
+                item.Jumlah = 1;
+                pesananList.Add(item);
+            }
+
+            totalHarga += item.Harga;
+            UpdatePesananPanel();
+            lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
+        }
+
+        private void DelItemButton_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            var item = (MenuItem)button.Tag;
+
+            var existingItem = pesananList.FirstOrDefault(i => i.ID == item.ID);
+            if (existingItem != null)
+            {
+                if (existingItem.Jumlah > 1)
+                {
+                    existingItem.Jumlah--;
+                }
+                else
+                {
+                    pesananList.Remove(existingItem);
+                }
+
+                totalHarga -= item.Harga;
+                UpdatePesananPanel();
+                lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
+            }
+        }
+
         private void UpdatePesananPanel()
         {
             panelPesanan.Controls.Clear();
-            foreach (string item in pesananList)
+            foreach (var item in pesananList)
             {
                 Label itemLabel = new Label();
-                itemLabel.Text = item;
+                itemLabel.Text = $"{item.Nama} x{item.Jumlah}";
                 itemLabel.Size = new Size(140, 80);
                 panelPesanan.Controls.Add(itemLabel);
             }
@@ -219,62 +162,29 @@ namespace menumaster.Views
                 return;
             }
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
+            Pesanan pesanan = new Pesanan
             {
-                conn.Open();
-                using (var trans = conn.BeginTransaction())
-                {
-                    try
-                    {
-                        // Insert into pesanan table
-                        string insertPesananQuery = "INSERT INTO pesanan (tanggal_pemesanan, total_harga, total_tax, ID_pelanggan, ID_metode_pembayaran, ID_karyawan) VALUES (@tanggal_pemesanan, @total_harga, @total_tax, @ID_pelanggan, @ID_metode_pembayaran, @ID_karyawan) RETURNING ID_pesanan";
-                        using (NpgsqlCommand cmd = new NpgsqlCommand(insertPesananQuery, conn))
-                        {
-                            cmd.Parameters.AddWithValue("tanggal_pemesanan", DateTime.Now);
-                            cmd.Parameters.AddWithValue("total_harga", totalHarga);
-                            cmd.Parameters.AddWithValue("total_tax", totalHarga * 0.1m);
-                            cmd.Parameters.AddWithValue("ID_pelanggan", pelangganID);
-                            cmd.Parameters.AddWithValue("ID_metode_pembayaran", metodePembayaranID);
-                            cmd.Parameters.AddWithValue("ID_karyawan", karyawanID);
+                TanggalPemesanan = DateTime.Now,
+                TotalHarga = totalHarga,
+                TotalTax = totalHarga * 0.1m,
+                PelangganID = pelangganID,
+                MetodePembayaranID = metodePembayaranID,
+                KaryawanID = karyawanID,
+                Items = pesananList
+            };
 
-                            int pesananID = (int)cmd.ExecuteScalar();
-
-                            // Insert into detail_pesanan table
-                            string insertDetailPesananQuery = "INSERT INTO detail_pesanan (ID_pesanan, ID_menu, jumlah) VALUES (@ID_pesanan, @ID_menu, @jumlah)";
-                            foreach (var entry in itemPrices)
-                            {
-                                int menuID = entry.Key;
-                                decimal itemPrice = entry.Value;
-                                int jumlahItem = menuIDs.Count(id => id == menuID); // Count the number of times the item was ordered
-
-                                using (NpgsqlCommand detailCmd = new NpgsqlCommand(insertDetailPesananQuery, conn))
-                                {
-                                    detailCmd.Parameters.AddWithValue("ID_pesanan", pesananID);
-                                    detailCmd.Parameters.AddWithValue("ID_menu", menuID);
-                                    detailCmd.Parameters.AddWithValue("jumlah", jumlahItem);
-
-                                    detailCmd.ExecuteNonQuery();
-                                }
-
-                            }
-                        }
-
-                        trans.Commit();
-                        MessageBox.Show("Pesanan berhasil ditambahkan");
-                        pesananList.Clear();
-                        menuIDs.Clear();
-                        itemPrices.Clear();
-                        totalHarga = 0;
-                        lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
-                        UpdatePesananPanel();
-                    }
-                    catch (Exception ex)
-                    {
-                        trans.Rollback();
-                        MessageBox.Show("Terjadi kesalahan: " + ex.Message);
-                    }
-
-                }
+            try
+            {
+                controller.SubmitPesanan(pesanan);
+                MessageBox.Show("Pesanan berhasil ditambahkan");
+                pesananList.Clear();
+                totalHarga = 0;
+                lblTotalHarga.Text = $"Total Harga: Rp {totalHarga:N2}";
+                UpdatePesananPanel();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
         }
 

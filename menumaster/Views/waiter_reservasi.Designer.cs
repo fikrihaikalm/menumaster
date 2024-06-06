@@ -57,6 +57,7 @@ namespace menumaster.Forms.Waiters
             // 
             // textBoxNama
             // 
+            textBoxNama.Anchor = AnchorStyles.None;
             textBoxNama.BackColor = Color.FromArgb(231, 231, 241);
             textBoxNama.BorderStyle = BorderStyle.None;
             textBoxNama.DetectUrls = false;
@@ -70,6 +71,7 @@ namespace menumaster.Forms.Waiters
             // 
             // LabelName
             // 
+            LabelName.Anchor = AnchorStyles.None;
             LabelName.AutoSize = true;
             LabelName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LabelName.Location = new Point(418, 21);
@@ -81,6 +83,7 @@ namespace menumaster.Forms.Waiters
             // 
             // LableNoTelepone
             // 
+            LableNoTelepone.Anchor = AnchorStyles.None;
             LableNoTelepone.AutoSize = true;
             LableNoTelepone.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LableNoTelepone.Location = new Point(418, 165);
@@ -92,6 +95,7 @@ namespace menumaster.Forms.Waiters
             // 
             // textBoxTelp
             // 
+            textBoxTelp.Anchor = AnchorStyles.None;
             textBoxTelp.BackColor = Color.FromArgb(231, 231, 241);
             textBoxTelp.BorderStyle = BorderStyle.None;
             textBoxTelp.DetectUrls = false;
@@ -105,6 +109,7 @@ namespace menumaster.Forms.Waiters
             // 
             // dateTimePickerTanggal
             // 
+            dateTimePickerTanggal.Anchor = AnchorStyles.None;
             dateTimePickerTanggal.CalendarMonthBackground = SystemColors.ButtonHighlight;
             dateTimePickerTanggal.Location = new Point(418, 376);
             dateTimePickerTanggal.Margin = new Padding(5);
@@ -114,6 +119,7 @@ namespace menumaster.Forms.Waiters
             // 
             // LabelTanggal
             // 
+            LabelTanggal.Anchor = AnchorStyles.None;
             LabelTanggal.AutoSize = true;
             LabelTanggal.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LabelTanggal.Location = new Point(418, 315);
@@ -125,6 +131,7 @@ namespace menumaster.Forms.Waiters
             // 
             // LabelMeja
             // 
+            LabelMeja.Anchor = AnchorStyles.None;
             LabelMeja.AutoSize = true;
             LabelMeja.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LabelMeja.Location = new Point(431, 614);
@@ -136,6 +143,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(418, 749);
@@ -147,6 +155,7 @@ namespace menumaster.Forms.Waiters
             // 
             // comboBoxMeja
             // 
+            comboBoxMeja.Anchor = AnchorStyles.None;
             comboBoxMeja.BackColor = Color.FromArgb(231, 231, 241);
             comboBoxMeja.FormattingEnabled = true;
             comboBoxMeja.Location = new Point(418, 678);
@@ -159,6 +168,7 @@ namespace menumaster.Forms.Waiters
             // 
             // comboBoxMetodePembayaran
             // 
+            comboBoxMetodePembayaran.Anchor = AnchorStyles.None;
             comboBoxMetodePembayaran.BackColor = Color.FromArgb(231, 231, 241);
             comboBoxMetodePembayaran.FormattingEnabled = true;
             comboBoxMetodePembayaran.Location = new Point(418, 805);
@@ -171,6 +181,7 @@ namespace menumaster.Forms.Waiters
             // 
             // BtnSimpan
             // 
+            BtnSimpan.Anchor = AnchorStyles.None;
             BtnSimpan.BackColor = Color.FromArgb(90, 103, 186);
             BtnSimpan.ForeColor = Color.White;
             BtnSimpan.Location = new Point(1535, 875);
@@ -184,6 +195,7 @@ namespace menumaster.Forms.Waiters
             // 
             // btnBack
             // 
+            btnBack.Anchor = AnchorStyles.None;
             btnBack.BackColor = Color.FromArgb(90, 103, 186);
             btnBack.ForeColor = Color.White;
             btnBack.Location = new Point(20, 875);
@@ -197,6 +209,7 @@ namespace menumaster.Forms.Waiters
             // 
             // numericUpDownDurasi
             // 
+            numericUpDownDurasi.Anchor = AnchorStyles.None;
             numericUpDownDurasi.Location = new Point(1207, 376);
             numericUpDownDurasi.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
             numericUpDownDurasi.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -207,6 +220,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Location = new Point(883, 321);
             label1.Name = "label1";
@@ -215,6 +229,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Location = new Point(1207, 321);
             label3.Name = "label3";
@@ -223,6 +238,7 @@ namespace menumaster.Forms.Waiters
             // 
             // numericUpDownWaktu
             // 
+            numericUpDownWaktu.Anchor = AnchorStyles.None;
             numericUpDownWaktu.Location = new Point(883, 376);
             numericUpDownWaktu.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
             numericUpDownWaktu.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -233,6 +249,7 @@ namespace menumaster.Forms.Waiters
             // 
             // numericUpDownJumlahOrang
             // 
+            numericUpDownJumlahOrang.Anchor = AnchorStyles.None;
             numericUpDownJumlahOrang.Location = new Point(418, 528);
             numericUpDownJumlahOrang.Name = "numericUpDownJumlahOrang";
             numericUpDownJumlahOrang.Size = new Size(240, 39);
@@ -240,6 +257,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Location = new Point(418, 471);
             label4.Name = "label4";
@@ -248,6 +266,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(883, 315);
@@ -259,6 +278,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(418, 456);
@@ -270,6 +290,7 @@ namespace menumaster.Forms.Waiters
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(1207, 315);
