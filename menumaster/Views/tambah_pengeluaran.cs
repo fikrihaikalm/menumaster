@@ -24,7 +24,7 @@ namespace menumaster
 
         private DataTable GetJenisPengeluaran()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
 
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
@@ -77,7 +77,7 @@ namespace menumaster
             DateTime tanggal = dateTimePicker1.Value;
             decimal total = decimal.Parse(textBox2.Text);
 
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
+            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menumaster2";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
 

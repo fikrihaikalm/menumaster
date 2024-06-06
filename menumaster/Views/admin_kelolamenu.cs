@@ -134,5 +134,10 @@ namespace menumaster.Views
             textBox3.Text = string.Empty;
             comboBox1.SelectedIndex = -1;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
