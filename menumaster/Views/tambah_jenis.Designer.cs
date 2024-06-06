@@ -36,25 +36,31 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(174, 188);
+            label1.Location = new Point(139, 150);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(98, 25);
+            label1.Size = new Size(80, 20);
             label1.TabIndex = 0;
             label1.Text = "Tambah    :";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(305, 182);
+            textBox1.Anchor = AnchorStyles.None;
+            textBox1.Location = new Point(244, 146);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(220, 31);
+            textBox1.Size = new Size(177, 27);
             textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(351, 256);
+            button1.Anchor = AnchorStyles.None;
+            button1.Location = new Point(281, 205);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(90, 27);
             button1.TabIndex = 2;
             button1.Text = "Simpan";
             button1.UseVisualStyleBackColor = true;
@@ -65,22 +71,23 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Cooper Black", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(22, 23);
+            label2.Location = new Point(18, 18);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(425, 35);
+            label2.Size = new Size(353, 29);
             label2.TabIndex = 26;
             label2.Text = "Tambah Jenis Pengeluaran";
             // 
             // tambah_jenis
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "tambah_jenis";
             Text = "tambah_jenis";
             ResumeLayout(false);
