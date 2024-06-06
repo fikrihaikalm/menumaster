@@ -24,7 +24,7 @@ namespace menumaster
 
         private DataTable GetJenisPengeluaran()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
 
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
