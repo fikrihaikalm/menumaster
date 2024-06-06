@@ -56,6 +56,7 @@
             buttonCardButton.TabIndex = 1;
             buttonCardButton.Text = "button1";
             buttonCardButton.UseVisualStyleBackColor = true;
+            buttonCardButton.Click += buttonCardButton_Click;
             // 
             // WelcomePageCardButton
             // 

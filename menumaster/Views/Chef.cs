@@ -36,9 +36,11 @@ namespace menumaster.Views
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            
-            this.Close(); 
-            
+
+            chef_login f1 = new chef_login();
+            f1.Show();
+            this.Close();
+
         }
     }
 }

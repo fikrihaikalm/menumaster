@@ -2,15 +2,8 @@
 {
     partial class WelcomePageForm
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             welcomePageCardAdmin = new Components.WelcomePageCardButton();
@@ -35,6 +24,7 @@
             panel1 = new Panel();
             label1 = new Label();
             label2 = new Label();
+            welcomePageCardButton1 = new Components.WelcomePageCardButton();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -95,9 +85,10 @@
             tableLayoutPanel1.Controls.Add(welcomePageCardManager, 1, 1);
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(welcomePageCardAdmin, 0, 1);
+            tableLayoutPanel1.Controls.Add(welcomePageCardButton1, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 4, 4, 4);
+            tableLayoutPanel1.Margin = new Padding(4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.Padding = new Padding(12, 14, 12, 14);
             tableLayoutPanel1.RowCount = 3;
@@ -114,7 +105,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(245, 18);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new Size(874, 156);
             panel1.TabIndex = 12;
@@ -139,9 +130,25 @@
             label2.Location = new Point(372, 125);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(143, 30);
+            label2.Size = new Size(151, 30);
             label2.TabIndex = 4;
-            label2.Text = "silahkan login";
+            label2.Text = "Silahkan Login";
+            // 
+            // welcomePageCardButton1
+            // 
+            welcomePageCardButton1.Anchor = AnchorStyles.None;
+            welcomePageCardButton1.BorderRadius = 20;
+            welcomePageCardButton1.BorderStyle = BorderStyle.FixedSingle;
+            welcomePageCardButton1.ButtonText = "Lanjutkan Sebagai Chef";
+            welcomePageCardButton1.CardName = "Chef";
+            welcomePageCardButton1.Location = new Point(478, 560);
+            welcomePageCardButton1.Margin = new Padding(12, 14, 12, 14);
+            welcomePageCardButton1.Name = "welcomePageCardButton1";
+            welcomePageCardButton1.Padding = new Padding(12, 14, 12, 14);
+            welcomePageCardButton1.Size = new Size(406, 168);
+            welcomePageCardButton1.TabIndex = 13;
+            welcomePageCardButton1.Load += welcomePageCardButton1_Load;
+            welcomePageCardButton1.ButtonClick += chefButton_Click;
             // 
             // WelcomePageForm
             // 
@@ -171,5 +178,6 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
+        private Components.WelcomePageCardButton welcomePageCardButton1;
     }
 }

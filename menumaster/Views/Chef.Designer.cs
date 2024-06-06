@@ -37,12 +37,13 @@
             // 
             // btnLihatPesanan
             // 
+            btnLihatPesanan.Anchor = AnchorStyles.None;
             btnLihatPesanan.BackColor = Color.Lavender;
             btnLihatPesanan.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLihatPesanan.ForeColor = Color.SlateBlue;
             btnLihatPesanan.Image = (Image)resources.GetObject("btnLihatPesanan.Image");
             btnLihatPesanan.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLihatPesanan.Location = new Point(415, 192);
+            btnLihatPesanan.Location = new Point(467, 240);
             btnLihatPesanan.Margin = new Padding(6, 8, 6, 8);
             btnLihatPesanan.Name = "btnLihatPesanan";
             btnLihatPesanan.Size = new Size(272, 52);
@@ -53,17 +54,18 @@
             // 
             // btnBack
             // 
+            btnBack.Anchor = AnchorStyles.None;
             btnBack.BackColor = Color.DarkSlateBlue;
             btnBack.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
             btnBack.Image = (Image)resources.GetObject("btnBack.Image");
             btnBack.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBack.Location = new Point(62, 508);
+            btnBack.Location = new Point(114, 556);
             btnBack.Margin = new Padding(6, 8, 6, 8);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(160, 52);
             btnBack.TabIndex = 1;
-            btnBack.Text = "Back";
+            btnBack.Text = "Logout";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
@@ -72,14 +74,16 @@
             AutoScaleDimensions = new SizeF(13F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1218, 603);
+            ClientSize = new Size(1364, 800);
             Controls.Add(btnBack);
             Controls.Add(btnLihatPesanan);
             Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ForeColor = Color.MediumPurple;
             Margin = new Padding(6, 8, 6, 8);
+            MinimumSize = new Size(994, 736);
             Name = "Chef";
             Text = "Chef";
+            WindowState = FormWindowState.Maximized;
             Load += Chef_Load;
             ResumeLayout(false);
         }
