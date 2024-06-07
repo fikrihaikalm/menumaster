@@ -43,7 +43,7 @@ namespace menumaster
                 new NpgsqlParameter("@password", textBox2.Text)
             };
 
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menumaster";
 
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {

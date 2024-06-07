@@ -16,7 +16,7 @@ namespace menumaster.Views
     public partial class Manager_TambahKaryawan : Form
     {
         // Buat variabel untuk menyimpan koneksi ke database
-        NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=12345;Database=MenuMaster");
+        NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=12345;Database=Menumaster");
 
         public Manager_TambahKaryawan()
         {
