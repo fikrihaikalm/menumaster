@@ -29,118 +29,134 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Homepage));
-            button1 = new Button();
-            button2 = new Button();
+            btnlaporankeuangan = new Button();
+            btnkelolakaryawan = new Button();
             label1 = new Label();
-            panel1 = new Panel();
             button3 = new Button();
-            panel1.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnlaporankeuangan
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.BackColor = Color.Lavender;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.LightSteelBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.RoyalBlue;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(84, 67);
-            button1.Name = "button1";
-            button1.Size = new Size(262, 47);
-            button1.TabIndex = 0;
-            button1.Text = "Laporan Keuangan";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = false;
+            btnlaporankeuangan.Anchor = AnchorStyles.None;
+            btnlaporankeuangan.BackColor = SystemColors.GradientInactiveCaption;
+            btnlaporankeuangan.FlatAppearance.BorderSize = 0;
+            btnlaporankeuangan.FlatAppearance.MouseOverBackColor = Color.LightSteelBlue;
+            btnlaporankeuangan.FlatStyle = FlatStyle.Flat;
+            btnlaporankeuangan.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnlaporankeuangan.ForeColor = Color.Black;
+            btnlaporankeuangan.Location = new Point(430, 238);
+            btnlaporankeuangan.Margin = new Padding(5);
+            btnlaporankeuangan.Name = "btnlaporankeuangan";
+            btnlaporankeuangan.Size = new Size(454, 89);
+            btnlaporankeuangan.TabIndex = 0;
+            btnlaporankeuangan.Text = "Laporan Keuangan";
+            btnlaporankeuangan.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnlaporankeuangan.UseVisualStyleBackColor = false;
+            btnlaporankeuangan.Click += btnlaporankeuangan_Click;
             // 
-            // button2
+            // btnkelolakaryawan
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.BackColor = Color.Lavender;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.LightSteelBlue;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Arial Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.RoyalBlue;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(84, 132);
-            button2.Name = "button2";
-            button2.Size = new Size(262, 47);
-            button2.TabIndex = 1;
-            button2.Text = "Kelola Karyawan";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnkelolakaryawan.Anchor = AnchorStyles.None;
+            btnkelolakaryawan.BackColor = SystemColors.GradientInactiveCaption;
+            btnkelolakaryawan.FlatAppearance.BorderSize = 0;
+            btnkelolakaryawan.FlatAppearance.MouseOverBackColor = Color.LightSteelBlue;
+            btnkelolakaryawan.FlatStyle = FlatStyle.Flat;
+            btnkelolakaryawan.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnkelolakaryawan.ForeColor = Color.Black;
+            btnkelolakaryawan.Location = new Point(430, 376);
+            btnkelolakaryawan.Margin = new Padding(5);
+            btnkelolakaryawan.Name = "btnkelolakaryawan";
+            btnkelolakaryawan.Size = new Size(454, 89);
+            btnkelolakaryawan.TabIndex = 1;
+            btnkelolakaryawan.Text = "Kelola Karyawan";
+            btnkelolakaryawan.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnkelolakaryawan.UseVisualStyleBackColor = false;
+            btnkelolakaryawan.Click += button2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(30, 26);
+            label1.Location = new Point(24, 28);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(92, 22);
+            label1.Size = new Size(169, 48);
             label1.TabIndex = 2;
             label1.Text = "Manager";
             // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(button2);
-            panel1.Location = new Point(265, 91);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(421, 255);
-            panel1.TabIndex = 3;
-            // 
             // button3
             // 
-            button3.Anchor = AnchorStyles.None;
-            button3.BackColor = Color.RoyalBlue;
+            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button3.BackColor = Color.MidnightBlue;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.Control;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(42, 416);
+            button3.Location = new Point(43, 705);
+            button3.Margin = new Padding(5);
             button3.Name = "button3";
-            button3.Size = new Size(95, 31);
+            button3.Size = new Size(135, 52);
             button3.TabIndex = 4;
             button3.Text = "Logout";
-            button3.TextAlign = ContentAlignment.MiddleRight;
-            button3.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button3.TextImageRelation = TextImageRelation.TextBeforeImage;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(477, 275);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(34, 33);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.None;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(477, 407);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 30);
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
+            // 
             // Manager_Homepage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(955, 471);
+            ClientSize = new Size(1365, 785);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnkelolakaryawan);
+            Controls.Add(btnlaporankeuangan);
             Controls.Add(button3);
-            Controls.Add(panel1);
             Controls.Add(label1);
-            MinimumSize = new Size(702, 460);
+            Margin = new Padding(5);
+            MinimumSize = new Size(990, 716);
             Name = "Manager_Homepage";
             Text = "Manager Homepage";
             WindowState = FormWindowState.Maximized;
             Load += Manager_Homepage_Load;
-            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button btnlaporankeuangan;
+        private Button btnkelolakaryawan;
         private Label label1;
-        private Panel panel1;
         private Button button3;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
