@@ -29,9 +29,12 @@ namespace menumaster.Views
 
         private void btnLihatPesanan_Click(object sender, EventArgs e)
         {
-            
-            MessageBox.Show("Menampilkan pesanan.");
-            
+
+            LihatPesanan f1 = new LihatPesanan();
+            f1.Show();
+            this.Close();
+
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
