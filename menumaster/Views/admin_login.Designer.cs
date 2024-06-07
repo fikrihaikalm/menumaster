@@ -1,6 +1,6 @@
-﻿namespace menumaster
+﻿namespace menumaster.Views
 {
-    partial class Login_admin 
+    partial class Login_admin
     {
         /// <summary>
         /// Required designer variable.

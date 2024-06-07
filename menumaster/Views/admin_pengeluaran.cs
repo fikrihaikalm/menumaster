@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
+using menumaster.Controllers;
+using menumaster.Models;
 
-namespace menumaster
+namespace menumaster.Views
 {
     public partial class admin_pengeluaran : Form
     {
@@ -19,9 +14,12 @@ namespace menumaster
         private DateOnly tanggalawal;
         private DateOnly tanggalakhir;
 
+        private AdminPengeluaranController _controller;
+
         public admin_pengeluaran()
         {
             InitializeComponent();
+            _controller = new AdminPengeluaranController();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,31 +53,14 @@ namespace menumaster
             tanggal2 = dateTimePicker2.Value;
             tanggalakhir = DateOnly.FromDateTime(tanggal2); // Only date, no time
 
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
-            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
+            try
             {
-                try
-                {
-                    conn.Open();
-                    string sql = "select p.tanggal_pengeluaran as tanggal, p.jumlah_pengeluaran as jumlah, jp.nama_pengeluaran as jenis from pengeluaran_operasional p join jenis_pengeluaran jp on (p.id_jenis_pengeluaran = jp.id_jenis_pengeluaran) WHERE p.tanggal_pengeluaran >= @tanggalawal and p.tanggal_pengeluaran <= @tanggalakhir";
-
-                    using (NpgsqlCommand command = new NpgsqlCommand(sql, conn))
-                    {
-                        command.Parameters.AddWithValue("@tanggalawal", tanggalawal);
-                        command.Parameters.AddWithValue("@tanggalakhir", tanggalakhir);
-
-                        using (NpgsqlDataAdapter da = new NpgsqlDataAdapter(command))
-                        {
-                            DataTable dt = new DataTable();
-                            da.Fill(dt);
-                            dataGridView1.DataSource = dt;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                List<Pengeluaran> pengeluaranList = _controller.GetPengeluaranData(tanggalawal, tanggalakhir);
+                dataGridView1.DataSource = pengeluaranList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 

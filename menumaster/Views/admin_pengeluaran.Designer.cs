@@ -1,4 +1,4 @@
-﻿namespace menumaster
+﻿namespace menumaster.Views
 {
     partial class admin_pengeluaran
     {

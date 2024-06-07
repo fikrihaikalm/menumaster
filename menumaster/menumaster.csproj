@@ -13,21 +13,18 @@
     <Compile Remove="Controllers\Admin\**" />
     <Compile Remove="Controllers\Manager\**" />
     <Compile Remove="Controllers\Waiters\**" />
-    <Compile Remove="helpers\**" />
     <Compile Remove="kasir\**" />
     <Compile Remove="manajer\**" />
     <EmbeddedResource Remove="admin\**" />
     <EmbeddedResource Remove="Controllers\Admin\**" />
     <EmbeddedResource Remove="Controllers\Manager\**" />
     <EmbeddedResource Remove="Controllers\Waiters\**" />
-    <EmbeddedResource Remove="helpers\**" />
     <EmbeddedResource Remove="kasir\**" />
     <EmbeddedResource Remove="manajer\**" />
     <None Remove="admin\**" />
     <None Remove="Controllers\Admin\**" />
     <None Remove="Controllers\Manager\**" />
     <None Remove="Controllers\Waiters\**" />
-    <None Remove="helpers\**" />
     <None Remove="kasir\**" />
     <None Remove="manajer\**" />
   </ItemGroup>
@@ -48,7 +45,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Resources\" />
   </ItemGroup>
 

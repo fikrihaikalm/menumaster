@@ -1,42 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using menumaster.Views;
-using Npgsql;
+using menumaster.Controllers;
+using menumaster.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace menumaster
+namespace menumaster.Views
 {
     public partial class tambah_pengeluaran : Form
     {
+        private readonly Pengeluaran1Controller _controller;
+
         public tambah_pengeluaran()
         {
             InitializeComponent();
-        }
-
-        private DataTable GetJenisPengeluaran()
-        {
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                string query = "SELECT id_jenis_pengeluaran, nama_pengeluaran FROM jenis_pengeluaran";
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
+            _controller = new Pengeluaran1Controller();
         }
 
         private void PopulateComboBox()
         {
-            DataTable jenisPengeluaranData = GetJenisPengeluaran();
+            DataTable jenisPengeluaranData = _controller.GetJenisPengeluaran();
             comboBox1.DataSource = jenisPengeluaranData;
             comboBox1.DisplayMember = "nama_pengeluaran";
             comboBox1.ValueMember = "id_jenis_pengeluaran";
@@ -54,58 +37,52 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            admin_page admin_page = new admin_page();
-            admin_page.Show();
+            admin_page adminPage = new admin_page();
+            adminPage.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            comboBox1.Text = string.Empty;
-            dateTimePicker1.Text = string.Empty;
-            textBox2.Text = string.Empty;
+            comboBox1.SelectedIndex = -1;
+            dateTimePicker1.Value = DateTime.Now;
+            textBox2.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             tambah_jenis jenis = new tambah_jenis();
-            jenis.FormClosed += new FormClosedEventHandler(tambah_pengeluaran_Activated); // Mengisi ulang combobox saat form ditutup
+            jenis.FormClosed += new FormClosedEventHandler(tambah_pengeluaran_Activated);
             jenis.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int jenisPengeluaran = (int)comboBox1.SelectedValue;
-            DateTime tanggal = dateTimePicker1.Value;
-            decimal total = decimal.Parse(textBox2.Text);
-
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            try
             {
-                string masuk = "INSERT INTO pengeluaran_operasional (id_jenis_pengeluaran, tanggal_pengeluaran, jumlah_pengeluaran, id_karyawan) VALUES (@jenis, @tanggal, @total, @karyawan)";
-                using (NpgsqlCommand command = new NpgsqlCommand(masuk, connection))
+                Pengeluaran1 pengeluaran = new Pengeluaran1
                 {
-                    command.Parameters.AddWithValue("jenis", jenisPengeluaran);
-                    command.Parameters.AddWithValue("tanggal", tanggal);
-                    command.Parameters.AddWithValue("total", total);
-                    command.Parameters.AddWithValue("karyawan", Login_admin.KaryawanID); // Menggunakan ID karyawan yang login
+                    IdJenisPengeluaran = (int)comboBox1.SelectedValue,
+                    TanggalPengeluaran = dateTimePicker1.Value,
+                    JumlahPengeluaran = decimal.Parse(textBox2.Text),
+                    IdKaryawan = Login_admin.KaryawanID // Menggunakan ID karyawan yang login
+                };
 
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    connection.Close();
+                bool isSuccess = _controller.TambahPengeluaran(pengeluaran);
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Pengeluaran berhasil disimpan!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        comboBox1.SelectedIndex = -1;
-                        dateTimePicker1.Value = DateTime.Now;
-                        textBox2.Clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal menyimpan pengeluaran", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                if (isSuccess)
+                {
+                    MessageBox.Show("Pengeluaran berhasil disimpan!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button3_Click(sender, e); // Clear the form
                 }
+                else
+                {
+                    MessageBox.Show("Gagal menyimpan pengeluaran", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

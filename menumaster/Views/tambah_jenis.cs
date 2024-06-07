@@ -1,49 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using menumaster.Controllers;
+using menumaster.Models;
 
 namespace menumaster.Views
 {
     public partial class tambah_jenis : Form
     {
+        private readonly JenisPengeluaranController _controller;
+
         public tambah_jenis()
         {
             InitializeComponent();
+            _controller = new JenisPengeluaranController();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string jenis_pengeluaran = textBox1.Text;
+            string jenisPengeluaran = textBox1.Text;
+            JenisPengeluaran jenis = new JenisPengeluaran { NamaPengeluaran = jenisPengeluaran };
 
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            try
             {
-                string masuk = "INSERT INTO jenis_pengeluaran (nama_pengeluaran) VALUES (@nama)";
-                using (NpgsqlCommand command = new NpgsqlCommand(masuk, connection))
-                {
-                    command.Parameters.AddWithValue("nama", jenis_pengeluaran);
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    connection.Close();
+                bool isSuccess = _controller.TambahJenisPengeluaran(jenis);
 
-                    if (rowsAffected > 0)
-                    {
-                        textBox1.Clear();
-                        this.Close(); // Menutup form setelah data berhasil disimpan
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal menyimpan jenis pengeluaran", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                if (isSuccess)
+                {
+                    textBox1.Clear();
+                    this.Close(); // Menutup form setelah data berhasil disimpan
                 }
+                else
+                {
+                    MessageBox.Show("Gagal menyimpan jenis pengeluaran", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

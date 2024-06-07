@@ -1,3 +1,5 @@
+using menumaster.Views;
+
 namespace menumaster
 {
     public partial class WelcomePageForm : Form
