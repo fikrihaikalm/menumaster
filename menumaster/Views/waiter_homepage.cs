@@ -41,15 +41,17 @@ namespace menumaster.Views
 
         private void button2_Click(object sender, EventArgs e)
         {
-            waiter_reservasi wr = new waiter_reservasi();
-            wr.Show();
+            waiter_pesanan wp = new waiter_pesanan();
+            wp.Show();
             this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            waiter_pesanan wp = new waiter_pesanan();
-            wp.Show();
+
+            waiter_reservasi wr = new waiter_reservasi();
+            wr.Show();
             this.Close();
         }
 
