@@ -1,38 +1,32 @@
-﻿using System.Data;
-using Npgsql;
+﻿using Npgsql;
+using System;
+using System.Data;
 
 namespace menumaster.Helpers
 {
-    public class DatabaseHelper
+    public static class DatabaseHelper
     {
-        private readonly string _connectionString;
+        private static string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=1;Database=menumaster";
 
-        public DatabaseHelper()
+        public static NpgsqlConnection GetConnection()
         {
-            _connectionString = "Host=localhost;Username=postgres;Password=1;Database=menumaster";
+            return new NpgsqlConnection(connectionString);
         }
 
-        // Overload method without parameters
-        public DataTable ExecuteQuery(string query)
+        public static DataTable ExecuteQuery(string query, NpgsqlParameter[] parameters = null)
         {
-            return ExecuteQuery(query, null);
-        }
-
-        // Method with parameters
-        public DataTable ExecuteQuery(string query, NpgsqlParameter[] parameters)
-        {
-            using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+            using (var connection = GetConnection())
             {
-                using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                using (var command = new NpgsqlCommand(query, connection))
                 {
                     if (parameters != null)
                     {
                         command.Parameters.AddRange(parameters);
                     }
 
-                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                    using (var adapter = new NpgsqlDataAdapter(command))
                     {
-                        DataTable dataTable = new DataTable();
+                        var dataTable = new DataTable();
                         adapter.Fill(dataTable);
                         return dataTable;
                     }
@@ -40,40 +34,38 @@ namespace menumaster.Helpers
             }
         }
 
-        public int ExecuteNonQuery(string query, NpgsqlParameter[] parameters)
+        public static int ExecuteNonQuery(string query, NpgsqlParameter[] parameters = null)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(_connectionString))
+            using (var connection = GetConnection())
             {
-                using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                connection.Open();
+                using (var command = new NpgsqlCommand(query, connection))
                 {
                     if (parameters != null)
                     {
                         command.Parameters.AddRange(parameters);
                     }
-                    connection.Open();
+
                     return command.ExecuteNonQuery();
                 }
             }
         }
 
-
-        public object ExecuteScalar(string query, NpgsqlParameter[] parameters)
+        public static object ExecuteScalar(string query, NpgsqlParameter[] parameters = null)
         {
-            using (NpgsqlConnection conn = new NpgsqlConnection(_connectionString))
+            using (var connection = GetConnection())
             {
-                conn.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                connection.Open();
+                using (var command = new NpgsqlCommand(query, connection))
                 {
                     if (parameters != null)
                     {
-                        cmd.Parameters.AddRange(parameters);
+                        command.Parameters.AddRange(parameters);
                     }
-                    return cmd.ExecuteScalar();
+
+                    return command.ExecuteScalar();
                 }
             }
         }
     }
 }
-
-    
-
