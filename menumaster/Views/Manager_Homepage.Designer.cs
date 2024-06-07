@@ -51,7 +51,7 @@
             btnlaporankeuangan.Location = new Point(430, 238);
             btnlaporankeuangan.Margin = new Padding(5);
             btnlaporankeuangan.Name = "btnlaporankeuangan";
-            btnlaporankeuangan.Size = new Size(489, 102);
+            btnlaporankeuangan.Size = new Size(454, 89);
             btnlaporankeuangan.TabIndex = 0;
             btnlaporankeuangan.Text = "Laporan Keuangan";
             btnlaporankeuangan.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -70,7 +70,7 @@
             btnkelolakaryawan.Location = new Point(430, 376);
             btnkelolakaryawan.Margin = new Padding(5);
             btnkelolakaryawan.Name = "btnkelolakaryawan";
-            btnkelolakaryawan.Size = new Size(489, 102);
+            btnkelolakaryawan.Size = new Size(454, 89);
             btnkelolakaryawan.TabIndex = 1;
             btnkelolakaryawan.Text = "Kelola Karyawan";
             btnkelolakaryawan.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -80,12 +80,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(43, 43);
+            label1.Location = new Point(24, 28);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(135, 34);
+            label1.Size = new Size(169, 48);
             label1.TabIndex = 2;
             label1.Text = "Manager";
             // 
@@ -95,7 +95,7 @@
             button3.BackColor = Color.MidnightBlue;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = SystemColors.Control;
             button3.Location = new Point(43, 705);
             button3.Margin = new Padding(5);

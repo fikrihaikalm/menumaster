@@ -14,7 +14,7 @@ namespace menumaster.Views
 {
     public partial class Manager_KelolaKaryawan : Form
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=MenuMaster";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=1;Database=menu master";
         public Manager_KelolaKaryawan()
         {
             InitializeComponent();
