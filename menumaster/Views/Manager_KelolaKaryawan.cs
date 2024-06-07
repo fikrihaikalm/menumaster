@@ -14,7 +14,7 @@ namespace menumaster.Views
 {
     public partial class Manager_KelolaKaryawan : Form
     {
-        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=1;Database=menu master";
+        private string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=MenuMaster";
         public Manager_KelolaKaryawan()
         {
             InitializeComponent();
@@ -39,7 +39,6 @@ namespace menumaster.Views
             LoadKaryawanData();
         }
 
-
         private void LoadKaryawanData()
         {
             using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
@@ -61,31 +60,77 @@ namespace menumaster.Views
             }
         }
 
-       private void button5_Click(object sender, EventArgs e)
-{
-    if (dataGridView1.SelectedRows.Count > 0)
-    {
-        int selectedIndex = dataGridView1.SelectedRows[0].Index;
-        int selectedId = Convert.ToInt32(dataGridView1.Rows[selectedIndex].Cells["id_karyawan"].Value);
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridView1.SelectedRows[0].Index;
+                int selectedId = Convert.ToInt32(dataGridView1.Rows[selectedIndex].Cells["id_karyawan"].Value);
 
-        // Konfirmasi pengguna sebelum menghapus data
-        DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
-        if (result == DialogResult.Yes)
+                // Konfirmasi pengguna sebelum menghapus data
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            conn.Open();
+                            string query = "DELETE FROM karyawan WHERE id_karyawan = @id_karyawan";
+                            using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@id_karyawan", selectedId);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // Refresh DataGridView after deletion
+                            LoadKaryawanData();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Harap pilih baris untuk dihapus.");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            LoadKaryawanData(textBox1.Text);
+        }
+
+        private void LoadKaryawanData(string searchKeyword = "")
         {
             using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "DELETE FROM karyawan WHERE id_karyawan = @id_karyawan";
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    string query = "SELECT * FROM karyawan";
+
+                    // If searchKeyword is not empty, add WHERE clause to the query
+                    if (!string.IsNullOrEmpty(searchKeyword))
                     {
-                        cmd.Parameters.AddWithValue("@id_karyawan", selectedId);
-                        cmd.ExecuteNonQuery();
+                        query += " WHERE nama LIKE @searchKeyword";
                     }
 
-                    // Refresh DataGridView after deletion
-                    LoadKaryawanData();
+                    NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, conn);
+
+                    // If searchKeyword is not empty, add parameter to search for similar names
+                    if (!string.IsNullOrEmpty(searchKeyword))
+                    {
+                        da.SelectCommand.Parameters.AddWithValue("@searchKeyword", "%" + searchKeyword + "%");
+                    }
+
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
@@ -93,13 +138,11 @@ namespace menumaster.Views
                 }
             }
         }
-    }
-    else
-    {
-        MessageBox.Show("Harap pilih baris untuk dihapus.");
-    }
-}
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadKaryawanData(textBox1.Text);
+        }
 
     }
 }

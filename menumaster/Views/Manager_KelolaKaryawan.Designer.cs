@@ -34,15 +34,15 @@
             button2 = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
             id_karyawan = new DataGridViewTextBoxColumn();
             nama = new DataGridViewTextBoxColumn();
             telp = new DataGridViewTextBoxColumn();
             alamat = new DataGridViewTextBoxColumn();
             foto = new DataGridViewTextBoxColumn();
             aktif = new DataGridViewTextBoxColumn();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(405, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -68,6 +69,7 @@
             button1.TabIndex = 1;
             button1.Text = "Search";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -108,6 +110,42 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(644, 344);
             dataGridView1.TabIndex = 4;
+            // 
+            // id_karyawan
+            // 
+            id_karyawan.DataPropertyName = "id_karyawan";
+            id_karyawan.HeaderText = "ID";
+            id_karyawan.Name = "id_karyawan";
+            // 
+            // nama
+            // 
+            nama.DataPropertyName = "nama";
+            nama.HeaderText = "Nama";
+            nama.Name = "nama";
+            // 
+            // telp
+            // 
+            telp.DataPropertyName = "telp";
+            telp.HeaderText = "Telp";
+            telp.Name = "telp";
+            // 
+            // alamat
+            // 
+            alamat.DataPropertyName = "alamat";
+            alamat.HeaderText = "Alamat";
+            alamat.Name = "alamat";
+            // 
+            // foto
+            // 
+            foto.DataPropertyName = "foto";
+            foto.HeaderText = "Foto";
+            foto.Name = "foto";
+            // 
+            // aktif
+            // 
+            aktif.DataPropertyName = "aktif";
+            aktif.HeaderText = "Aktif";
+            aktif.Name = "aktif";
             // 
             // button3
             // 
@@ -155,42 +193,6 @@
             button5.Text = "Delete";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
-            // 
-            // id_karyawan
-            // 
-            id_karyawan.DataPropertyName = "id_karyawan";
-            id_karyawan.HeaderText = "ID";
-            id_karyawan.Name = "id_karyawan";
-            // 
-            // nama
-            // 
-            nama.DataPropertyName = "nama";
-            nama.HeaderText = "Nama";
-            nama.Name = "nama";
-            // 
-            // telp
-            // 
-            telp.DataPropertyName = "telp";
-            telp.HeaderText = "Telp";
-            telp.Name = "telp";
-            // 
-            // alamat
-            // 
-            alamat.DataPropertyName = "alamat";
-            alamat.HeaderText = "Alamat";
-            alamat.Name = "alamat";
-            // 
-            // foto
-            // 
-            foto.DataPropertyName = "foto";
-            foto.HeaderText = "Foto";
-            foto.Name = "foto";
-            // 
-            // aktif
-            // 
-            aktif.DataPropertyName = "aktif";
-            aktif.HeaderText = "Aktif";
-            aktif.Name = "aktif";
             // 
             // Manager_KelolaKaryawan
             // 
