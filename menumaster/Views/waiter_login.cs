@@ -1,4 +1,4 @@
-﻿using menumaster.Helpers; // Pastikan namespace sesuai dengan lokasi DatabaseHelper Anda
+﻿using menumaster.Helpers;
 using menumaster.Views;
 using System;
 using System.Data;
@@ -28,10 +28,23 @@ namespace menumaster
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(passwordtxt.Text))
+            {
+                MessageBox.Show("ID dan password tidak boleh kosong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int idKaryawan;
+            if (!int.TryParse(textBox1.Text, out idKaryawan))
+            {
+                MessageBox.Show("ID karyawan harus berupa angka", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string query = "SELECT COUNT(*) FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password AND id_role = 4";
 
             NpgsqlParameter[] parameters = {
-                new NpgsqlParameter("@id_karyawan", int.Parse(textBox1.Text)),
+                new NpgsqlParameter("@id_karyawan", idKaryawan),
                 new NpgsqlParameter("@password", passwordtxt.Text)
             };
 
