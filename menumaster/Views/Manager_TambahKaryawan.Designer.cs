@@ -156,6 +156,7 @@
             button2.TabIndex = 10;
             button2.Text = "Simpan";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Manager_TambahKaryawan
             // 

@@ -108,7 +108,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(644, 344);
             dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button3
             // 
@@ -155,6 +154,7 @@
             button5.TabIndex = 7;
             button5.Text = "Delete";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // id_karyawan
             // 

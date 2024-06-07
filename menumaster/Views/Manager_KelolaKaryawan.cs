@@ -39,10 +39,6 @@ namespace menumaster.Views
             LoadKaryawanData();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void LoadKaryawanData()
         {
@@ -64,5 +60,46 @@ namespace menumaster.Views
                 }
             }
         }
+
+       private void button5_Click(object sender, EventArgs e)
+{
+    if (dataGridView1.SelectedRows.Count > 0)
+    {
+        int selectedIndex = dataGridView1.SelectedRows[0].Index;
+        int selectedId = Convert.ToInt32(dataGridView1.Rows[selectedIndex].Cells["id_karyawan"].Value);
+
+        // Konfirmasi pengguna sebelum menghapus data
+        DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
+        if (result == DialogResult.Yes)
+        {
+            using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "DELETE FROM karyawan WHERE id_karyawan = @id_karyawan";
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id_karyawan", selectedId);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // Refresh DataGridView after deletion
+                    LoadKaryawanData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+    }
+    else
+    {
+        MessageBox.Show("Harap pilih baris untuk dihapus.");
+    }
+}
+
+
     }
 }
