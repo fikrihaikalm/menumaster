@@ -23,14 +23,12 @@ namespace menumaster.Views
         {
             string jenis_pengeluaran = textBox1.Text;
 
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
-                // Correct the SQL statement to match the table schema
-                string masuk = "INSERT INTO jenis_pengeluaran ( nama_pengeluaran) VALUES (@nama)";
+                string masuk = "INSERT INTO jenis_pengeluaran (nama_pengeluaran) VALUES (@nama)";
                 using (NpgsqlCommand command = new NpgsqlCommand(masuk, connection))
                 {
-                    // Adjust the parameters to match the SQL statement
                     command.Parameters.AddWithValue("nama", jenis_pengeluaran);
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -38,15 +36,14 @@ namespace menumaster.Views
 
                     if (rowsAffected > 0)
                     {
-
                         textBox1.Clear();
+                        this.Close(); // Menutup form setelah data berhasil disimpan
                     }
                     else
                     {
-                        MessageBox.Show("gagal");
+                        MessageBox.Show("Gagal menyimpan jenis pengeluaran", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-
             }
         }
     }

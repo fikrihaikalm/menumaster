@@ -13,22 +13,23 @@ namespace menumaster
 {
     public partial class Login_admin : Form
     {
+        public static int KaryawanID { get; private set; }
+
         public Login_admin()
         {
             InitializeComponent();
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             string username = textBox1.Text;
             string passwordtxt = textBox2.Text; // Assuming textBox2 is for password
-            string query = "SELECT COUNT(*) FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password AND id_role = 2";
+            string query = "SELECT id_karyawan FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password AND id_role = 2";
 
             NpgsqlParameter[] parameters = {
-        new NpgsqlParameter("@id_karyawan", int.Parse(textBox1.Text)),
-        new NpgsqlParameter("@password", passwordtxt)
-    };
+                new NpgsqlParameter("@id_karyawan", int.Parse(textBox1.Text)),
+                new NpgsqlParameter("@password", passwordtxt)
+            };
 
             string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
 
@@ -40,10 +41,12 @@ namespace menumaster
                     using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                     {
                         command.Parameters.AddRange(parameters);
-                        int result = Convert.ToInt32(command.ExecuteScalar());
+                        var result = command.ExecuteScalar();
 
-                        if (result > 0)
+                        if (result != null)
                         {
+                            KaryawanID = Convert.ToInt32(result); // Simpan ID karyawan
+                            MessageBox.Show("Login berhasil!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             admin_page homepage = new admin_page();
                             homepage.Show();
                             this.Close();
@@ -60,7 +63,6 @@ namespace menumaster
                 }
             }
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -15,8 +15,6 @@ namespace menumaster
 {
     public partial class tambah_pengeluaran : Form
     {
-
-
         public tambah_pengeluaran()
         {
             InitializeComponent();
@@ -40,13 +38,18 @@ namespace menumaster
         {
             DataTable jenisPengeluaranData = GetJenisPengeluaran();
             comboBox1.DataSource = jenisPengeluaranData;
-            comboBox1.DisplayMember = "nama_pengeluaran"; 
-            comboBox1.ValueMember = "id_jenis_pengeluaran";   
+            comboBox1.DisplayMember = "nama_pengeluaran";
+            comboBox1.ValueMember = "id_jenis_pengeluaran";
         }
 
         private void tambah_pengeluaran_Load(object sender, EventArgs e)
         {
             PopulateComboBox();
+        }
+
+        private void tambah_pengeluaran_Activated(object sender, EventArgs e)
+        {
+            PopulateComboBox(); // Mengisi ulang combobox setiap kali form mendapatkan fokus
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,16 +61,15 @@ namespace menumaster
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             comboBox1.Text = string.Empty;
             dateTimePicker1.Text = string.Empty;
             textBox2.Text = string.Empty;
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             tambah_jenis jenis = new tambah_jenis();
+            jenis.FormClosed += new FormClosedEventHandler(tambah_pengeluaran_Activated); // Mengisi ulang combobox saat form ditutup
             jenis.Show();
         }
 
@@ -77,17 +79,16 @@ namespace menumaster
             DateTime tanggal = dateTimePicker1.Value;
             decimal total = decimal.Parse(textBox2.Text);
 
-            string connectionString = "Host=localhost;Username=postgres;Password=postgres;Database=menu master";
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
-
                 string masuk = "INSERT INTO pengeluaran_operasional (id_jenis_pengeluaran, tanggal_pengeluaran, jumlah_pengeluaran, id_karyawan) VALUES (@jenis, @tanggal, @total, @karyawan)";
                 using (NpgsqlCommand command = new NpgsqlCommand(masuk, connection))
                 {
                     command.Parameters.AddWithValue("jenis", jenisPengeluaran);
-                    command.Parameters.AddWithValue("tanggal", tanggal);  
-                    command.Parameters.AddWithValue("total", total); 
-                    command.Parameters.AddWithValue("karyawan", 1);  
+                    command.Parameters.AddWithValue("tanggal", tanggal);
+                    command.Parameters.AddWithValue("total", total);
+                    command.Parameters.AddWithValue("karyawan", Login_admin.KaryawanID); // Menggunakan ID karyawan yang login
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -95,18 +96,17 @@ namespace menumaster
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("berhasil !");
+                        MessageBox.Show("Pengeluaran berhasil disimpan!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         comboBox1.SelectedIndex = -1;
                         dateTimePicker1.Value = DateTime.Now;
                         textBox2.Clear();
                     }
                     else
                     {
-                        MessageBox.Show("gagal");
+                        MessageBox.Show("Gagal menyimpan pengeluaran", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
-
     }
 }
