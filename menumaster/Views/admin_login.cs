@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace menumaster
 {
@@ -17,36 +18,65 @@ namespace menumaster
             InitializeComponent();
         }
 
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
-            admin_page admin_page = new admin_page();
-            admin_page.Show();
-            this.Hide();
+            string username = textBox1.Text;
+            string passwordtxt = textBox2.Text; // Assuming textBox2 is for password
+            string query = "SELECT COUNT(*) FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password AND id_role = 2";
 
-            //string adminID = textBox1.Text;
-            //string adminPassword = textBox2.Text;
+            NpgsqlParameter[] parameters = {
+        new NpgsqlParameter("@id_karyawan", int.Parse(textBox1.Text)),
+        new NpgsqlParameter("@password", passwordtxt)
+    };
 
-            //if (adminID == "admin" && adminPassword == "password")
-            //{
-            // Login berhasil, buka form AdminDashboard
+            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
 
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+                        command.Parameters.AddRange(parameters);
+                        int result = Convert.ToInt32(command.ExecuteScalar());
 
-
-            //}
-
-            //else
-            //{
-            // Login gagal, tampilkan pesan kesalahan
-            //    MessageBox.Show("ID atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                        if (result > 0)
+                        {
+                            admin_page homepage = new admin_page();
+                            homepage.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ID, password salah atau bukan role admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             WelcomePageForm f1 = new WelcomePageForm();
             f1.Show();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
