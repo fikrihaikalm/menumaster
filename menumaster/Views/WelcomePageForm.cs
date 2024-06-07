@@ -47,7 +47,7 @@ namespace menumaster
 
         private void chefButton_Click(object sender, EventArgs e)
         {
-            chef_login f4 = new chef_login();
+            LihatPesanan f4 = new LihatPesanan();
             f4.Show();
             this.Hide();
         }

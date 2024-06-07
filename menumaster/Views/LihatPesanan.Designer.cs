@@ -38,7 +38,7 @@
             // 
             // btnBack
             // 
-            btnBack.Anchor = AnchorStyles.None;
+            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnBack.Location = new Point(34, 702);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(117, 59);
@@ -49,7 +49,6 @@
             // 
             // lblTitle
             // 
-            lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.Location = new Point(34, 9);
@@ -66,6 +65,7 @@
             Controls.Add(dgvPesanan);
             Name = "LihatPesanan";
             Text = "Lihat Pesanan";
+            WindowState = FormWindowState.Maximized;
             Load += LihatPesanan_Load;
             ((System.ComponentModel.ISupportInitialize)dgvPesanan).EndInit();
             ResumeLayout(false);
