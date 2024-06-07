@@ -46,7 +46,7 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(20, 22);
             label1.Name = "label1";
-            label1.Size = new Size(185, 41);
+            label1.Size = new Size(219, 48);
             label1.TabIndex = 0;
             label1.Text = "Pendapatan";
             label1.Click += label1_Click;
@@ -93,20 +93,20 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Anchor = AnchorStyles.None;
-            dateTimePicker1.Font = new Font("Segoe UI", 13.8F);
-            dateTimePicker1.Location = new Point(273, 96);
+            dateTimePicker1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(268, 108);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 38);
+            dateTimePicker1.Size = new Size(395, 39);
             dateTimePicker1.TabIndex = 6;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Anchor = AnchorStyles.None;
-            dateTimePicker2.Font = new Font("Segoe UI", 13.8F);
-            dateTimePicker2.Location = new Point(610, 96);
+            dateTimePicker2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker2.Location = new Point(688, 108);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(300, 38);
+            dateTimePicker2.Size = new Size(397, 39);
             dateTimePicker2.TabIndex = 7;
             dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
@@ -115,9 +115,9 @@
             button2.Anchor = AnchorStyles.None;
             button2.BackColor = SystemColors.GradientInactiveCaption;
             button2.Font = new Font("Segoe UI", 13.8F);
-            button2.Location = new Point(941, 90);
+            button2.Location = new Point(1119, 102);
             button2.Name = "button2";
-            button2.Size = new Size(131, 50);
+            button2.Size = new Size(156, 50);
             button2.TabIndex = 8;
             button2.Text = "Tampilkan";
             button2.UseVisualStyleBackColor = false;
@@ -125,7 +125,7 @@
             // 
             // admin_pendapatan
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1368, 809);
             Controls.Add(button2);
