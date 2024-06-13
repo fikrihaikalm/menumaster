@@ -5,7 +5,7 @@ using menumaster.Helpers;
 
 namespace menumaster.Controllers
 {
-    public class KelolaKaryawanController
+    public class ManagerKelolaKaryawanController
     {
         public DataTable GetKaryawanData(string searchKeyword = "")
         {

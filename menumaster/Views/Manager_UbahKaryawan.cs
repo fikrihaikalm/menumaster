@@ -7,13 +7,13 @@ namespace menumaster.Views
 {
     public partial class Manager_UbahKaryawan : Form
     {
-        private readonly UbahKaryawanController _controller;
+        private readonly ManagerUbahKaryawanController _controller;
         private int _idKaryawan;
 
         public Manager_UbahKaryawan(int idKaryawan)
         {
             InitializeComponent();
-            _controller = new UbahKaryawanController();
+            _controller = new ManagerUbahKaryawanController();
             _idKaryawan = idKaryawan;
         }
 

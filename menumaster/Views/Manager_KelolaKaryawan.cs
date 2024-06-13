@@ -8,12 +8,12 @@ namespace menumaster.Views
 {
     public partial class Manager_KelolaKaryawan : Form
     {
-        private readonly KelolaKaryawanController _controller;
+        private readonly ManagerKelolaKaryawanController _controller;
 
         public Manager_KelolaKaryawan()
         {
             InitializeComponent();
-            _controller = new KelolaKaryawanController();
+            _controller = new ManagerKelolaKaryawanController();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -5,7 +5,7 @@ using menumaster.Helpers;
 
 namespace menumaster.Controllers
 {
-    public class TambahKaryawanController
+    public class ManagerTambahKaryawanController
     {
         public void TambahKaryawan(string nama, string telp, string alamat, string foto, bool aktif, string password, string email, DateTime tglMasuk, decimal gaji, int idRole)
         {

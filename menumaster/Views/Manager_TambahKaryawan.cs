@@ -6,12 +6,12 @@ namespace menumaster.Views
 {
     public partial class Manager_TambahKaryawan : Form
     {
-        private readonly TambahKaryawanController _controller;
+        private readonly ManagerTambahKaryawanController _controller;
 
         public Manager_TambahKaryawan()
         {
             InitializeComponent();
-            _controller = new TambahKaryawanController();
+            _controller = new ManagerTambahKaryawanController();
         }
 
         private void button1_Click(object sender, EventArgs e)

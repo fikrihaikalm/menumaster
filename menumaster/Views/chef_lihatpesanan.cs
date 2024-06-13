@@ -7,12 +7,12 @@ namespace menumaster.Views
 {
     public partial class LihatPesanan : Form
     {
-        private readonly LihatPesananController _controller;
+        private readonly ChefLihatPesananController _controller;
 
         public LihatPesanan()
         {
             InitializeComponent();
-            _controller = new LihatPesananController();
+            _controller = new ChefLihatPesananController();
         }
 
         private void LihatPesanan_Load(object sender, EventArgs e)

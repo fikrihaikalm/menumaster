@@ -5,7 +5,7 @@ using menumaster.Helpers;
 
 namespace menumaster.Controllers
 {
-    public class UbahKaryawanController
+    public class ManagerUbahKaryawanController
     {
         public DataRow GetKaryawanById(int idKaryawan)
         {

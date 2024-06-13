@@ -8,12 +8,12 @@ namespace menumaster
     public partial class Login_manajer : Form
     {
         public static int KaryawanID { get; private set; }
-        private readonly LoginManajerController _controller;
+        private readonly LoginManagerController _controller;
 
         public Login_manajer()
         {
             InitializeComponent();
-            _controller = new LoginManajerController();
+            _controller = new LoginManagerController();
         }
 
         private void button1_Click(object sender, EventArgs e)

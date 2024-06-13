@@ -8,12 +8,12 @@ namespace menumaster.Views
 {
     public partial class LaporanKeuanganForm : Form
     {
-        private readonly LaporanKeuanganController _controller;
+        private readonly ManagerLaporanKeuanganController _controller;
 
         public LaporanKeuanganForm()
         {
             InitializeComponent();
-            _controller = new LaporanKeuanganController();
+            _controller = new ManagerLaporanKeuanganController();
         }
 
         private void LaporanKeuanganForm_Load(object sender, EventArgs e)

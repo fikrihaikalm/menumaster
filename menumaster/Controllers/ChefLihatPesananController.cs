@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace menumaster.Controllers
 {
-    public class LihatPesananController
+    public class ChefLihatPesananController
     {
         public DataTable GetPesananData()
         {

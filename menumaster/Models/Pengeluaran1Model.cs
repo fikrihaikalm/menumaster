@@ -2,7 +2,7 @@
 
 namespace menumaster.Models
 {
-    public class Pengeluaran1
+    public class Pengeluaran1Model
     {
         public int IdJenisPengeluaran { get; set; }
         public DateTime TanggalPengeluaran { get; set; }

@@ -14,7 +14,7 @@ namespace menumaster.Controllers
             return DatabaseHelper.ExecuteQuery(query);
         }
 
-        public bool TambahPengeluaran(Pengeluaran1 pengeluaran)
+        public bool TambahPengeluaran(Pengeluaran1Model pengeluaran)
         {
             string query = "INSERT INTO pengeluaran_operasional (id_jenis_pengeluaran, tanggal_pengeluaran, jumlah_pengeluaran, id_karyawan) " +
                            "VALUES (@jenis, @tanggal, @jumlah, @karyawan)";

@@ -5,7 +5,7 @@ using menumaster.Helpers;
 
 namespace menumaster.Controllers
 {
-    public class MenuController
+    public class AdminMenuController
     {
         public DataTable GetMenuData()
         {

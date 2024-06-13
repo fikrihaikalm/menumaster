@@ -5,7 +5,7 @@ using menumaster.Helpers;
 
 namespace menumaster.Controllers
 {
-    public class LaporanKeuanganController
+    public class ManagerLaporanKeuanganController
     {
         public DataTable GetLaporanKeuangan(DateTime tanggal)
         {

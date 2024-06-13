@@ -8,13 +8,13 @@ namespace menumaster.Views
 {
     public partial class admin_kelolamenu : Form
     {
-        private readonly MenuController _menuController;
+        private readonly AdminMenuController _menuController;
         private HashSet<int> editedRows;
 
         public admin_kelolamenu()
         {
             InitializeComponent();
-            _menuController = new MenuController();
+            _menuController = new AdminMenuController();
             editedRows = new HashSet<int>();
             LoadData();
             PopulateComboBox();

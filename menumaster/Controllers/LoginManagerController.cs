@@ -4,7 +4,7 @@ using menumaster.Helpers;
 
 namespace menumaster.Controllers
 {
-    public class LoginManajerController
+    public class LoginManagerController
     {
         public int? AuthenticateUser(int idKaryawan, string password)
         {

@@ -60,7 +60,7 @@ namespace menumaster.Views
         {
             try
             {
-                Pengeluaran1 pengeluaran = new Pengeluaran1
+                Pengeluaran1Model pengeluaran = new Pengeluaran1Model
                 {
                     IdJenisPengeluaran = (int)comboBox1.SelectedValue,
                     TanggalPengeluaran = dateTimePicker1.Value,
