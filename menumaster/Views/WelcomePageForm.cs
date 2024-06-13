@@ -9,7 +9,7 @@ namespace menumaster
             InitializeComponent();
         }
 
-        private void adminButton_Click(object sender, EventArgs e)
+/*        private void adminButton_Click(object sender, EventArgs e)
         {
             Login_admin f2 = new Login_admin();
             f2.Show();
@@ -21,7 +21,7 @@ namespace menumaster
             Login_manajer form3 = new Login_manajer();
             form3.Show();
             this.Hide();
-        }
+        }*/
 
         private void kasirButton_Click(object sender, EventArgs e)
         {
