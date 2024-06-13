@@ -31,7 +31,7 @@
             // 
             // welcomePageCardAdmin
             // 
-/*            welcomePageCardAdmin.Anchor = AnchorStyles.None;
+            welcomePageCardAdmin.Anchor = AnchorStyles.None;
             welcomePageCardAdmin.BorderRadius = 20;
             welcomePageCardAdmin.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardAdmin.ButtonText = "Lanjutkan Sebagai Admin";
@@ -46,7 +46,7 @@
             // 
             // welcomePageCardManager
             // 
-            welcomePageCardManager.Anchor = AnchorStyles.None;
+/*            welcomePageCardManager.Anchor = AnchorStyles.None;
             welcomePageCardManager.BorderRadius = 20;
             welcomePageCardManager.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardManager.ButtonText = "Lanjutkan Sebagai Manager";
