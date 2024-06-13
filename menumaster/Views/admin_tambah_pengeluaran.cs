@@ -7,11 +7,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace menumaster.Views
 {
-    public partial class tambah_pengeluaran : Form
+    public partial class Admin_tambah_pengeluaran : Form
     {
         private readonly Pengeluaran1Controller _controller;
 
-        public tambah_pengeluaran()
+        public Admin_tambah_pengeluaran()
         {
             InitializeComponent();
             _controller = new Pengeluaran1Controller();
@@ -51,7 +51,7 @@ namespace menumaster.Views
 
         private void button4_Click(object sender, EventArgs e)
         {
-            tambah_jenis jenis = new tambah_jenis();
+            Admin_tambah_jenis jenis = new Admin_tambah_jenis();
             jenis.FormClosed += new FormClosedEventHandler(tambah_pengeluaran_Activated);
             jenis.Show();
         }

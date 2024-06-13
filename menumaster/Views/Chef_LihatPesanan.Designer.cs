@@ -45,9 +45,9 @@
             btnBack.BackColor = Color.DarkSlateBlue;
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBack.ForeColor = SystemColors.HighlightText;
-            btnBack.Location = new Point(20, 719);
+            btnBack.Location = new Point(20, 702);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(135, 54);
+            btnBack.Size = new Size(186, 71);
             btnBack.TabIndex = 1;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
@@ -59,7 +59,7 @@
             lblTitle.Font = new Font("Segoe UI", 16.125F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.Location = new Point(34, 9);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(193, 37);
+            lblTitle.Size = new Size(302, 59);
             lblTitle.TabIndex = 2;
             lblTitle.Text = "Lihat Pesanan";
             // 

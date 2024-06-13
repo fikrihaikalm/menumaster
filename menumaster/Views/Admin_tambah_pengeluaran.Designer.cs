@@ -1,6 +1,6 @@
 ﻿namespace menumaster.Views
 {
-    partial class tambah_pengeluaran
+    partial class Admin_tambah_pengeluaran
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tambah_pengeluaran));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_tambah_pengeluaran));
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();

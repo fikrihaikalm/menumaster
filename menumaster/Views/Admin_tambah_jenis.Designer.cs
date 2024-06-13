@@ -1,6 +1,6 @@
 ﻿namespace menumaster.Views
 {
-    partial class tambah_jenis
+    partial class Admin_tambah_jenis
     {
         /// <summary>
         /// Required designer variable.

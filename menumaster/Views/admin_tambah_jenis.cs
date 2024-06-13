@@ -5,11 +5,11 @@ using menumaster.Models;
 
 namespace menumaster.Views
 {
-    public partial class tambah_jenis : Form
+    public partial class Admin_tambah_jenis : Form
     {
         private readonly JenisPengeluaranController _controller;
 
-        public tambah_jenis()
+        public Admin_tambah_jenis()
         {
             InitializeComponent();
             _controller = new JenisPengeluaranController();

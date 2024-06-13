@@ -38,7 +38,7 @@
             lblLaporanKeuangan.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblLaporanKeuangan.Location = new Point(20, 38);
             lblLaporanKeuangan.Name = "lblLaporanKeuangan";
-            lblLaporanKeuangan.Size = new Size(280, 41);
+            lblLaporanKeuangan.Size = new Size(451, 65);
             lblLaporanKeuangan.TabIndex = 0;
             lblLaporanKeuangan.Text = "Laporan Keuangan";
             // 
@@ -49,7 +49,7 @@
             lblPeriode.Font = new Font("Segoe UI", 13.8F);
             lblPeriode.Location = new Point(30, 113);
             lblPeriode.Name = "lblPeriode";
-            lblPeriode.Size = new Size(91, 31);
+            lblPeriode.Size = new Size(146, 50);
             lblPeriode.TabIndex = 1;
             lblPeriode.Text = "Periode";
             // 
@@ -59,7 +59,7 @@
             dtpPeriode.Font = new Font("Segoe UI", 12F);
             dtpPeriode.Location = new Point(140, 113);
             dtpPeriode.Name = "dtpPeriode";
-            dtpPeriode.Size = new Size(373, 34);
+            dtpPeriode.Size = new Size(373, 50);
             dtpPeriode.TabIndex = 2;
             dtpPeriode.ValueChanged += DtpPeriode_ValueChanged;
             // 
@@ -82,9 +82,9 @@
             btnBack.BackColor = Color.DarkSlateBlue;
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBack.ForeColor = SystemColors.HighlightText;
-            btnBack.Location = new Point(20, 719);
+            btnBack.Location = new Point(20, 695);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(135, 54);
+            btnBack.Size = new Size(197, 78);
             btnBack.TabIndex = 4;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;

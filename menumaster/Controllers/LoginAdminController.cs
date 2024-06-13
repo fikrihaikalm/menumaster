@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace menumaster.Controllers
 {
-    public class LoginController
+    public class LoginAdminController
     {
         public int? AuthenticateUser(int id_karyawan, string password)
         {

@@ -7,12 +7,12 @@ namespace menumaster.Views
     public partial class Login_admin : Form
     {
         public static int KaryawanID { get; private set; }
-        private LoginController _loginController;
+        private LoginAdminController _loginController;
 
         public Login_admin()
         {
             InitializeComponent();
-            _loginController = new LoginController();
+            _loginController = new LoginAdminController();
         }
 
         private void button1_Click(object sender, EventArgs e)
