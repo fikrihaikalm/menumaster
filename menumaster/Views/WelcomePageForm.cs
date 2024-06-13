@@ -16,12 +16,12 @@ namespace menumaster
             this.Hide();
         }
 
-/*        private void managerButton_Click(object sender, EventArgs e)
+        private void managerButton_Click(object sender, EventArgs e)
         {
             Login_manajer form3 = new Login_manajer();
             form3.Show();
             this.Hide();
-        }*/
+        }
 
         private void kasirButton_Click(object sender, EventArgs e)
         {

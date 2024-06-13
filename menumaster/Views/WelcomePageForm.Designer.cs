@@ -46,7 +46,7 @@
             // 
             // welcomePageCardManager
             // 
-/*            welcomePageCardManager.Anchor = AnchorStyles.None;
+            welcomePageCardManager.Anchor = AnchorStyles.None;
             welcomePageCardManager.BorderRadius = 20;
             welcomePageCardManager.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardManager.ButtonText = "Lanjutkan Sebagai Manager";
@@ -58,7 +58,7 @@
             welcomePageCardManager.Size = new Size(406, 168);
             welcomePageCardManager.TabIndex = 10;
             welcomePageCardManager.ButtonClick += managerButton_Click;
-            welcomePageCardManager.Load += welcomePageCardManager_Load;*/
+            welcomePageCardManager.Load += welcomePageCardManager_Load;
             // 
             // welcomePageCardKasir
             // 
