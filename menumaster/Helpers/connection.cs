@@ -6,7 +6,7 @@ namespace menumaster.Helpers
 {
     public static class DatabaseHelper
     {
-        private static string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=1;Database=menumaster";
+        private static string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=menu master";
 
         public static NpgsqlConnection GetConnection()
         {

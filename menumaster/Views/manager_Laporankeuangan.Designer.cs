@@ -78,7 +78,7 @@
             // 
             // btnBack
             // 
-            btnBack.Anchor = AnchorStyles.None;
+            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnBack.BackColor = Color.DarkSlateBlue;
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBack.ForeColor = SystemColors.HighlightText;

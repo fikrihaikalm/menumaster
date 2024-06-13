@@ -31,9 +31,9 @@
             // 
             dgvPesanan.Anchor = AnchorStyles.None;
             dgvPesanan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPesanan.BackgroundColor = Color.Azure;
+            dgvPesanan.BackgroundColor = SystemColors.ControlLight;
             dgvPesanan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPesanan.Location = new Point(34, 88);
+            dgvPesanan.Location = new Point(44, 88);
             dgvPesanan.Name = "dgvPesanan";
             dgvPesanan.RowHeadersWidth = 82;
             dgvPesanan.Size = new Size(1280, 608);
@@ -78,11 +78,12 @@
             // 
             // LihatPesanan
             // 
-            ClientSize = new Size(1346, 788);
+            ClientSize = new Size(1367, 788);
             Controls.Add(pictureBox1);
             Controls.Add(lblTitle);
             Controls.Add(btnBack);
             Controls.Add(dgvPesanan);
+            MinimumSize = new Size(1385, 814);
             Name = "LihatPesanan";
             Text = "Lihat Pesanan";
             WindowState = FormWindowState.Maximized;

@@ -75,7 +75,7 @@
             // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.None;
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button2.BackColor = Color.DarkSlateBlue;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
