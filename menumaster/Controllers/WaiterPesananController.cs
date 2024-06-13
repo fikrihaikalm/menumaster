@@ -31,6 +31,46 @@ namespace menumaster.Controllers
             return items;
         }
 
+        public int GetOrCreatePelanggan(string nama, string noTelp)
+        {
+            string query = "SELECT id_pelanggan FROM pelanggan WHERE telp = @noTelp";
+            NpgsqlParameter[] parameters = {
+                new NpgsqlParameter("@noTelp", noTelp)
+            };
+            DataTable dt = DatabaseHelper.ExecuteQuery(query, parameters);
+
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["id_pelanggan"]);
+            }
+            else
+            {
+                string insertQuery = "INSERT INTO pelanggan (nama, telp) VALUES (@nama, @Telp) RETURNING id_pelanggan";
+                NpgsqlParameter[] insertParameters = {
+                    new NpgsqlParameter("@nama", nama),
+                    new NpgsqlParameter("@Telp", noTelp)
+                };
+                return (int)DatabaseHelper.ExecuteScalar(insertQuery, insertParameters);
+            }
+        }
+
+        public List<MetodePembayaran> GetMetodePembayaran()
+        {
+            string query = "SELECT id_metode_pembayaran, nama_metode FROM metode_pembayaran";
+            DataTable dt = DatabaseHelper.ExecuteQuery(query);
+            var metodePembayaranList = new List<MetodePembayaran>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                metodePembayaranList.Add(new MetodePembayaran
+                {
+                    ID = Convert.ToInt32(row["id_metode_pembayaran"]),
+                    Nama = row["nama_metode"].ToString()
+                });
+            }
+            return metodePembayaranList;
+        }
+
         public void SubmitPesanan(Pesanan pesanan)
         {
             using (var conn = DatabaseHelper.GetConnection())
@@ -51,13 +91,13 @@ namespace menumaster.Controllers
                         };
                         int pesananID = (int)DatabaseHelper.ExecuteScalar(insertPesananQuery, pesananParameters);
 
-                        string insertDetailPesananQuery = "INSERT INTO detail_pesanan (ID_pesanan, ID_menu, jumlah) VALUES (@ID_pesanan, @ID_menu, @jumlah)";
+                        string insertDetailPesananQuery = "INSERT INTO detail_pesanan (ID_pesanan, ID_menu, jumlah) VALUES (@ID_pesanan, @ID_menu, @jumlah )";
                         foreach (var item in pesanan.Items)
                         {
                             NpgsqlParameter[] detailParameters = {
                                 new NpgsqlParameter("@ID_pesanan", pesananID),
                                 new NpgsqlParameter("@ID_menu", item.ID),
-                                new NpgsqlParameter("@jumlah", item.Jumlah)
+                                new NpgsqlParameter("@jumlah", item.Jumlah),
                             };
                             DatabaseHelper.ExecuteNonQuery(insertDetailPesananQuery, detailParameters);
                         }

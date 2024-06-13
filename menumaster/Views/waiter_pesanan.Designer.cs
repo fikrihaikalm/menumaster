@@ -1,4 +1,7 @@
-﻿namespace menumaster.Views
+﻿using System.Reflection.Emit;
+using System.Windows.Forms;
+
+namespace menumaster.Views
 {
     partial class waiter_pesanan
     {
@@ -22,14 +25,16 @@
             panelItems = new FlowLayoutPanel();
             panelPesanan = new FlowLayoutPanel();
             submitButton = new Button();
-            txtPelangganID = new TextBox();
-            txtMetodePembayaranID = new TextBox();
+            txtNamaPelanggan = new TextBox();
+            txtNoTelp = new TextBox();
+            comboMetodePembayaran = new ComboBox();
             txtKaryawanID = new TextBox();
-            lblPelangganID = new Label();
-            lblMetodePembayaranID = new Label();
-            lblKaryawanID = new Label();
-            label1 = new Label();
-            lblTotalHarga = new Label();
+            lblNamaPelanggan = new System.Windows.Forms.Label();
+            lblNoTelp = new System.Windows.Forms.Label();
+            lblMetodePembayaran = new System.Windows.Forms.Label();
+            lblKaryawanID = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            lblTotalHarga = new System.Windows.Forms.Label();
             btnBack = new Button();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -104,61 +109,81 @@
             submitButton.UseVisualStyleBackColor = false;
             submitButton.Click += SubmitButton_Click;
             // 
-            // txtPelangganID
+            // txtNamaPelanggan
             // 
-            txtPelangganID.Anchor = AnchorStyles.None;
-            txtPelangganID.Font = new Font("Segoe UI", 13.8F);
-            txtPelangganID.Location = new Point(634, 602);
-            txtPelangganID.Name = "txtPelangganID";
-            txtPelangganID.Size = new Size(246, 38);
-            txtPelangganID.TabIndex = 6;
+            txtNamaPelanggan.Anchor = AnchorStyles.None;
+            txtNamaPelanggan.Font = new Font("Segoe UI", 13.8F);
+            txtNamaPelanggan.Location = new Point(625, 590);
+            txtNamaPelanggan.Name = "txtNamaPelanggan";
+            txtNamaPelanggan.Size = new Size(246, 44);
+            txtNamaPelanggan.TabIndex = 6;
             // 
-            // txtMetodePembayaranID
+            // txtNoTelp
             // 
-            txtMetodePembayaranID.Anchor = AnchorStyles.None;
-            txtMetodePembayaranID.Font = new Font("Segoe UI", 13.8F);
-            txtMetodePembayaranID.Location = new Point(634, 653);
-            txtMetodePembayaranID.Name = "txtMetodePembayaranID";
-            txtMetodePembayaranID.Size = new Size(246, 38);
-            txtMetodePembayaranID.TabIndex = 7;
+            txtNoTelp.Anchor = AnchorStyles.None;
+            txtNoTelp.Font = new Font("Segoe UI", 13.8F);
+            txtNoTelp.Location = new Point(625, 641);
+            txtNoTelp.Name = "txtNoTelp";
+            txtNoTelp.Size = new Size(246, 44);
+            txtNoTelp.TabIndex = 7;
+            // 
+            // comboMetodePembayaran
+            // 
+            comboMetodePembayaran.Anchor = AnchorStyles.None;
+            comboMetodePembayaran.Font = new Font("Segoe UI", 13.8F);
+            comboMetodePembayaran.Location = new Point(625, 693);
+            comboMetodePembayaran.Name = "comboMetodePembayaran";
+            comboMetodePembayaran.Size = new Size(246, 46);
+            comboMetodePembayaran.TabIndex = 8;
             // 
             // txtKaryawanID
             // 
             txtKaryawanID.Anchor = AnchorStyles.None;
-            txtKaryawanID.Font = new Font("Segoe UI", 13.8F);
-            txtKaryawanID.Location = new Point(634, 705);
+            txtKaryawanID.Location = new Point(20, 663);
             txtKaryawanID.Name = "txtKaryawanID";
-            txtKaryawanID.Size = new Size(246, 38);
-            txtKaryawanID.TabIndex = 8;
+            txtKaryawanID.Size = new Size(246, 31);
+            txtKaryawanID.TabIndex = 43;
+            txtKaryawanID.TextChanged += txtKaryawanID_TextChanged;
             // 
-            // lblPelangganID
+            // lblNamaPelanggan
             // 
-            lblPelangganID.Anchor = AnchorStyles.None;
-            lblPelangganID.AutoSize = true;
-            lblPelangganID.Font = new Font("Segoe UI", 13.8F);
-            lblPelangganID.Location = new Point(343, 605);
-            lblPelangganID.Name = "lblPelangganID";
-            lblPelangganID.Size = new Size(150, 31);
-            lblPelangganID.TabIndex = 9;
-            lblPelangganID.Text = "Pelanggan ID";
+            lblNamaPelanggan.Anchor = AnchorStyles.None;
+            lblNamaPelanggan.AutoSize = true;
+            lblNamaPelanggan.Font = new Font("Segoe UI", 13.8F);
+            lblNamaPelanggan.Location = new Point(334, 593);
+            lblNamaPelanggan.Name = "lblNamaPelanggan";
+            lblNamaPelanggan.Size = new Size(227, 38);
+            lblNamaPelanggan.TabIndex = 9;
+            lblNamaPelanggan.Text = "Nama Pelanggan";
             // 
-            // lblMetodePembayaranID
+            // lblNoTelp
             // 
-            lblMetodePembayaranID.Anchor = AnchorStyles.None;
-            lblMetodePembayaranID.AutoSize = true;
-            lblMetodePembayaranID.Font = new Font("Segoe UI", 13.8F);
-            lblMetodePembayaranID.Location = new Point(342, 656);
-            lblMetodePembayaranID.Name = "lblMetodePembayaranID";
-            lblMetodePembayaranID.Size = new Size(254, 31);
-            lblMetodePembayaranID.TabIndex = 10;
-            lblMetodePembayaranID.Text = "Metode Pembayaran ID";
+            lblNoTelp.Anchor = AnchorStyles.None;
+            lblNoTelp.AutoSize = true;
+            lblNoTelp.Font = new Font("Segoe UI", 13.8F);
+            lblNoTelp.Location = new Point(334, 644);
+            lblNoTelp.Name = "lblNoTelp";
+            lblNoTelp.Size = new Size(112, 38);
+            lblNoTelp.TabIndex = 10;
+            lblNoTelp.Text = "No Telp";
+            // 
+            // lblMetodePembayaran
+            // 
+            lblMetodePembayaran.Anchor = AnchorStyles.None;
+            lblMetodePembayaran.AutoSize = true;
+            lblMetodePembayaran.Font = new Font("Segoe UI", 13.8F);
+            lblMetodePembayaran.Location = new Point(334, 696);
+            lblMetodePembayaran.Name = "lblMetodePembayaran";
+            lblMetodePembayaran.Size = new Size(273, 38);
+            lblMetodePembayaran.TabIndex = 11;
+            lblMetodePembayaran.Text = "Metode Pembayaran";
             // 
             // lblKaryawanID
             // 
             lblKaryawanID.Anchor = AnchorStyles.None;
-            lblKaryawanID.Location = new Point(5, 0);
+            lblKaryawanID.Location = new Point(36, 44);
             lblKaryawanID.Name = "lblKaryawanID";
-            lblKaryawanID.Size = new Size(100, 23);
+            lblKaryawanID.Size = new Size(100, 24);
             lblKaryawanID.TabIndex = 13;
             // 
             // label1
@@ -166,9 +191,9 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F);
-            label1.Location = new Point(343, 708);
+            label1.Location = new Point(18, 602);
             label1.Name = "label1";
-            label1.Size = new Size(140, 31);
+            label1.Size = new Size(170, 38);
             label1.TabIndex = 12;
             label1.Text = "Karyawan ID";
             // 
@@ -179,13 +204,13 @@
             lblTotalHarga.Font = new Font("Segoe UI", 13.8F);
             lblTotalHarga.Location = new Point(923, 602);
             lblTotalHarga.Name = "lblTotalHarga";
-            lblTotalHarga.Size = new Size(159, 31);
+            lblTotalHarga.Size = new Size(195, 38);
             lblTotalHarga.TabIndex = 14;
             lblTotalHarga.Text = "TOTAL HARGA";
             // 
             // btnBack
             // 
-            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnBack.Anchor = AnchorStyles.None;
             btnBack.BackColor = Color.DarkSlateBlue;
             btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             btnBack.ForeColor = SystemColors.HighlightText;
@@ -199,7 +224,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = Properties.Resources.ep_back;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(36, 739);
@@ -213,16 +238,18 @@
             // waiter_pesanan
             // 
             ClientSize = new Size(1367, 785);
+            Controls.Add(lblKaryawanID);
             Controls.Add(pictureBox1);
             Controls.Add(btnBack);
             Controls.Add(lblTotalHarga);
             Controls.Add(label1);
-            Controls.Add(lblKaryawanID);
-            Controls.Add(lblMetodePembayaranID);
-            Controls.Add(lblPelangganID);
+            Controls.Add(lblMetodePembayaran);
+            Controls.Add(lblNoTelp);
+            Controls.Add(lblNamaPelanggan);
             Controls.Add(txtKaryawanID);
-            Controls.Add(txtMetodePembayaranID);
-            Controls.Add(txtPelangganID);
+            Controls.Add(comboMetodePembayaran);
+            Controls.Add(txtNoTelp);
+            Controls.Add(txtNamaPelanggan);
             Controls.Add(submitButton);
             Controls.Add(buttonSnack);
             Controls.Add(buttonMinuman);
@@ -244,15 +271,18 @@
         private System.Windows.Forms.FlowLayoutPanel panelItems;
         private System.Windows.Forms.FlowLayoutPanel panelPesanan;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.TextBox txtPelangganID;
-        private System.Windows.Forms.TextBox txtMetodePembayaranID;
+        private System.Windows.Forms.TextBox txtNamaPelanggan;
+        private System.Windows.Forms.TextBox txtNoTelp;
+        private System.Windows.Forms.ComboBox comboMetodePembayaran;
         private System.Windows.Forms.TextBox txtKaryawanID;
-        private System.Windows.Forms.Label lblPelangganID;
-        private System.Windows.Forms.Label lblMetodePembayaranID;
+        private System.Windows.Forms.Label lblNamaPelanggan;
+        private System.Windows.Forms.Label lblNoTelp;
+        private System.Windows.Forms.Label lblMetodePembayaran;
         private System.Windows.Forms.Label lblKaryawanID;
-        private Label label1;
-        private Label lblTotalHarga;
-        private Button btnBack;
-        private PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalHarga;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
+

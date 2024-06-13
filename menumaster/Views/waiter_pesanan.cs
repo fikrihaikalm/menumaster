@@ -18,6 +18,7 @@ namespace menumaster.Views
         {
             InitializeComponent();
             LoadMakanan();
+            LoadMetodePembayaran();
         }
 
         private void LoadMakanan()
@@ -150,17 +151,20 @@ namespace menumaster.Views
                 return;
             }
 
-            int pelangganID;
-            int metodePembayaranID;
+            string namaPelanggan = txtNamaPelanggan.Text;
+            string noTelp = txtNoTelp.Text;
+            int metodePembayaranID = (int)comboMetodePembayaran.SelectedValue;
             int karyawanID;
 
-            if (!int.TryParse(txtPelangganID.Text, out pelangganID) ||
-                !int.TryParse(txtMetodePembayaranID.Text, out metodePembayaranID) ||
+            if (string.IsNullOrWhiteSpace(namaPelanggan) ||
+                string.IsNullOrWhiteSpace(noTelp) ||
                 !int.TryParse(txtKaryawanID.Text, out karyawanID))
             {
-                MessageBox.Show("ID Pelanggan, ID Metode Pembayaran, dan ID Karyawan harus berupa angka!");
+                MessageBox.Show("Nama Pelanggan, No Telp, dan ID Karyawan harus diisi dengan benar!");
                 return;
             }
+
+            int pelangganID = controller.GetOrCreatePelanggan(namaPelanggan, noTelp);
 
             Pesanan pesanan = new Pesanan
             {
@@ -188,6 +192,14 @@ namespace menumaster.Views
             }
         }
 
+        private void LoadMetodePembayaran()
+        {
+            var metodePembayaran = controller.GetMetodePembayaran();
+            comboMetodePembayaran.DataSource = metodePembayaran;
+            comboMetodePembayaran.DisplayMember = "Nama";
+            comboMetodePembayaran.ValueMember = "ID";
+        }
+
         private void ButtonMakanan_Click(object sender, EventArgs e)
         {
             LoadMakanan();
@@ -208,6 +220,11 @@ namespace menumaster.Views
             waiter_homepage homePage = new waiter_homepage();
             homePage.Show();
             this.Close();
+        }
+
+        private void txtKaryawanID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

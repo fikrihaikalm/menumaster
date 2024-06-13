@@ -16,6 +16,7 @@ namespace menumaster.Views
         public waiter_homepage()
         {
             InitializeComponent();
+
         }
 
         private void btnPesan_Click(object sender, EventArgs e)
