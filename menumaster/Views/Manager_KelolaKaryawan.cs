@@ -27,7 +27,6 @@ namespace menumaster.Views
         {
             Manager_TambahKaryawan f3 = new Manager_TambahKaryawan();
             f3.Show();
-            this.Hide();
         }
 
         private void Manager_KelolaKaryawan_Load(object sender, EventArgs e)
