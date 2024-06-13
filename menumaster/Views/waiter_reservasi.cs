@@ -151,6 +151,11 @@ namespace menumaster.Forms.Waiters
         {
 
         }
+
+        private void LabelMeja_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

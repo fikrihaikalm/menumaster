@@ -15,6 +15,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(waiter_pesanan));
             buttonMakanan = new Button();
             buttonMinuman = new Button();
             buttonSnack = new Button();
@@ -30,12 +31,15 @@
             label1 = new Label();
             lblTotalHarga = new Label();
             btnBack = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // buttonMakanan
             // 
             buttonMakanan.Anchor = AnchorStyles.None;
-            buttonMakanan.Location = new Point(294, 12);
+            buttonMakanan.Font = new Font("Segoe UI", 13.8F);
+            buttonMakanan.Location = new Point(297, 12);
             buttonMakanan.Name = "buttonMakanan";
             buttonMakanan.Size = new Size(133, 46);
             buttonMakanan.TabIndex = 0;
@@ -46,7 +50,8 @@
             // buttonMinuman
             // 
             buttonMinuman.Anchor = AnchorStyles.None;
-            buttonMinuman.Location = new Point(473, 12);
+            buttonMinuman.Font = new Font("Segoe UI", 13.8F);
+            buttonMinuman.Location = new Point(476, 12);
             buttonMinuman.Name = "buttonMinuman";
             buttonMinuman.Size = new Size(146, 46);
             buttonMinuman.TabIndex = 1;
@@ -57,7 +62,8 @@
             // buttonSnack
             // 
             buttonSnack.Anchor = AnchorStyles.None;
-            buttonSnack.Location = new Point(678, 12);
+            buttonSnack.Font = new Font("Segoe UI", 13.8F);
+            buttonSnack.Location = new Point(681, 12);
             buttonSnack.Name = "buttonSnack";
             buttonSnack.Size = new Size(117, 46);
             buttonSnack.TabIndex = 2;
@@ -69,7 +75,8 @@
             // 
             panelItems.Anchor = AnchorStyles.None;
             panelItems.AutoScroll = true;
-            panelItems.Location = new Point(15, 84);
+            panelItems.Font = new Font("Segoe UI", 13.8F);
+            panelItems.Location = new Point(18, 84);
             panelItems.Name = "panelItems";
             panelItems.Size = new Size(862, 500);
             panelItems.TabIndex = 3;
@@ -78,7 +85,8 @@
             // 
             panelPesanan.Anchor = AnchorStyles.None;
             panelPesanan.AutoScroll = true;
-            panelPesanan.Location = new Point(920, 69);
+            panelPesanan.Font = new Font("Segoe UI", 13.8F);
+            panelPesanan.Location = new Point(923, 69);
             panelPesanan.Name = "panelPesanan";
             panelPesanan.Size = new Size(401, 515);
             panelPesanan.TabIndex = 4;
@@ -86,45 +94,51 @@
             // submitButton
             // 
             submitButton.Anchor = AnchorStyles.None;
-            submitButton.Location = new Point(1111, 687);
+            submitButton.BackColor = SystemColors.GradientActiveCaption;
+            submitButton.Font = new Font("Segoe UI", 13.8F);
+            submitButton.Location = new Point(1143, 687);
             submitButton.Name = "submitButton";
-            submitButton.Size = new Size(210, 61);
+            submitButton.Size = new Size(181, 61);
             submitButton.TabIndex = 5;
             submitButton.Text = "Submit";
-            submitButton.UseVisualStyleBackColor = true;
+            submitButton.UseVisualStyleBackColor = false;
             submitButton.Click += SubmitButton_Click;
             // 
             // txtPelangganID
             // 
             txtPelangganID.Anchor = AnchorStyles.None;
-            txtPelangganID.Location = new Point(631, 602);
+            txtPelangganID.Font = new Font("Segoe UI", 13.8F);
+            txtPelangganID.Location = new Point(634, 602);
             txtPelangganID.Name = "txtPelangganID";
-            txtPelangganID.Size = new Size(100, 27);
+            txtPelangganID.Size = new Size(246, 38);
             txtPelangganID.TabIndex = 6;
             // 
             // txtMetodePembayaranID
             // 
             txtMetodePembayaranID.Anchor = AnchorStyles.None;
-            txtMetodePembayaranID.Location = new Point(631, 653);
+            txtMetodePembayaranID.Font = new Font("Segoe UI", 13.8F);
+            txtMetodePembayaranID.Location = new Point(634, 653);
             txtMetodePembayaranID.Name = "txtMetodePembayaranID";
-            txtMetodePembayaranID.Size = new Size(100, 27);
+            txtMetodePembayaranID.Size = new Size(246, 38);
             txtMetodePembayaranID.TabIndex = 7;
             // 
             // txtKaryawanID
             // 
             txtKaryawanID.Anchor = AnchorStyles.None;
-            txtKaryawanID.Location = new Point(631, 705);
+            txtKaryawanID.Font = new Font("Segoe UI", 13.8F);
+            txtKaryawanID.Location = new Point(634, 705);
             txtKaryawanID.Name = "txtKaryawanID";
-            txtKaryawanID.Size = new Size(100, 27);
+            txtKaryawanID.Size = new Size(246, 38);
             txtKaryawanID.TabIndex = 8;
             // 
             // lblPelangganID
             // 
             lblPelangganID.Anchor = AnchorStyles.None;
             lblPelangganID.AutoSize = true;
-            lblPelangganID.Location = new Point(340, 605);
+            lblPelangganID.Font = new Font("Segoe UI", 13.8F);
+            lblPelangganID.Location = new Point(343, 605);
             lblPelangganID.Name = "lblPelangganID";
-            lblPelangganID.Size = new Size(97, 20);
+            lblPelangganID.Size = new Size(150, 31);
             lblPelangganID.TabIndex = 9;
             lblPelangganID.Text = "Pelanggan ID";
             // 
@@ -132,16 +146,17 @@
             // 
             lblMetodePembayaranID.Anchor = AnchorStyles.None;
             lblMetodePembayaranID.AutoSize = true;
-            lblMetodePembayaranID.Location = new Point(339, 656);
+            lblMetodePembayaranID.Font = new Font("Segoe UI", 13.8F);
+            lblMetodePembayaranID.Location = new Point(342, 656);
             lblMetodePembayaranID.Name = "lblMetodePembayaranID";
-            lblMetodePembayaranID.Size = new Size(165, 20);
+            lblMetodePembayaranID.Size = new Size(254, 31);
             lblMetodePembayaranID.TabIndex = 10;
             lblMetodePembayaranID.Text = "Metode Pembayaran ID";
             // 
             // lblKaryawanID
             // 
             lblKaryawanID.Anchor = AnchorStyles.None;
-            lblKaryawanID.Location = new Point(2, 0);
+            lblKaryawanID.Location = new Point(5, 0);
             lblKaryawanID.Name = "lblKaryawanID";
             lblKaryawanID.Size = new Size(100, 23);
             lblKaryawanID.TabIndex = 13;
@@ -150,9 +165,10 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(340, 708);
+            label1.Font = new Font("Segoe UI", 13.8F);
+            label1.Location = new Point(343, 708);
             label1.Name = "label1";
-            label1.Size = new Size(92, 20);
+            label1.Size = new Size(140, 31);
             label1.TabIndex = 12;
             label1.Text = "Karyawan ID";
             // 
@@ -160,26 +176,44 @@
             // 
             lblTotalHarga.Anchor = AnchorStyles.None;
             lblTotalHarga.AutoSize = true;
-            lblTotalHarga.Location = new Point(920, 602);
+            lblTotalHarga.Font = new Font("Segoe UI", 13.8F);
+            lblTotalHarga.Location = new Point(923, 602);
             lblTotalHarga.Name = "lblTotalHarga";
-            lblTotalHarga.Size = new Size(104, 20);
+            lblTotalHarga.Size = new Size(159, 31);
             lblTotalHarga.TabIndex = 14;
             lblTotalHarga.Text = "TOTAL HARGA";
             // 
             // btnBack
             // 
-            btnBack.Anchor = AnchorStyles.None;
-            btnBack.Location = new Point(15, 687);
+            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnBack.BackColor = Color.DarkSlateBlue;
+            btnBack.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            btnBack.ForeColor = SystemColors.HighlightText;
+            btnBack.Location = new Point(20, 719);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(210, 61);
+            btnBack.Size = new Size(135, 54);
             btnBack.TabIndex = 15;
             btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox1.BackgroundImage = Properties.Resources.ep_back;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(36, 739);
+            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(21, 19);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 42;
+            pictureBox1.TabStop = false;
             // 
             // waiter_pesanan
             // 
-            ClientSize = new Size(1360, 785);
+            ClientSize = new Size(1367, 785);
+            Controls.Add(pictureBox1);
             Controls.Add(btnBack);
             Controls.Add(lblTotalHarga);
             Controls.Add(label1);
@@ -195,10 +229,11 @@
             Controls.Add(buttonMakanan);
             Controls.Add(panelItems);
             Controls.Add(panelPesanan);
-            MinimumSize = new Size(994, 736);
+            MinimumSize = new Size(1385, 814);
             Name = "waiter_pesanan";
             Text = "Waiter Pesanan";
             WindowState = FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -218,5 +253,6 @@
         private Label label1;
         private Label lblTotalHarga;
         private Button btnBack;
+        private PictureBox pictureBox1;
     }
 }
