@@ -94,9 +94,9 @@
             label1.Location = new Point(20, 22);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(124, 41);
+            label1.Size = new Size(112, 41);
             label1.TabIndex = 3;
-            label1.Text = "ADMIN";
+            label1.Text = "Admin";
             label1.Click += label1_Click;
             // 
             // pictureBox1
@@ -188,7 +188,7 @@
             Controls.Add(button3);
             Controls.Add(button1);
             Controls.Add(button2);
-            MinimumSize = new Size(1386, 856);
+            MinimumSize = new Size(1385, 814);
             Name = "admin_page";
             Text = "admin_page";
             WindowState = FormWindowState.Maximized;
