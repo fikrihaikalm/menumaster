@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using menumaster.Helpers;
-using Npgsql;
+using menumaster.Controllers;
 
 namespace menumaster.Views
 {
     public partial class LihatPesanan : Form
     {
+        private readonly LihatPesananController _controller;
+
         public LihatPesanan()
         {
             InitializeComponent();
+            _controller = new LihatPesananController();
         }
 
         private void LihatPesanan_Load(object sender, EventArgs e)
@@ -26,18 +28,10 @@ namespace menumaster.Views
             this.Close();
         }
 
-
         private void LoadPesanan()
         {
-            string query = @"SELECT dp.ID_detail_pesanan as urutan_pesanan, p.tanggal_pemesanan, m.nama, dp.jumlah 
-                            FROM detail_pesanan dp 
-                            JOIN pesanan p ON dp.ID_pesanan = p.ID_pesanan 
-                            JOIN menu m ON dp.ID_menu = m.ID_menu
-                            where dp.jumlah > 0 ";
-
-            DataTable dt = DatabaseHelper.ExecuteQuery(query);
+            DataTable dt = _controller.GetPesananData();
             dgvPesanan.DataSource = dt;
-
         }
     }
 }

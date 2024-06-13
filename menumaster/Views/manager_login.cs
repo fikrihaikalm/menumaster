@@ -1,24 +1,19 @@
 ﻿using menumaster.Forms;
+using menumaster.Controllers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace menumaster
 {
     public partial class Login_manajer : Form
     {
         public static int KaryawanID { get; private set; }
+        private readonly LoginManajerController _controller;
 
         public Login_manajer()
         {
             InitializeComponent();
+            _controller = new LoginManajerController();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,46 +31,29 @@ namespace menumaster
                 return;
             }
 
-            string query = "SELECT COUNT(*) FROM karyawan WHERE id_karyawan = @id_karyawan AND password = @password AND id_role = 1";
-
-            NpgsqlParameter[] parameters = {
-                new NpgsqlParameter("@id_karyawan", idKaryawan),
-                new NpgsqlParameter("@password", textBox2.Text)
-            };
-
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menumaster";
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            try
             {
-                try
-                {
-                    connection.Open();
-                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
-                    {
-                        command.Parameters.AddRange(parameters);
-                        int result = Convert.ToInt32(command.ExecuteScalar());
+                var result = _controller.AuthenticateUser(idKaryawan, textBox2.Text);
 
-                        if (result > 0)
-                        {
-                            // Simpan ID karyawan
-                            KaryawanID = idKaryawan;
-
-                            // ID, password valid dan role manager
-                            Manager_Homepage homepage = new Manager_Homepage();
-                            homepage.Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            // ID, password salah atau bukan role manager
-                            MessageBox.Show("ID, password salah atau bukan role manager", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
+                if (result.HasValue)
                 {
-                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Simpan ID karyawan
+                    KaryawanID = idKaryawan;
+
+                    // ID, password valid dan role manager
+                    Manager_Homepage homepage = new Manager_Homepage();
+                    homepage.Show();
+                    this.Close();
                 }
+                else
+                {
+                    // ID, password salah atau bukan role manager
+                    MessageBox.Show("ID, password salah atau bukan role manager", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
