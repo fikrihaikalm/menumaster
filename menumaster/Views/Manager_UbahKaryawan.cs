@@ -20,6 +20,9 @@ namespace menumaster.Views
         private void Manager_UbahKaryawan_Load(object sender, EventArgs e)
         {
             LoadKaryawanData(_idKaryawan);
+            comboBoxRole.DataSource = _controller.GetRoles();
+            comboBoxRole.DisplayMember = "RoleName";
+            comboBoxRole.ValueMember = "RoleID";
         }
 
         private void LoadKaryawanData(int idKaryawan)
@@ -27,9 +30,16 @@ namespace menumaster.Views
             DataRow karyawan = _controller.GetKaryawanById(idKaryawan);
             if (karyawan != null)
             {
-                textBox1.Text = karyawan["id_karyawan"].ToString();
-                textBox2.Text = karyawan["nama"].ToString();
-                textBox3.Text = karyawan["telp"].ToString();
+                textBoxID.Text = karyawan["id_karyawan"].ToString();
+                textBoxNama.Text = karyawan["nama"].ToString();
+                textBoxTelp.Text = karyawan["telp"].ToString();
+                textBoxAlamat.Text = karyawan["alamat"].ToString();
+                textBoxFoto.Text = karyawan["foto"].ToString();
+                textBoxPassword.Text = karyawan["password"].ToString();
+                textBoxEmail.Text = karyawan["email"].ToString();
+                dateTimePickerTglMasuk.Value = Convert.ToDateTime(karyawan["tgl_masuk"]);
+                textBoxGaji.Text = karyawan["gaji"].ToString();
+                comboBoxRole.SelectedValue = karyawan["ID_role"];
                 checkBoxAktif.Checked = (bool)karyawan["aktif"];
             }
             else
@@ -43,12 +53,16 @@ namespace menumaster.Views
         {
             try
             {
-                int idKaryawan = _idKaryawan;
-                string nama = textBox2.Text;
-                int telp = int.Parse(textBox3.Text);
+                string telp = textBoxTelp.Text;
+                string alamat = textBoxAlamat.Text;
+                string foto = textBoxFoto.Text;
                 bool aktif = checkBoxAktif.Checked;
+                string password = textBoxPassword.Text;
+                string email = textBoxEmail.Text;
+                decimal gaji = decimal.Parse(textBoxGaji.Text);
+                int idRole = (int)comboBoxRole.SelectedValue;
 
-                _controller.UbahKaryawan(idKaryawan, nama, telp, aktif);
+                _controller.UbahKaryawan(_idKaryawan, telp, alamat, foto, aktif, password, email, gaji, idRole);
 
                 MessageBox.Show("Data karyawan berhasil diubah.");
                 this.Close();
@@ -61,18 +75,7 @@ namespace menumaster.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Logika untuk tombol "Batal"
             this.Close();
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

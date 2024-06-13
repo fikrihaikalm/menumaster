@@ -1,23 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
+using menumaster.Controllers;
 
 namespace menumaster.Views
 {
     public partial class admin_kelolamenu : Form
     {
+        private readonly MenuController _menuController;
         private HashSet<int> editedRows;
 
         public admin_kelolamenu()
         {
             InitializeComponent();
+            _menuController = new MenuController();
             editedRows = new HashSet<int>();
             LoadData();
             PopulateComboBox();
@@ -26,23 +23,9 @@ namespace menumaster.Views
             button5.Click += button5_Click_1;  // Ensure the event handler is assigned
         }
 
-        private DataTable kelolamenu()
-        {
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                string query = "SELECT id_kategori, kategori FROM kategori_menu";
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
-        }
-
         private void PopulateComboBox()
         {
-            DataTable categories = kelolamenu();
+            DataTable categories = _menuController.GetCategories();
             comboBox1.DataSource = categories;
             comboBox1.DisplayMember = "kategori";
             comboBox1.ValueMember = "id_kategori";
@@ -67,15 +50,9 @@ namespace menumaster.Views
 
         private void LoadData()
         {
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-            NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             try
             {
-                conn.Open();
-                string sql = "SELECT id_menu, nama AS menu, harga, deskripsi, id_kategori FROM menu";
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                DataTable dt = _menuController.GetMenuData();
                 dataGridView1.DataSource = dt;
 
                 // Make the DataGridView editable
@@ -89,10 +66,6 @@ namespace menumaster.Views
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
 
@@ -129,36 +102,19 @@ namespace menumaster.Views
             string deskripsiMenu = textBox3.Text;
             int jenisKategori = (int)comboBox1.SelectedValue;
 
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            try
             {
-                string masuk = "INSERT INTO menu (nama, harga, deskripsi, id_kategori) VALUES (@nama, @harga, @deskripsi, @id_kategori)";
-                using (NpgsqlCommand command = new NpgsqlCommand(masuk, connection))
-                {
-                    command.Parameters.AddWithValue("nama", namaMenu);
-                    command.Parameters.AddWithValue("harga", hargaMenu);
-                    command.Parameters.AddWithValue("deskripsi", deskripsiMenu);
-                    command.Parameters.AddWithValue("id_kategori", jenisKategori);
-
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-                    connection.Close();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Berhasil!");
-                        textBox1.Clear();
-                        textBox2.Clear();
-                        textBox3.Clear();
-                        comboBox1.SelectedIndex = -1;
-
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal");
-                    }
-                }
+                _menuController.AddMenu(namaMenu, hargaMenu, deskripsiMenu, jenisKategori);
+                MessageBox.Show("Berhasil!");
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                comboBox1.SelectedIndex = -1;
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal: " + ex.Message);
             }
         }
 
@@ -200,81 +156,16 @@ namespace menumaster.Views
             string deskripsiMenu = textBox3.Text;
             int jenisKategori = (int)comboBox1.SelectedValue;
 
-            string connectionString = "Host=localhost;Username=postgres;Password=1;Database=menu master";
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            try
             {
-                try
-                {
-                    connection.Open();
-                    bool updateSuccess = true;
-                    bool needsUpdate = false;
-
-                    // Compare each field to determine if it has changed
-                    string updateQuery = "UPDATE menu SET ";
-                    if (namaMenu != selectedRow.Cells["menu"].Value.ToString())
-                    {
-                        updateQuery += "nama = @nama, ";
-                        needsUpdate = true;
-                    }
-                    if (hargaMenu != Convert.ToDecimal(selectedRow.Cells["harga"].Value))
-                    {
-                        updateQuery += "harga = @harga, ";
-                        needsUpdate = true;
-                    }
-                    if (deskripsiMenu != selectedRow.Cells["deskripsi"].Value.ToString())
-                    {
-                        updateQuery += "deskripsi = @deskripsi, ";
-                        needsUpdate = true;
-                    }
-                    if (jenisKategori != Convert.ToInt32(selectedRow.Cells["id_kategori"].Value))
-                    {
-                        updateQuery += "id_kategori = @id_kategori, ";
-                        needsUpdate = true;
-                    }
-
-                    // If nothing needs to be updated, return
-                    if (!needsUpdate)
-                    {
-                        MessageBox.Show("Tidak ada perubahan untuk diupdate.");
-                        return;
-                    }
-
-                    // Remove the last comma and space
-                    updateQuery = updateQuery.TrimEnd(',', ' ') + " WHERE id_menu = @id_menu";
-
-                    using (NpgsqlCommand command = new NpgsqlCommand(updateQuery, connection))
-                    {
-                        if (updateQuery.Contains("@nama"))
-                            command.Parameters.AddWithValue("@nama", namaMenu);
-                        if (updateQuery.Contains("@harga"))
-                            command.Parameters.AddWithValue("@harga", hargaMenu);
-                        if (updateQuery.Contains("@deskripsi"))
-                            command.Parameters.AddWithValue("@deskripsi", deskripsiMenu);
-                        if (updateQuery.Contains("@id_kategori"))
-                            command.Parameters.AddWithValue("@id_kategori", jenisKategori);
-                        command.Parameters.AddWithValue("@id_menu", idMenu);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected == 0)
-                        {
-                            MessageBox.Show("Update gagal.");
-                            updateSuccess = false;
-                        }
-                    }
-
-                    if (updateSuccess)
-                    {
-                        MessageBox.Show("Data berhasil diupdate!");
-                        LoadData(); // Refresh data
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                _menuController.UpdateMenu(idMenu, namaMenu, hargaMenu, deskripsiMenu, jenisKategori);
+                MessageBox.Show("Data berhasil diupdate!");
+                LoadData(); // Refresh data
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-
     }
 }

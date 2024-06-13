@@ -30,16 +30,28 @@
         {
             button2 = new Button();
             button1 = new Button();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            textBoxAlamat = new TextBox();
+            textBoxTelp = new TextBox();
+            textBoxNama = new TextBox();
+            textBoxID = new TextBox();
+            labelAlamat = new Label();
+            labelTelp = new Label();
+            labelNama = new Label();
+            labelID = new Label();
+            labelTitle = new Label();
             checkBoxAktif = new CheckBox();
+            textBoxFoto = new TextBox();
+            labelFoto = new Label();
+            textBoxPassword = new TextBox();
+            labelPassword = new Label();
+            textBoxEmail = new TextBox();
+            labelEmail = new Label();
+            dateTimePickerTglMasuk = new DateTimePicker();
+            labelTglMasuk = new Label();
+            textBoxGaji = new TextBox();
+            labelGaji = new Label();
+            comboBoxRole = new ComboBox();
+            labelRole = new Label();
             SuspendLayout();
             // 
             // button2
@@ -49,7 +61,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Arial", 9F, FontStyle.Bold);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(874, 533);
+            button2.Location = new Point(876, 722);
             button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
             button2.Size = new Size(107, 45);
@@ -65,7 +77,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Arial", 9F, FontStyle.Bold);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(759, 533);
+            button1.Location = new Point(350, 722);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(107, 45);
@@ -74,108 +86,108 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // textBox4
+            // textBoxAlamat
             // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(589, 452);
-            textBox4.Margin = new Padding(4, 5, 4, 5);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(391, 31);
-            textBox4.TabIndex = 19;
-            textBox4.TextChanged += textBox4_TextChanged;
+            textBoxAlamat.Anchor = AnchorStyles.None;
+            textBoxAlamat.Location = new Point(592, 314);
+            textBoxAlamat.Margin = new Padding(4, 5, 4, 5);
+            textBoxAlamat.Name = "textBoxAlamat";
+            textBoxAlamat.Size = new Size(391, 31);
+            textBoxAlamat.TabIndex = 19;
             // 
-            // textBox3
+            // textBoxTelp
             // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(589, 387);
-            textBox3.Margin = new Padding(4, 5, 4, 5);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(391, 31);
-            textBox3.TabIndex = 18;
-            textBox3.TextChanged += textBox3_TextChanged;
+            textBoxTelp.Anchor = AnchorStyles.None;
+            textBoxTelp.Location = new Point(592, 249);
+            textBoxTelp.Margin = new Padding(4, 5, 4, 5);
+            textBoxTelp.Name = "textBoxTelp";
+            textBoxTelp.Size = new Size(391, 31);
+            textBoxTelp.TabIndex = 18;
             // 
-            // textBox2
+            // textBoxNama
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(589, 323);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(391, 31);
-            textBox2.TabIndex = 17;
+            textBoxNama.Anchor = AnchorStyles.None;
+            textBoxNama.Location = new Point(592, 185);
+            textBoxNama.Margin = new Padding(4, 5, 4, 5);
+            textBoxNama.Name = "textBoxNama";
+            textBoxNama.ReadOnly = true;
+            textBoxNama.Size = new Size(391, 31);
+            textBoxNama.TabIndex = 17;
             // 
-            // textBox1
+            // textBoxID
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(589, 263);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(391, 31);
-            textBox1.TabIndex = 16;
+            textBoxID.Anchor = AnchorStyles.None;
+            textBoxID.Location = new Point(592, 125);
+            textBoxID.Margin = new Padding(4, 5, 4, 5);
+            textBoxID.Name = "textBoxID";
+            textBoxID.ReadOnly = true;
+            textBoxID.Size = new Size(391, 31);
+            textBoxID.TabIndex = 16;
             // 
-            // label5
+            // labelAlamat
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold);
-            label5.Location = new Point(347, 453);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(89, 27);
-            label5.TabIndex = 15;
-            label5.Text = "Alamat";
+            labelAlamat.Anchor = AnchorStyles.None;
+            labelAlamat.AutoSize = true;
+            labelAlamat.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelAlamat.Location = new Point(350, 315);
+            labelAlamat.Margin = new Padding(4, 0, 4, 0);
+            labelAlamat.Name = "labelAlamat";
+            labelAlamat.Size = new Size(89, 27);
+            labelAlamat.TabIndex = 15;
+            labelAlamat.Text = "Alamat";
             // 
-            // label4
+            // labelTelp
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold);
-            label4.Location = new Point(347, 388);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(180, 27);
-            label4.TabIndex = 14;
-            label4.Text = "Nomor Telepon";
+            labelTelp.Anchor = AnchorStyles.None;
+            labelTelp.AutoSize = true;
+            labelTelp.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelTelp.Location = new Point(350, 250);
+            labelTelp.Margin = new Padding(4, 0, 4, 0);
+            labelTelp.Name = "labelTelp";
+            labelTelp.Size = new Size(180, 27);
+            labelTelp.TabIndex = 14;
+            labelTelp.Text = "Nomor Telepon";
             // 
-            // label3
+            // labelNama
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold);
-            label3.Location = new Point(347, 325);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(74, 27);
-            label3.TabIndex = 13;
-            label3.Text = "Nama";
+            labelNama.Anchor = AnchorStyles.None;
+            labelNama.AutoSize = true;
+            labelNama.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelNama.Location = new Point(350, 187);
+            labelNama.Margin = new Padding(4, 0, 4, 0);
+            labelNama.Name = "labelNama";
+            labelNama.Size = new Size(74, 27);
+            labelNama.TabIndex = 13;
+            labelNama.Text = "Nama";
             // 
-            // label2
+            // labelID
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold);
-            label2.Location = new Point(347, 265);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(34, 27);
-            label2.TabIndex = 12;
-            label2.Text = "ID";
+            labelID.Anchor = AnchorStyles.None;
+            labelID.AutoSize = true;
+            labelID.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelID.Location = new Point(350, 127);
+            labelID.Margin = new Padding(4, 0, 4, 0);
+            labelID.Name = "labelID";
+            labelID.Size = new Size(34, 27);
+            labelID.TabIndex = 12;
+            labelID.Text = "ID";
             // 
-            // label1
+            // labelTitle
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(529, 103);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(378, 34);
-            label1.TabIndex = 11;
-            label1.Text = "Mengubah Data Karyawan";
+            labelTitle.Anchor = AnchorStyles.None;
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTitle.Location = new Point(552, 31);
+            labelTitle.Margin = new Padding(4, 0, 4, 0);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(378, 34);
+            labelTitle.TabIndex = 11;
+            labelTitle.Text = "Mengubah Data Karyawan";
             // 
             // checkBoxAktif
             // 
             checkBoxAktif.Anchor = AnchorStyles.None;
-            checkBoxAktif.Location = new Point(589, 517);
+            checkBoxAktif.Location = new Point(1003, 635);
             checkBoxAktif.Margin = new Padding(4, 5, 4, 5);
             checkBoxAktif.Name = "checkBoxAktif";
             checkBoxAktif.Size = new Size(149, 40);
@@ -183,23 +195,164 @@
             checkBoxAktif.Text = "Aktif";
             checkBoxAktif.UseVisualStyleBackColor = true;
             // 
+            // textBoxFoto
+            // 
+            textBoxFoto.Anchor = AnchorStyles.None;
+            textBoxFoto.Location = new Point(592, 359);
+            textBoxFoto.Margin = new Padding(4, 5, 4, 5);
+            textBoxFoto.Name = "textBoxFoto";
+            textBoxFoto.Size = new Size(391, 31);
+            textBoxFoto.TabIndex = 23;
+            // 
+            // labelFoto
+            // 
+            labelFoto.Anchor = AnchorStyles.None;
+            labelFoto.AutoSize = true;
+            labelFoto.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelFoto.Location = new Point(350, 360);
+            labelFoto.Margin = new Padding(4, 0, 4, 0);
+            labelFoto.Name = "labelFoto";
+            labelFoto.Size = new Size(62, 27);
+            labelFoto.TabIndex = 24;
+            labelFoto.Text = "Foto";
+            // 
+            // textBoxPassword
+            // 
+            textBoxPassword.Anchor = AnchorStyles.None;
+            textBoxPassword.Location = new Point(592, 415);
+            textBoxPassword.Margin = new Padding(4, 5, 4, 5);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(391, 31);
+            textBoxPassword.TabIndex = 25;
+            // 
+            // labelPassword
+            // 
+            labelPassword.Anchor = AnchorStyles.None;
+            labelPassword.AutoSize = true;
+            labelPassword.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelPassword.Location = new Point(350, 416);
+            labelPassword.Margin = new Padding(4, 0, 4, 0);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(122, 27);
+            labelPassword.TabIndex = 26;
+            labelPassword.Text = "Password";
+            // 
+            // textBoxEmail
+            // 
+            textBoxEmail.Anchor = AnchorStyles.None;
+            textBoxEmail.Location = new Point(592, 471);
+            textBoxEmail.Margin = new Padding(4, 5, 4, 5);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(391, 31);
+            textBoxEmail.TabIndex = 27;
+            // 
+            // labelEmail
+            // 
+            labelEmail.Anchor = AnchorStyles.None;
+            labelEmail.AutoSize = true;
+            labelEmail.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelEmail.Location = new Point(350, 472);
+            labelEmail.Margin = new Padding(4, 0, 4, 0);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(73, 27);
+            labelEmail.TabIndex = 28;
+            labelEmail.Text = "Email";
+            // 
+            // dateTimePickerTglMasuk
+            // 
+            dateTimePickerTglMasuk.Anchor = AnchorStyles.None;
+            dateTimePickerTglMasuk.Enabled = false;
+            dateTimePickerTglMasuk.Location = new Point(592, 527);
+            dateTimePickerTglMasuk.Margin = new Padding(4, 5, 4, 5);
+            dateTimePickerTglMasuk.Name = "dateTimePickerTglMasuk";
+            dateTimePickerTglMasuk.Size = new Size(391, 31);
+            dateTimePickerTglMasuk.TabIndex = 29;
+            // 
+            // labelTglMasuk
+            // 
+            labelTglMasuk.Anchor = AnchorStyles.None;
+            labelTglMasuk.AutoSize = true;
+            labelTglMasuk.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelTglMasuk.Location = new Point(350, 528);
+            labelTglMasuk.Margin = new Padding(4, 0, 4, 0);
+            labelTglMasuk.Name = "labelTglMasuk";
+            labelTglMasuk.Size = new Size(180, 27);
+            labelTglMasuk.TabIndex = 30;
+            labelTglMasuk.Text = "Tanggal Masuk";
+            // 
+            // textBoxGaji
+            // 
+            textBoxGaji.Anchor = AnchorStyles.None;
+            textBoxGaji.Location = new Point(592, 583);
+            textBoxGaji.Margin = new Padding(4, 5, 4, 5);
+            textBoxGaji.Name = "textBoxGaji";
+            textBoxGaji.Size = new Size(391, 31);
+            textBoxGaji.TabIndex = 31;
+            // 
+            // labelGaji
+            // 
+            labelGaji.Anchor = AnchorStyles.None;
+            labelGaji.AutoSize = true;
+            labelGaji.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelGaji.Location = new Point(350, 584);
+            labelGaji.Margin = new Padding(4, 0, 4, 0);
+            labelGaji.Name = "labelGaji";
+            labelGaji.Size = new Size(57, 27);
+            labelGaji.TabIndex = 32;
+            labelGaji.Text = "Gaji";
+            // 
+            // comboBoxRole
+            // 
+            comboBoxRole.Anchor = AnchorStyles.None;
+            comboBoxRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxRole.FormattingEnabled = true;
+            comboBoxRole.Location = new Point(592, 639);
+            comboBoxRole.Margin = new Padding(4, 5, 4, 5);
+            comboBoxRole.Name = "comboBoxRole";
+            comboBoxRole.Size = new Size(391, 33);
+            comboBoxRole.TabIndex = 33;
+            // 
+            // labelRole
+            // 
+            labelRole.Anchor = AnchorStyles.None;
+            labelRole.AutoSize = true;
+            labelRole.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            labelRole.Location = new Point(350, 640);
+            labelRole.Margin = new Padding(4, 0, 4, 0);
+            labelRole.Name = "labelRole";
+            labelRole.Size = new Size(63, 27);
+            labelRole.TabIndex = 34;
+            labelRole.Text = "Role";
+            // 
             // Manager_UbahKaryawan
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1364, 785);
+            ClientSize = new Size(1364, 885);
+            Controls.Add(labelRole);
+            Controls.Add(comboBoxRole);
+            Controls.Add(textBoxGaji);
+            Controls.Add(labelGaji);
+            Controls.Add(dateTimePickerTglMasuk);
+            Controls.Add(labelTglMasuk);
+            Controls.Add(textBoxEmail);
+            Controls.Add(labelEmail);
+            Controls.Add(textBoxPassword);
+            Controls.Add(labelPassword);
+            Controls.Add(textBoxFoto);
+            Controls.Add(labelFoto);
             Controls.Add(checkBoxAktif);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(textBoxAlamat);
+            Controls.Add(textBoxTelp);
+            Controls.Add(textBoxNama);
+            Controls.Add(textBoxID);
+            Controls.Add(labelAlamat);
+            Controls.Add(labelTelp);
+            Controls.Add(labelNama);
+            Controls.Add(labelID);
+            Controls.Add(labelTitle);
             Margin = new Padding(4, 5, 4, 5);
             MinimumSize = new Size(993, 729);
             Name = "Manager_UbahKaryawan";
@@ -212,17 +365,29 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBoxAktif;
+        private Button button2;
+        private Button button1;
+        private TextBox textBoxAlamat;
+        private TextBox textBoxTelp;
+        private TextBox textBoxNama;
+        private TextBox textBoxID;
+        private Label labelAlamat;
+        private Label labelTelp;
+        private Label labelNama;
+        private Label labelID;
+        private Label labelTitle;
+        private CheckBox checkBoxAktif;
+        private TextBox textBoxFoto;
+        private Label labelFoto;
+        private TextBox textBoxPassword;
+        private Label labelPassword;
+        private TextBox textBoxEmail;
+        private Label labelEmail;
+        private DateTimePicker dateTimePickerTglMasuk;
+        private Label labelTglMasuk;
+        private TextBox textBoxGaji;
+        private Label labelGaji;
+        private ComboBox comboBoxRole;
+        private Label labelRole;
     }
 }
