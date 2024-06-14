@@ -2,15 +2,8 @@
 {
     partial class WelcomePageForm
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             welcomePageCardAdmin = new Components.WelcomePageCardButton();
@@ -35,6 +24,7 @@
             panel1 = new Panel();
             label1 = new Label();
             label2 = new Label();
+            welcomePageCardButton1 = new Components.WelcomePageCardButton();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -46,11 +36,11 @@
             welcomePageCardAdmin.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardAdmin.ButtonText = "Lanjutkan Sebagai Admin";
             welcomePageCardAdmin.CardName = "Admin";
-            welcomePageCardAdmin.Location = new Point(32, 308);
-            welcomePageCardAdmin.Margin = new Padding(12, 14, 12, 14);
+            welcomePageCardAdmin.Location = new Point(42, 394);
+            welcomePageCardAdmin.Margin = new Padding(16, 18, 16, 18);
             welcomePageCardAdmin.Name = "welcomePageCardAdmin";
-            welcomePageCardAdmin.Padding = new Padding(12, 14, 12, 14);
-            welcomePageCardAdmin.Size = new Size(406, 168);
+            welcomePageCardAdmin.Padding = new Padding(16, 18, 16, 18);
+            welcomePageCardAdmin.Size = new Size(527, 214);
             welcomePageCardAdmin.TabIndex = 8;
             welcomePageCardAdmin.ButtonClick += adminButton_Click;
             // 
@@ -61,11 +51,11 @@
             welcomePageCardManager.BorderStyle = BorderStyle.FixedSingle;
             welcomePageCardManager.ButtonText = "Lanjutkan Sebagai Manager";
             welcomePageCardManager.CardName = "Manager";
-            welcomePageCardManager.Location = new Point(478, 308);
-            welcomePageCardManager.Margin = new Padding(12, 14, 12, 14);
+            welcomePageCardManager.Location = new Point(622, 394);
+            welcomePageCardManager.Margin = new Padding(16, 18, 16, 18);
             welcomePageCardManager.Name = "welcomePageCardManager";
-            welcomePageCardManager.Padding = new Padding(12, 14, 12, 14);
-            welcomePageCardManager.Size = new Size(406, 168);
+            welcomePageCardManager.Padding = new Padding(16, 18, 16, 18);
+            welcomePageCardManager.Size = new Size(527, 214);
             welcomePageCardManager.TabIndex = 10;
             welcomePageCardManager.ButtonClick += managerButton_Click;
             welcomePageCardManager.Load += welcomePageCardManager_Load;
@@ -75,13 +65,13 @@
             welcomePageCardKasir.Anchor = AnchorStyles.None;
             welcomePageCardKasir.BorderRadius = 20;
             welcomePageCardKasir.BorderStyle = BorderStyle.FixedSingle;
-            welcomePageCardKasir.ButtonText = "Lanjutkan Sebagai Kasir";
-            welcomePageCardKasir.CardName = "Kasir";
-            welcomePageCardKasir.Location = new Point(925, 308);
-            welcomePageCardKasir.Margin = new Padding(12, 14, 12, 14);
+            welcomePageCardKasir.ButtonText = "Lanjutkan Sebagai Waiter";
+            welcomePageCardKasir.CardName = "Waiter";
+            welcomePageCardKasir.Location = new Point(1203, 394);
+            welcomePageCardKasir.Margin = new Padding(16, 18, 16, 18);
             welcomePageCardKasir.Name = "welcomePageCardKasir";
-            welcomePageCardKasir.Padding = new Padding(12, 14, 12, 14);
-            welcomePageCardKasir.Size = new Size(406, 168);
+            welcomePageCardKasir.Padding = new Padding(16, 18, 16, 18);
+            welcomePageCardKasir.Size = new Size(527, 214);
             welcomePageCardKasir.TabIndex = 11;
             welcomePageCardKasir.ButtonClick += kasirButton_Click;
             // 
@@ -95,16 +85,17 @@
             tableLayoutPanel1.Controls.Add(welcomePageCardManager, 1, 1);
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(welcomePageCardAdmin, 0, 1);
+            tableLayoutPanel1.Controls.Add(welcomePageCardButton1, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 4, 4, 4);
+            tableLayoutPanel1.Margin = new Padding(5, 5, 5, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(12, 14, 12, 14);
+            tableLayoutPanel1.Padding = new Padding(16, 18, 16, 18);
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(1364, 785);
+            tableLayoutPanel1.Size = new Size(1773, 1005);
             tableLayoutPanel1.TabIndex = 13;
             // 
             // panel1
@@ -113,10 +104,10 @@
             tableLayoutPanel1.SetColumnSpan(panel1, 3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(245, 18);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Location = new Point(318, 23);
+            panel1.Margin = new Padding(5, 5, 5, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(874, 156);
+            panel1.Size = new Size(1136, 200);
             panel1.TabIndex = 12;
             // 
             // label1
@@ -124,9 +115,9 @@
             label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(874, 125);
+            label1.Size = new Size(1136, 160);
             label1.TabIndex = 3;
             label1.Text = "Selamat Datang";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -136,22 +127,38 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(372, 125);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(484, 160);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(143, 30);
+            label2.Size = new Size(201, 40);
             label2.TabIndex = 4;
-            label2.Text = "silahkan login";
+            label2.Text = "Silahkan Login";
+            // 
+            // welcomePageCardButton1
+            // 
+            welcomePageCardButton1.Anchor = AnchorStyles.None;
+            welcomePageCardButton1.BorderRadius = 20;
+            welcomePageCardButton1.BorderStyle = BorderStyle.FixedSingle;
+            welcomePageCardButton1.ButtonText = "Lanjutkan Sebagai Chef";
+            welcomePageCardButton1.CardName = "Chef";
+            welcomePageCardButton1.Location = new Point(622, 717);
+            welcomePageCardButton1.Margin = new Padding(16, 18, 16, 18);
+            welcomePageCardButton1.Name = "welcomePageCardButton1";
+            welcomePageCardButton1.Padding = new Padding(16, 18, 16, 18);
+            welcomePageCardButton1.Size = new Size(527, 214);
+            welcomePageCardButton1.TabIndex = 13;
+            welcomePageCardButton1.ButtonClick += chefButton_Click;
+            welcomePageCardButton1.Load += welcomePageCardButton1_Load;
             // 
             // WelcomePageForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1364, 785);
+            ClientSize = new Size(1773, 1005);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(2, 4, 2, 4);
-            MinimumSize = new Size(994, 734);
+            Margin = new Padding(3, 5, 3, 5);
+            MinimumSize = new Size(1284, 920);
             Name = "WelcomePageForm";
             Text = "welcome page";
             WindowState = FormWindowState.Maximized;
@@ -171,5 +178,6 @@
         private Label label2;
         private Panel panel1;
         private Label label1;
+        private Components.WelcomePageCardButton welcomePageCardButton1;
     }
 }

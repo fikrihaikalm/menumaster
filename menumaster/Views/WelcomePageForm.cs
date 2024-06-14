@@ -1,3 +1,5 @@
+using menumaster.Views;
+
 namespace menumaster
 {
     public partial class WelcomePageForm : Form
@@ -36,6 +38,18 @@ namespace menumaster
         private void WelcomePageForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void welcomePageCardButton1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chefButton_Click(object sender, EventArgs e)
+        {
+            LihatPesanan f4 = new LihatPesanan();
+            f4.Show();
+            this.Hide();
         }
     }
 }

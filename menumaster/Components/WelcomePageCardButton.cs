@@ -58,5 +58,10 @@ namespace menumaster.Components
                 this.Invalidate(); // Redraw the control when the border radius changes
             }
         }
+
+        private void buttonCardButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

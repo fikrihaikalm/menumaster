@@ -1,6 +1,6 @@
-﻿namespace menumaster
+﻿namespace menumaster.Views
 {
-    partial class Login_admin 
+    partial class Login_admin
     {
         /// <summary>
         /// Required designer variable.
@@ -13,7 +13,7 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components !=  null))
+            if (disposing && (components != null))
             {
                 components.Dispose();
             }
@@ -85,6 +85,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(283, 31);
             textBox1.TabIndex = 3;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -106,6 +107,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(283, 31);
             textBox2.TabIndex = 5;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button1
             // 
@@ -165,7 +167,6 @@
             Name = "Login_admin";
             Text = "Login admin";
             WindowState = FormWindowState.Maximized;
-            Load += Login_admin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

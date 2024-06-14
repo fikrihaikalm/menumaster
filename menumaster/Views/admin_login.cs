@@ -1,45 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using menumaster.Controllers;
+using System;
 using System.Windows.Forms;
 
-namespace menumaster
+namespace menumaster.Views
 {
     public partial class Login_admin : Form
     {
+        public static int KaryawanID { get; private set; }
+        private LoginAdminController _loginController;
+
         public Login_admin()
         {
             InitializeComponent();
+            _loginController = new LoginAdminController();
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
-/*            admin_page admin_page = new admin_page();
-            admin_page.Show();
-            this.Hide();*/
+            string username = textBox1.Text;
+            string passwordtxt = textBox2.Text; // Assuming textBox2 is for password
 
-            //string adminID = textBox1.Text;
-            //string adminPassword = textBox2.Text;
+            if (int.TryParse(username, out int id_karyawan))
+            {
+                try
+                {
+                    int? karyawanID = _loginController.AuthenticateUser(id_karyawan, passwordtxt);
 
-            //if (adminID == "admin" && adminPassword == "password")
-            //{
-            // Login berhasil, buka form AdminDashboard
-
-
-
-            //}
-
-            //else
-            //{
-            // Login gagal, tampilkan pesan kesalahan
-            //    MessageBox.Show("ID atau Password salah!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                    if (karyawanID.HasValue)
+                    {
+                        KaryawanID = karyawanID.Value; // Save the employee ID
+                        MessageBox.Show("Login berhasil!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        admin_page homepage = new admin_page();
+                        homepage.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ID, password salah atau bukan role admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("ID karyawan harus berupa angka.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,11 +57,12 @@ namespace menumaster
             this.Close();
         }
 
-        private void Login_admin_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
-
-
